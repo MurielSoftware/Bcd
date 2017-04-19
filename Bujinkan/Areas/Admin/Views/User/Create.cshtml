@@ -60,7 +60,7 @@
                 @Html.CustomValidationSummary()
                 <div class="form-group">
                     @Html.LabelFor(model => model.BujinkanTitle, new { @class = "control-label col-sm-2 form-control-title form-control-required" })
-                    <div class="col-sm-2">
+                    <div class="col-sm-4">
                         @Html.InlineEditableControl(Html.LocalizedDropDownDisplayFor(model => model.BujinkanTitle, new { @class = "form-control-editable form-control-title" }), Html.LocalizedDropDownListFor(model => model.BujinkanTitle, new { @class = "form-control form-control-title" }))
                     </div>
                 </div>

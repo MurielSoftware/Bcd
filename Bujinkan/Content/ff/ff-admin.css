@@ -69,10 +69,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 7px 12px;
 }
 
-    .panel .panel-heading .nav-tabs > li > a:hover {
-        color: #394263;
-        background-color: #fff;
-    }
+.panel .panel-heading .nav-tabs > li > a:hover {
+    color: #394263;
+    background-color: #fff;
+}
 
 .panel .panel-heading .nav-tabs > li.active > a,
 .panel .panel-heading .nav-tabs > li.active > a:hover,
@@ -83,6 +83,63 @@ h1, h2, h3, h4, h5, h6 {
 .panel hr {
     border: 0;
     border-bottom: 1px dashed #eaedf1;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+#map-canvas:hover, input:hover, input:focus, input:active,
+textarea:hover, textarea:focus, textarea:active,
+select:hover, select:focus, select:active {
+    border: 1px solid #333;
+}
+
+input[type=file] {
+    border: 1px solid transparent;
+}
+
+input[type=file]:hover {
+    border: 1px solid #ccdede;
+}
+
+.form-control-title {
+    font-size: 18px;
+    height: 42px;
+}
+
+.form-control-required {
+    color: #662a2a;
+}
+
+.form-control-editable {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 6px 12px;
+    min-height: 30px;
+    background: #fafafa;
+    color: #000;
+    border: 1px solid #f0f0f0;
+}
+
+.form-control-editable:hover {
+    border: 1px solid #333;
+    background-color: #f7f7f7;
+}
+
+.form-control-editable-icon {
+    display: none;
+    right: 10px;
+    padding: 6px;
+    position: absolute;
+    margin-top: -15px;
+    color: #eee;
+    background-color: #333;
+}
+
+.dropdown-menu {
+    margin: 0;
 }
 
 .metro-box {

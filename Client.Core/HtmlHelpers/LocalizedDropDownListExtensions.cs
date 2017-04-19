@@ -68,9 +68,11 @@ namespace Client.Core.HtmlHelpers
             SelectListItem selectedValue = selectListItem.Where(f => f.Value.Equals(modelMetadata.Model.ToString())).FirstOrDefault();
             if (selectedValue == null)
             {
-                return MvcHtmlString.Create(selectListItem.First().Text);
+                return DivExtensions.CreateDiv<T>(htmlHelper, selectListItem.First().Text, htmlAttributes);
+                //return MvcHtmlString.Create(selectListItem.First().Text);
             }
-            return MvcHtmlString.Create(selectedValue.Text);
+            return DivExtensions.CreateDiv<T>(htmlHelper, selectedValue.Text, htmlAttributes);
+            //return MvcHtmlString.Create(selectedValue.Text);
         }
 
         /// <summary>
@@ -98,7 +100,7 @@ namespace Client.Core.HtmlHelpers
                 {
                     //if (!enumAttribute.RoleType.HasValue || (RoleExtensions.IsLoggedUserWithSpecificRights(enumAttribute.RoleType.Value)))
                     //{
-                    //    selectListItems.Add(CreateListItem(enumAttribute.ResourceKey, value, modelMetadata.Model));
+                        selectListItems.Add(CreateListItem(enumAttribute.ResourceKey, value, modelMetadata.Model));
                     //}
                 }
             }

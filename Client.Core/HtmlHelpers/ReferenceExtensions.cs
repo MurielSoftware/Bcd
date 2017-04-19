@@ -56,7 +56,7 @@ namespace Client.Core.HtmlHelpers
             ModelMetadata metadata = ModelMetadata.FromLambdaExpression(expression, htmlHelper.ViewData);
             if (metadata.Model == null || !(metadata.Model is ReferenceString))
             {
-                return CreateTexts(htmlHelper, SharedConstants.EMPTY_STRING, htmlAttributes);
+                return DivExtensions.CreateDiv<T>(htmlHelper, SharedConstants.EMPTY_STRING, htmlAttributes);
                // return ExtensionsUtil.CreateLabel(metadata.PropertyName, SharedConstants.EMPTY_STRING, htmlAttributes);
             }
 
@@ -64,29 +64,12 @@ namespace Client.Core.HtmlHelpers
 
             if (action == null && controller == null)
             {
-                return MvcHtmlString.Create(CreateTexts<T>(htmlHelper, (metadata.Model as ReferenceString).GetValues(), htmlAttributes));
+                return DivExtensions.CreateDiv<T>(htmlHelper, (metadata.Model as ReferenceString).GetValues(), htmlAttributes);
             }
             return MvcHtmlString.Create(CreateLinks<T>(htmlHelper, metadata.Model as ReferenceString, action, controller, htmlAttributes));
         }
 
-        /// <summary>
-        /// Creates only labels of the references.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="htmlHelper">The html helper</param>
-        /// <param name="metadata">The metadata of the current property</param>
-        /// <param name="referencies">The referencies contained IDs and labels</param>
-        /// <param name="htmlAttributes">The html attributres</param>
-        /// <returns>Returns the created texts</returns>
-        public static string CreateTexts<T>(this HtmlHelper<T> htmlHelper, string text, object htmlAttributes)
-        {
-            TagBuilder tagBuilder = new TagBuilder("div");
-            tagBuilder.MergeAttributes(HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes));
-            tagBuilder.InnerHtml = text;
-            return tagBuilder.ToString();
-            
-          //  return ExtensionsUtil.CreateLabel(propertyName, referenceString.GetValues(), htmlAttributes).ToString();
-        }
+
 
         /// <summary>
         /// Creates the links of the references.
