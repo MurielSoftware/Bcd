@@ -22,6 +22,7 @@ namespace Shared.Core.Constants
         public const string LABEL_EMAIL = "label_email";
         public const string LABEL_END = "label_end";
         public const string LABEL_FACEBOOK = "label_facebook";
+        public const string LABEL_FILL_FORM = "label_fill_form";
         public const string LABEL_FIRSTNAME = "label_firstname";
         public const string LABEL_FOR_CHILDREN = "label_for_children";
         public const string LABEL_FRIDAY = "label_friday";
@@ -29,10 +30,12 @@ namespace Shared.Core.Constants
         public const string LABEL_INSTRUCTOR = "label_instructor";
         public const string LABEL_LIST = "label_list";
         public const string LABEL_MONDAY = "label_monday";
+        public const string LABEL_NO = "label_no";
         public const string LABEL_PASSWORD = "label_password";
         public const string LABEL_PHONE = "label_phone";
         public const string LABEL_ROLE = "label_role";
         public const string LABEL_SATURDAY = "label_saturday";
+        public const string LABEL_SAVE = "label_save";
         public const string LABEL_SEMINAR = "label_seminar";
         public const string LABEL_SEMINARS = "label_seminars";
         public const string LABEL_SHIDOSHI = "label_shidoshi";
@@ -50,6 +53,7 @@ namespace Shared.Core.Constants
         public const string LABEL_WEB = "label_web";
         public const string LABEL_WEDNESDAY = "label_wednesday";
         public const string LABEL_WELCOME = "label_welcome";
+        public const string LABEL_YES = "label_yes";
         public const string LABEL_ZIPCODE = "label_zipcode";
 
         public const string VALIDATION_EMAIL_MESSAGE = "validation_email_message";

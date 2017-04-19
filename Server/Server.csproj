@@ -56,9 +56,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\BujinkanContext.cs" />
-    <Compile Include="Dao\BaseDao.cs" />
-    <Compile Include="Dao\GenericDao.cs" />
-    <Compile Include="Dao\UserDao.cs" />
+    <Compile Include="Converters\Attributes\PrimitiveAttributeConverter.cs" />
+    <Compile Include="Converters\BaseConvertProvider.cs" />
+    <Compile Include="Converters\DtoToEntityConvertProvider.cs" />
+    <Compile Include="Converters\EntityToDtoConvertProvider.cs" />
+    <Compile Include="Converters\IConverter.cs" />
+    <Compile Include="Converters\References\BaseReferenceAttributeConverter.cs" />
+    <Compile Include="Converters\References\IReferenceConverter.cs" />
+    <Compile Include="Converters\References\List\BaseListReferenceAttributeConverter.cs" />
+    <Compile Include="Converters\References\List\EntityToDto\ListReferenceAttributeEntityToDto.cs" />
+    <Compile Include="Converters\References\List\EntityToDto\SingleListReferenceAttributeEntityToDto.cs" />
+    <Compile Include="Converters\References\Reference\DtoToEntity\MultiReferenceAttributeDtoToEntityConverter.cs" />
+    <Compile Include="Converters\References\Reference\DtoToEntity\ReferenceAttributeDtoToEntityConverter.cs" />
+    <Compile Include="Converters\References\Reference\DtoToEntity\SingleReferenceAttributeDtoToEntityConverter.cs" />
+    <Compile Include="Converters\References\Reference\EntityToDto\MultiReferenceAttributeEntityToDtoConverter.cs" />
+    <Compile Include="Converters\References\Reference\EntityToDto\ReferenceAttributeEntityToDtoConverter.cs" />
+    <Compile Include="Converters\References\Reference\EntityToDto\SingleReferenceAttributeEntityToDtoConverter.cs" />
+    <Compile Include="Converters\References\Utils\ReferenceConversionUtils.cs" />
+    <Compile Include="Daos\BaseDao.cs" />
+    <Compile Include="Daos\GenericDao.cs" />
+    <Compile Include="Daos\UserDao.cs" />
     <Compile Include="Model\Actuality.cs" />
     <Compile Include="Model\BaseEntity.cs" />
     <Compile Include="Model\Blog.cs" />

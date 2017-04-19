@@ -8,7 +8,7 @@ using Shared.Dtos.Users;
 using PagedList;
 using Server.Model;
 
-namespace Server.Dao
+namespace Server.Daos
 {
     internal class UserDao : BaseDao
     {
@@ -19,7 +19,7 @@ namespace Server.Dao
 
         internal IPagedList<UserDto> FindPaged(UserFilterDto userFilterDto)
         {
-            return _bujinkanContext.Set<User>()
+            return _modelContext.Set<User>()
                 .Select(x => new UserDto() { Id = x.Id, BujinkanTitle = x.BujinkanTitle, FirstName = x.FirstName, Surname = x.Surname })
                 .ToPagedList(userFilterDto.Page, userFilterDto.PageSize);
         }

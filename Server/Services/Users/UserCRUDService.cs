@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Shared.Core.Context;
 using PagedList;
-using Server.Dao;
+using Server.Daos;
 
 namespace Server.Services.Users
 {

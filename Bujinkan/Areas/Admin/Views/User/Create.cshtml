@@ -1,0 +1,141 @@
+﻿@model Shared.Dtos.Users.UserDto
+
+@using Client.Core.HtmlHelpers
+@using Shared.Core.Constants
+
+@{
+    ViewBag.Title = Html.LocalizedDisplay(MessageKeyConstants.LABEL_TEACHER);
+}
+
+@section header{
+    <div class="header-section-title">
+        <h1><i class="fa fa-user"></i> @Html.LocalizedDisplay(MessageKeyConstants.LABEL_TEACHER)</h1>
+        <small>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_TEACHER)</small>
+    </div>
+    <img src="/Content/images/admin/admin-cover.jpg" />
+}
+
+@section breadcrumb {
+    <ul class="breadcrumb">
+        <li>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_HOME)</li>
+        <li>@Html.LocalizedActionLink(MessageKeyConstants.LABEL_TEACHERS, WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_USER)</li>
+    </ul>
+}
+
+@*@section ribbon {
+    @if (Model.Id != Guid.Empty)
+    {
+        <ul class="ribbon-group">
+            <li>
+                <a href="@Url.Action(SharedConstants.VIEW_PHOTO_UPLOAD, SharedConstants.CONTROLLER_USER, new { id = Model.Id })" class="ribbon-button">
+                    <i class="fa fa-image"></i>@Html.LocalizedDisplay(MessageKeys.ADD) @Html.LocalizedDisplay(MessageKeys.PHOTOS)
+                </a>
+            </li>
+            <li class="ribbon-group-title">
+                @Html.LocalizedDisplay(MessageKeys.GALLERY)
+            </li>
+        </ul>
+    }
+}*@
+
+<div class="panel">
+    <div class="panel-heading">
+        <ul class="nav nav-tabs remoteTabs">
+            <li class="active"><a href="#form" data-toggle="tab"><i class='fa fa-pencil'></i> @Html.LocalizedDisplay(MessageKeyConstants.LABEL_FILL_FORM)</a></li>
+        </ul>
+    </div>
+    <div class="panel-body">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken();
+            if (Model.Id != Guid.Empty)
+            {
+                @Html.HiddenFor(model => model.Id)
+                @Html.HiddenFor(model => model.CreatedDate)
+                @Html.HiddenFor(model => model.Password)
+                @Html.HiddenFor(model => model.Order)
+                @*@Html.HiddenFor(model => model.UserCreatorId)*@
+            }
+            <div class="form-horizontal">
+                @Html.CustomValidationSummary()
+                <div class="form-group">
+                    @Html.LabelFor(model => model.BujinkanTitle, new { @class = "control-label col-sm-2 form-control-title form-control-required" })
+                    <div class="col-sm-2">
+                        @Html.InlineEditableControl(Html.LocalizedDropDownDisplayFor(model => model.BujinkanTitle, new { @class = "form-control-editable form-control-title" }), Html.LocalizedDropDownListFor(model => model.BujinkanTitle, new { @class = "form-control form-control-title" }))
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FirstName, new { @class = "control-label col-sm-2 form-control-title form-control-required" })
+                    <div class="col-sm-4">
+                        @Html.InlineEditableControl(Html.EditableLabelFor(model => model.FirstName, new { @class = "form-control-editable form-control-title" }), Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control form-control-title" } }))
+                    </div>
+                    @Html.LabelFor(model => model.Surname, new { @class = "control-label col-sm-2 form-control-title form-control-required" })
+                    <div class="col-sm-4">
+                        @Html.InlineEditableControl(Html.EditableLabelFor(model => model.Surname, new { @class = "form-control-editable form-control-title" }), Html.EditorFor(model => model.Surname, new { htmlAttributes = new { @class = "form-control form-control-title" } }))
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Dan, new { @class = "control-label col-sm-2" })
+                    <div class="col-sm-1">
+                        @Html.InlineEditableControl(Html.EditableLabelFor(model => model.Dan, new { @class = "form-control-editable" }), @Html.EditorFor(model => model.Dan, new { htmlAttributes = new { @class = "form-control" } }))
+                    </div>
+                    @Html.LabelFor(model => model.DojoReference, new { @class = "control-label col-sm-2" })
+                    <div class="col-sm-7">
+                        @Html.InlineEditableControl(Html.ReferenceLabelFor(model => model.DojoReference, null, null, new { @class = "form-control-editable" }), @Html.ReferenceFor(model => model.DojoReference.Value, "Dojo", "/Admin/Dojo/GetByPrefix", 1))
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CountryReference, new { @class = "control-label col-sm-2" })
+                    <div class="col-sm-10">
+                        @Html.InlineEditableControl(Html.ReferenceLabelFor(model => model.CountryReference, null, null, new { @class = "form-control-editable" }), @Html.ReferenceFor(model => model.CountryReference.Value, "Country", "/Admin/Country/GetByPrefix", 1))
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Web, new { @class = "control-label col-sm-2" })
+                    <div class="col-sm-10">
+                        @Html.InlineEditableControl(Html.EditableLabelFor(model => model.Web, new { @class = "form-control-editable" }), @Html.EditorFor(model => model.Web, new { htmlAttributes = new { @class = "form-control form-control", @placeholder = "http://www.address.cz" } }))
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Facebook, new { @class = "control-label col-sm-2" })
+                    <div class="col-sm-10">
+                        @Html.InlineEditableControl(Html.EditableLabelFor(model => model.Facebook, new { @class = "form-control-editable" }), @Html.EditorFor(model => model.Facebook, new { htmlAttributes = new { @class = "form-control form-control", @placeholder = "http://www.address.cz" } }))
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, new { @class = "control-label col-sm-2 form-control-required" })
+                    <div class="col-sm-4">
+                        @Html.InlineEditableControl(Html.EditableLabelFor(model => model.Email, new { @class = "form-control-editable" }), Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } }))
+                    </div>
+                    @Html.LabelFor(model => model.Phone, new { @class = "control-label col-sm-2" })
+                    <div class="col-sm-4">
+                        @Html.InlineEditableControl(Html.EditableLabelFor(model => model.Phone, new { @class = "form-control-editable" }), Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", @data_mask = "+(999) 999 999 999", @placeholder = "+(___) ___ ___ ___" } }))
+                    </div>
+                </div>
+                <hr />
+                @*@if (Html.IsLoggedUserWithRights(RoleType.USER_CREATION))
+                {*@
+                    <div class="form-group">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.RoleReference, new { @class = "control-label col-sm-2 form-control-required" })
+                            <div class="col-sm-4">
+                                @Html.InlineEditableControl(Html.ReferenceLabelFor(model => model.RoleReference, null, null, new { @class = "form-control-editable" }), Html.RemoteDropDownListFor(model => model.RoleId, "/Admin/Role/GetRoles"))
+                            </div>
+                        </div>
+                    </div>
+                @*}*@
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Description, new { @class = "control-label col-sm-2" })
+                    <div class="col-sm-10">
+                        @Html.InlineEditableControl(Html.EditableLabelFor(model => model.Description, new { @class = "form-control-editable form-control-textarea" }), Html.RichTextBoxFor(model => model.Description))
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-12">
+                        <button type="submit" class="btn btn-success pull-right"><i class="fa fa-save"></i> @Html.LocalizedDisplay(MessageKeyConstants.LABEL_SAVE)</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

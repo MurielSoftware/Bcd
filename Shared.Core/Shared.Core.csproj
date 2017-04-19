@@ -51,6 +51,7 @@
     <Compile Include="Attributes\ActionFilterRole.cs" />
     <Compile Include="Attributes\EnumAttribute.cs" />
     <Compile Include="Attributes\FilterAttribute.cs" />
+    <Compile Include="Attributes\ListReferenceAttribute.cs" />
     <Compile Include="Attributes\ReferenceAttribute.cs" />
     <Compile Include="Constants\DaoConstants.cs" />
     <Compile Include="Constants\GuidConstants.cs" />
@@ -58,6 +59,8 @@
     <Compile Include="Constants\MessageKeyConstants.cs" />
     <Compile Include="Constants\SharedConstants.cs" />
     <Compile Include="Constants\WebConstants.cs" />
+    <Compile Include="Context\ExpressionQueryBuilder.cs" />
+    <Compile Include="Context\IBaseEntity.cs" />
     <Compile Include="Context\IDatabaseContext.cs" />
     <Compile Include="Context\IUnitOfWork.cs" />
     <Compile Include="Dtos\BaseDto.cs" />
@@ -68,6 +71,7 @@
     <Compile Include="Dtos\MenuItems\MenuItemAssociationType.cs" />
     <Compile Include="Dtos\MenuItems\MenuItemDto.cs" />
     <Compile Include="Dtos\MenuItems\MenuItemEntityType.cs" />
+    <Compile Include="Dtos\ReferencedDto.cs" />
     <Compile Include="Dtos\ReferenceString.cs" />
     <Compile Include="Dtos\Roles\RoleDto.cs" />
     <Compile Include="Dtos\Roles\RoleType.cs" />
@@ -85,6 +89,7 @@
     <Compile Include="Services\IService.cs" />
     <Compile Include="Utils\ResourceUtils.cs" />
     <Compile Include="Utils\StringUtils.cs" />
+    <Compile Include="Utils\UrlUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Resource.resx">

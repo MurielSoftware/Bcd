@@ -36,6 +36,9 @@
     <Reference Include="System.Web.Mvc">
       <HintPath>C:\Users\jkrpec\Documents\Visual Studio 2017\Projects\Bujinkan\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,8 +51,13 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="HtmlHelpers\EditableControlExtensions.cs" />
     <Compile Include="HtmlHelpers\LocalizedActionLinkExtensions.cs" />
     <Compile Include="HtmlHelpers\LocalizedDisplayExtensions.cs" />
+    <Compile Include="HtmlHelpers\LocalizedDropDownListExtensions.cs" />
+    <Compile Include="HtmlHelpers\ReferenceExtensions.cs" />
+    <Compile Include="HtmlHelpers\RichTextBoxExtensions.cs" />
+    <Compile Include="HtmlHelpers\ValidationSummaryExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

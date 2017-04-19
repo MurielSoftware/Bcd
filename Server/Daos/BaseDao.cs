@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Server.Dao
+namespace Server.Daos
 {
     public abstract class BaseDao
     {
-        protected BujinkanContext _bujinkanContext;
+        protected BujinkanContext _modelContext;
 
         internal BaseDao(IUnitOfWork unitOfWork)
         {
@@ -20,7 +20,12 @@ namespace Server.Dao
             ////_bujinkanContext.Set<User>().ToList();
             ////watch.Stop();
             ////var elapsedMs = watch.ElapsedMilliseconds;
-            _bujinkanContext = (BujinkanContext)unitOfWork.GetContext();
+            _modelContext = (BujinkanContext)unitOfWork.GetContext();
+        }
+
+        protected BujinkanContext GetModelContext()
+        {
+            return _modelContext;
         }
     }
 }
