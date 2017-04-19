@@ -1,0 +1,14 @@
+﻿CREATE TABLE [dbo].[Entry]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL,
+	[CreatedDate] DATETIME NOT NULL,
+	[UpdatedDate] DATETIME NOT NULL,
+	[FirstName] NVARCHAR(64) NOT NULL,
+	[Surname] NVARCHAR(64) NOT NULL,
+	[Email] NVARCHAR(64) NOT NULL,
+	[Phone] NVARCHAR(64) NULL,
+	[DepositPaid] BIT NOT NULL,
+	[Description] NVARCHAR(MAX) NULL,
+
+	[EventId] UNIQUEIDENTIFIER NOT NULL
+)

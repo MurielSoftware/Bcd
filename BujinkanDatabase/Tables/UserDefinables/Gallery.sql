@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[Gallery]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL,
+	[GalleryType] INT NOT NULL,
+	[Name] NVARCHAR(128) NOT NULL,
+	[Date] DATETIME NOT NULL,
+	[Description] NVARCHAR(MAX) NULL,
+
+	[CoverPhotoId] UNIQUEIDENTIFIER NULL,
+	[UserDefinableId] UNIQUEIDENTIFIER NULL
+)

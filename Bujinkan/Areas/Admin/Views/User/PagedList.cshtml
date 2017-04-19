@@ -1,0 +1,37 @@
+﻿@model PagedList.IPagedList<Shared.Dtos.Users.UserDto>
+
+@using Client.Core.Helpers
+@using Shared.Core.Constants
+@using PagedList.Mvc
+
+<div id="@HtmlConstants.PAGED_LIST_USER">
+    <i id="loading-send-email" style="display:none" class='fa fa-circle-o-notch fa-spin'></i>
+    <table class="table table-hover">
+        <thead>
+            <tr role="row">
+                <th class="th-icon"></th>
+                <th>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_FIRST_NAME)</th>
+                <th>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_EMAIL)</th>
+                <th>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_PHONE)</th>
+                <th class="th-administration-box"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td><i class='fa fa-user'></i></td>
+                    <td>@*@Html.EnumLabelFor(model => item.BujinkanTitle)*@ @Html.DisplayFor(model => item.FirstName) @Html.DisplayFor(model => item.Surname)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Phone)</td>
+                    <td>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @if (Model.PageCount > 1)
+    {
+        @*@Html.PagedListPager(Model, page => Url.Action(SharedConstants.VIEW_PAGED_LIST, new Shared.Core.Url.PageRouteValueDictionary(ViewBag.FilterDto, new Dictionary<string, object>() { { "page", page } })), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions() { HttpMethod = "GET", UpdateTargetId = HtmlConstants.PAGED_LIST_USER, LoadingElementId = "loading" }));*@
+    }
+</div>

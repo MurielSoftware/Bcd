@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[Event]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL,
+	[Theme] NVARCHAR(128) NOT NULL,
+	[Start] DATETIME NOT NULL,
+	[End] DATETIME NOT NULL,
+	[Address] NVARCHAR(MAX) NULL,
+	[City] NVARCHAR(64) NOT NULL,
+	[Zipcode] NVARCHAR(16) NULL,
+	[Gps] NVARCHAR(64) NULL,
+	[Facebook] NVARCHAR(255) NULL,
+	[Description] NVARCHAR(MAX) NULL,
+	[ShowPrize] BIT NOT NULL,
+	[PrizeMember] SMALLINT NULL,
+	[PrizeNomember] SMALLINT NULL,
+	[Currency] INT NOT NULL,
+	[EnableRegistration] BIT NOT NULL,
+	[RegistrationDeadline] DATETIME NULL,
+	[CurrentParticipiants] INT NOT NULL,
+	[MaximumParticipiants] INT NULL,
+	[Prepayment] SMALLINT NULL,
+	[PrepaymentDeadline] DATETIME NULL,
+	[AccountNumber] NVARCHAR(32) NULL,
+	[Discriminator] NVARCHAR(32) NOT NULL,
+
+	[CountryId] UNIQUEIDENTIFIER NULL,
+)

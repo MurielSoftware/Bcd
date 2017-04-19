@@ -1,0 +1,134 @@
+﻿.ribbon {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.ribbon a {
+    color: #696969;
+}
+
+.ribbon a:hover, .ribbon a:focus {
+    background-color: #d5e1f2;
+    text-decoration: none;
+}
+
+.ribbon a:focus {
+    background-color: #c2d5f2;
+}
+
+.ribbon .nav > li > a {
+    text-transform: uppercase;
+    padding: 0;
+    height: 20px;
+}
+
+.ribbon .nav > li > a:hover,
+.ribbon .nav > li > a:focus {
+    background-color: #fff;
+    color: #0000cf;
+}
+
+.ribbon .nav-tabs > li > a {
+    border-radius: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ribbon .tab-pane {
+    padding: 5px;
+}
+
+.ribbon .dropdown-menu {
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.ribbon .dropdown-menu > li {
+    float: none;
+}
+
+.ribbon .dropdown-menu > li > a {
+    color: #696969;
+    padding: 1px 2px;
+    width: 100%;
+}
+
+.ribbon .dropdown-menu > li > a:hover,
+.ribbon .dropdown-menu > li > a:focus {
+    background-color: #d5e1f2;
+    color: #727272;
+}
+
+ul.ribbon-group {
+    border-right: 1px solid #ddd;
+    color: #666;
+    height: 77px;
+    padding: 0 5px;
+    display: inline-block;
+    list-style: none;
+}
+
+ul.ribbon-group li {
+    float: left;
+    position: relative;
+    display: block;
+}
+
+ul.ribbon-group /*li*/.ribbon-group-title {
+    clear: both;
+    text-align: center;
+    padding-top: 4px;
+    width: 100%;
+}
+
+.ribbon-button {
+    display: inline-block;
+    text-align: center;
+    padding: 2px;
+    position: relative;
+}
+
+.ribbon-button .fa {
+    display: block;
+    font-size: 28px;
+    padding: 6px 0;
+}
+
+.ribbon-button .fa-angle-down {
+    display: inline;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.ribbon-button-group {
+    display: inline-block;
+    position: relative;
+}
+
+.ribbon-button-sm {
+    display: block;
+    height: 20px;
+    color: #696969;
+    padding: 2px;
+}
+
+.ribbon-button-sm .fa {
+    width: 14px;
+    text-align: center;
+}
+
+.ribbon-logged-user-panel {
+    float: right;
+    padding: 5px 25px 5px 5px;
+    right: 0;
+}
+
+.ribbon-logged-user-panel img {
+    max-height: 55px;
+    margin-bottom: 5px;
+    margin: 0 auto;
+}

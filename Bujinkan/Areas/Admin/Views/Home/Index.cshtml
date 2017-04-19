@@ -1,0 +1,69 @@
+﻿@using Client.Core.Helpers
+@using Shared.Core.Constants
+
+@{
+    ViewBag.Title = MessageKeyConstants.LABEL_HOME;
+}
+
+@section header{
+    <div class="header-section-title">
+        <h1>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_WELCOME)</h1>
+        <small>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_ADMINISTRATION_OF_BCD)</small>
+    </div>
+    <img src="/Content/images/admin/admin-cover.jpg" />
+}
+
+<div class="row">
+    <div class="col-sm-6 col-md-3">
+        <div class="metro-box color-autumn">
+            <i class="fa fa-child"></i>
+            <div class="text-right">
+                <h1>
+                    @Html.LocalizedDisplay(MessageKeyConstants.LABEL_SEMINARS)
+                    <small>
+                        @Html.LocalizedActionLink(MessageKeyConstants.LABEL_ADD, WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_TRAINING) | @Html.LocalizedActionLink(MessageKeyConstants.LABEL_LIST, WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_SEMINAR)
+                    </small>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <div class="metro-box color-spring">
+            <i class="fa fa-graduation-cap"></i>
+            <div class="text-right">
+                <h1>
+                    @Html.LocalizedDisplay(MessageKeyConstants.LABEL_TRAININGS)
+                    <small>
+                        @Html.LocalizedActionLink(MessageKeyConstants.LABEL_ADD, WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_TRAINING) | @Html.LocalizedActionLink(MessageKeyConstants.LABEL_LIST, WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_SEMINAR)
+                    </small>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <div class="metro-box color-fire">
+            <i class="fa fa-user"></i>
+            <div class="text-right">
+                <h1>
+                    @Html.LocalizedDisplay(MessageKeyConstants.LABEL_TEACHERS)
+                    <small>
+                        @Html.LocalizedActionLink(MessageKeyConstants.LABEL_ADD, WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_USER) | @Html.LocalizedActionLink(MessageKeyConstants.LABEL_LIST, WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_USER)
+                    </small>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <div class="metro-box color-amethyst">
+            <i class="fa fa-file-text-o"></i>
+            <div class="text-right">
+                <h1>
+                    @Html.LocalizedDisplay(MessageKeyConstants.LABEL_ARTICLES)
+                    <small>
+                        @Html.LocalizedActionLink(MessageKeyConstants.LABEL_ADD, WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_TRAINING) | @Html.LocalizedActionLink(MessageKeyConstants.LABEL_LIST, WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_SEMINAR)
+                    </small>
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>

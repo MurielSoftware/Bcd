@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[UserDefinable]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL,
+	[CreatedDate] DATETIME NOT NULL,
+	[UpdatedDate] DATETIME NOT NULL,
+	[Public] BIT NOT NULL,
+
+	[UserCreatorId] UNIQUEIDENTIFIER NULL
+)

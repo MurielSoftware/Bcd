@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Vocabulary]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL,
+	[CreatedDate] DATETIME NOT NULL,
+	[UpdatedDate] DATETIME NOT NULL,
+	[Word] NVARCHAR(128) NOT NULL,
+	[Translate] NVARCHAR(MAX) NOT NULL,
+)

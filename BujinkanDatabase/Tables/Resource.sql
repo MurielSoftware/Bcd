@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Resource]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL,
+	[CreatedDate] DATETIME NOT NULL,
+	[UpdatedDate] DATETIME NOT NULL,
+	[Name] NVARCHAR(128) NULL,
+	[Path] NVARCHAR(MAX) NULL
+)

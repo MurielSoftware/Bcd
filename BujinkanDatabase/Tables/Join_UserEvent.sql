@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Join_UserEvent]
+(
+	[EventId] UNIQUEIDENTIFIER NOT NULL,
+	[UserId] UNIQUEIDENTIFIER NOT NULL,
+)

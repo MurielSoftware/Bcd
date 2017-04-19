@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[Product]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL,
+	[Name] NVARCHAR(128) NOT NULL,
+	[Url] NVARCHAR(255) NULL,
+	[Description] NVARCHAR(MAX) NULL,
+	[Prize] INT NULL,
+	[ShowPrize] BIT NOT NULL,
+	[Currency] INT NOT NULL,
+	
+	[CategoryId] UNIQUEIDENTIFIER NOT NULL,
+)

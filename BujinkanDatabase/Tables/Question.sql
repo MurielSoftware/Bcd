@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Question]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL,
+	[CreatedDate] DATETIME NOT NULL,
+	[UpdatedDate] DATETIME NOT NULL,
+	[QuestionMark] NVARCHAR(MAX) NOT NULL,
+	[Answer] NVARCHAR(MAX) NOT NULL,
+)

@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[Link]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL,
+	[CreatedDate] DATETIME NOT NULL,
+	[UpdatedDate] DATETIME NOT NULL,
+	[Name] NVARCHAR(128) NOT NULL,
+	[Url] NVARCHAR(MAX) NOT NULL,
+	[LinkType] INT NOT NULL,
+	[Description] NVARCHAR(MAX) NULL
+)
