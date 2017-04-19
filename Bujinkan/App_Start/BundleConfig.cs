@@ -9,8 +9,7 @@ namespace Bujinkan
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/script-admin").Include(
-                        "~/Scripts/jquery-2.1.4.min.js",
-                        "~/Scripts/jquery-ui.min.js",
+                        "~/Scripts/bootstrap.min.js",
                         "~/Scripts/ff-admin.js"));
 
             bundles.Add(new StyleBundle("~/Content/css-admin").Include(
