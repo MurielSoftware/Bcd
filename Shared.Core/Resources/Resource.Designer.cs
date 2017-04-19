@@ -59,5 +59,149 @@ namespace Shared.Core.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Země.
+        /// </summary>
+        public static string label_country {
+            get {
+                return ResourceManager.GetString("label_country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dan.
+        /// </summary>
+        public static string label_dan {
+            get {
+                return ResourceManager.GetString("label_dan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Popis.
+        /// </summary>
+        public static string label_description {
+            get {
+                return ResourceManager.GetString("label_description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-mail.
+        /// </summary>
+        public static string label_email {
+            get {
+                return ResourceManager.GetString("label_email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facebook.
+        /// </summary>
+        public static string label_facebook {
+            get {
+                return ResourceManager.GetString("label_facebook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jméno.
+        /// </summary>
+        public static string label_firstname {
+            get {
+                return ResourceManager.GetString("label_firstname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heslo.
+        /// </summary>
+        public static string label_password {
+            get {
+                return ResourceManager.GetString("label_password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Telefon.
+        /// </summary>
+        public static string label_phone {
+            get {
+                return ResourceManager.GetString("label_phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Role.
+        /// </summary>
+        public static string label_role {
+            get {
+                return ResourceManager.GetString("label_role", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Příjmení.
+        /// </summary>
+        public static string label_surname {
+            get {
+                return ResourceManager.GetString("label_surname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Titul.
+        /// </summary>
+        public static string label_title {
+            get {
+                return ResourceManager.GetString("label_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Web.
+        /// </summary>
+        public static string label_web {
+            get {
+                return ResourceManager.GetString("label_web", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; je neplatný e-mail.
+        /// </summary>
+        public static string validation_email_message {
+            get {
+                return ResourceManager.GetString("validation_email_message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hodnota &apos;{0}&apos; musí být mezi &apos;{1}&apos; a &apos;{2}&apos;.
+        /// </summary>
+        public static string validation_range_message {
+            get {
+                return ResourceManager.GetString("validation_range_message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hodnota &apos;{0}&apos; je povinná.
+        /// </summary>
+        public static string validation_required_message {
+            get {
+                return ResourceManager.GetString("validation_required_message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; je neplatná url adresa.
+        /// </summary>
+        public static string validation_url_message {
+            get {
+                return ResourceManager.GetString("validation_url_message", resourceCulture);
+            }
+        }
     }
 }

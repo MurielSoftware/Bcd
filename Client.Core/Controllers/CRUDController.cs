@@ -56,7 +56,7 @@ namespace Client.Core.Controllers
         /// <param name="controllerName">The name of the controller</param>
         /// <param name="routeValues">The route values for redirect</param>
         /// <returns>The apropriate View</returns>
-        public virtual ActionResult Create(T dto, object message, string actionName, string controllerName, object routeValues = null)
+        public virtual ActionResult DoCreate(T dto, object message, string actionName, string controllerName, object routeValues = null)
         {
             if(!ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Client.Core.Controllers
         /// <param name="controllerName">The name of the controller of the action to call after success deletion</param>
         /// <param name="message">The message ti display after deletion</param>
         /// <returns>The validation summary if the deletion is not possible or appropriate refreshed view</returns>
-        public virtual ActionResult DeleteConfirmed(Guid id, object message, string actionName, string controllerName, object routeValues = null)
+        public virtual ActionResult DoDeleteConfirmed(Guid id, object message, string actionName, string controllerName, object routeValues = null)
         {
             try
             {
@@ -124,6 +124,6 @@ namespace Client.Core.Controllers
         /// </summary>
         /// <param name="dialogDto">The DTO for dialog</param>
         /// <returns>Returns the appropriate view</returns>
-        public abstract ActionResult DeleteConfirmed();
+        public abstract ActionResult DeleteConfirmed(DialogDto dialogDto);
     }
 }

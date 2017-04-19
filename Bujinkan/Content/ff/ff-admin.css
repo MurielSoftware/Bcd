@@ -16,3 +16,137 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: hidden;
     background-color: #394263;
 }
+
+#page-header {
+    overflow: hidden;
+    max-height: 186px;
+}
+
+.header-section-title {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    padding: 0px 0px 20px 20px;
+    color: #fff;
+}
+
+#page-content {
+    background-color: #eaedf1;
+    padding: 20px 20px;
+    min-height: 720px;
+}
+
+.breadcrumb {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    border-top: 1px solid #dbe1e8;
+    border-bottom: 1px solid #dbe1e8;
+}
+
+.panel {
+    border-radius: 0px;
+}
+
+.panel-heading {
+    background-color: #394263;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 0px;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.panel .panel-heading .nav-tabs {
+    border-bottom: 0px;
+}
+
+.panel .panel-heading .nav-tabs > li > a {
+    border-radius: 0;
+    border: 0px;
+    border-right: 1px solid #ddd;
+    margin-right: 0;
+    color: #fff;
+    padding: 7px 12px;
+}
+
+    .panel .panel-heading .nav-tabs > li > a:hover {
+        color: #394263;
+        background-color: #fff;
+    }
+
+.panel .panel-heading .nav-tabs > li.active > a,
+.panel .panel-heading .nav-tabs > li.active > a:hover,
+.panel .panel-heading .nav-tabs > li.active > a:focus {
+    color: #394263;
+}
+
+.panel hr {
+    border: 0;
+    border-bottom: 1px dashed #eaedf1;
+}
+
+.metro-box {
+    display: block;
+    transition: all .2s ease-out;
+    margin-bottom: 15px;
+    color: #fff;
+    padding: 20px;
+}
+
+.metro-box:hover {
+    transform: scale(1.03);
+    box-shadow: #ccc 0px 3px 8px;
+}
+
+.metro-box a, .metro-box span {
+    color: #eee;
+}
+
+.metro-box .fa {
+    text-align: center;
+    background: #eee;
+    width: 64px;
+    line-height: 64px;
+    border-radius: 64px;
+    display: inline-block;
+    float: left;
+    font-size: 44px;
+}
+
+.metro-box h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #fff;
+    display: block;
+}
+
+.metro-box h1 small {
+    font-size: 16px;
+    margin: 5px 0;
+    display: block;
+}
+
+.color-autumn {
+    background-color: #e67e22;
+    color: #e67e22;
+}
+
+.color-spring {
+    background-color: #27ae60;
+    color: #27ae60;
+}
+
+.color-fire {
+    background-color: #e74c3c;
+    color: #e74c3c;
+}
+
+.color-amethyst {
+    background-color: #af64cc;
+    color: #af64cc
+}
+
+.color-tyrcis {
+    background-color: #1bbae1;
+}

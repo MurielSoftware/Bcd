@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 
-namespace Client.Core.Helpers
+namespace Client.Core.HtmlHelpers
 {
     public static class LocalizedDisplayExtensions
     {
@@ -28,7 +28,7 @@ namespace Client.Core.Helpers
             return DisplayExtensions.DisplayFor(htmlHelper, expression);
         }
 
-        public static MvcHtmlString LocalizedDisplayFor<T>(this HtmlHelper<T> htmlHelper, string resourceKey, string defaultValue = null)
+        public static MvcHtmlString LocalizedDisplay<T>(this HtmlHelper<T> htmlHelper, string resourceKey, string defaultValue = null)
         {
             if(string.IsNullOrEmpty(resourceKey))
             {

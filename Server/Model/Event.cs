@@ -30,6 +30,7 @@ namespace Server.Model
         public virtual short? Prepayment { get; set; }
         public virtual DateTime? PrepaymentDeadline { get; set; }
         public virtual string AccountNumber { get; set; }
+        public virtual string Discriminator { get; set; }
 
         public virtual Guid? CountryId { get; set; }
 

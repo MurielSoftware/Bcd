@@ -30,6 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,8 +61,10 @@
     <Compile Include="Context\IDatabaseContext.cs" />
     <Compile Include="Context\IUnitOfWork.cs" />
     <Compile Include="Dtos\BaseDto.cs" />
+    <Compile Include="Dtos\BaseFilterDto.cs" />
     <Compile Include="Dtos\BulkCreates\BulkCreateDto.cs" />
     <Compile Include="Dtos\BulkCreates\RecordDelimiter.cs" />
+    <Compile Include="Dtos\DialogDto.cs" />
     <Compile Include="Dtos\MenuItems\MenuItemAssociationType.cs" />
     <Compile Include="Dtos\MenuItems\MenuItemDto.cs" />
     <Compile Include="Dtos\MenuItems\MenuItemEntityType.cs" />
@@ -71,6 +81,7 @@
     </Compile>
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\ICRUDService.cs" />
+    <Compile Include="Services\IPagedListAdministrationReaderService.cs" />
     <Compile Include="Services\IService.cs" />
     <Compile Include="Utils\ResourceUtils.cs" />
     <Compile Include="Utils\StringUtils.cs" />

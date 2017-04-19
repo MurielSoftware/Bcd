@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 
-namespace Client.Core.Helpers
+namespace Client.Core.HtmlHelpers
 {
     public static class LocalizedActionLinkExtensions
     {

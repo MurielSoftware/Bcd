@@ -1,6 +1,6 @@
 ﻿@model PagedList.IPagedList<Shared.Dtos.Users.UserDto>
 
-@using Client.Core.Helpers
+@using Client.Core.HtmlHelpers
 @using Shared.Core.Constants
 @using PagedList.Mvc
 
@@ -10,7 +10,7 @@
         <thead>
             <tr role="row">
                 <th class="th-icon"></th>
-                <th>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_FIRST_NAME)</th>
+                <th>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_FIRSTNAME)</th>
                 <th>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_EMAIL)</th>
                 <th>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_PHONE)</th>
                 <th class="th-administration-box"></th>

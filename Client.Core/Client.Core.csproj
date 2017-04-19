@@ -48,7 +48,8 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
-    <Compile Include="Helpers\LocalizedDisplayExtensions.cs" />
+    <Compile Include="HtmlHelpers\LocalizedActionLinkExtensions.cs" />
+    <Compile Include="HtmlHelpers\LocalizedDisplayExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

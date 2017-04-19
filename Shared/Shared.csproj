@@ -46,6 +46,7 @@
     <Compile Include="Dtos\UserDefinableDto.cs" />
     <Compile Include="Dtos\Users\BujinkanTitle.cs" />
     <Compile Include="Dtos\Users\UserDto.cs" />
+    <Compile Include="Dtos\Users\UserFilterDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Trainings\ITrainingCRUDService.cs" />
     <Compile Include="Services\Users\IUserCRUDService.cs" />

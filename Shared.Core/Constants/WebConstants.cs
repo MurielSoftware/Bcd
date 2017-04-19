@@ -18,6 +18,7 @@ namespace Shared.Core.Constants
         public const string VIEW_LIST = "List";
         public const string VIEW_PROFILE = "Profil";
         public const string VIEW_FILTER = "Filter";
+        public const string VIEW_PAGED_LIST = "PagedList";
 
         public const string DIALOG_CHANGE_PASSWORD = "DialogChangePassword";
         public const string DIALOG_CONFIRMATION = "DialogConfirmation";

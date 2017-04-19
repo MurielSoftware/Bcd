@@ -8,5 +8,6 @@ namespace Shared.Core.Constants
 {
     public class SharedConstants
     {
+        public const int PAGE_SIZE = 15;
     }
 }

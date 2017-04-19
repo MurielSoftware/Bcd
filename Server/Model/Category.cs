@@ -11,6 +11,7 @@ namespace Server.Model
     public class Category : BaseEntity
     {
         public virtual string Name { get; set; }
+        public virtual string Discriminator { get; set; }
 
         public override string ToString()
         {

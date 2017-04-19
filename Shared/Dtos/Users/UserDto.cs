@@ -16,7 +16,7 @@ namespace Shared.Dtos.Users
         [Display(Name = MessageKeyConstants.LABEL_TITLE, ResourceType = typeof(Resource))]
         public virtual BujinkanTitle BujinkanTitle { get; set; }
 
-        [Display(Name = MessageKeyConstants.LABEL_FIRST_NAME, ResourceType = typeof(Resource))]
+        [Display(Name = MessageKeyConstants.LABEL_FIRSTNAME, ResourceType = typeof(Resource))]
         [Required(ErrorMessageResourceName = MessageKeyConstants.VALIDATION_REQUIRED_MESSAGE, ErrorMessageResourceType = typeof(Resource))]
         public virtual string FirstName { get; set; }
 

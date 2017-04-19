@@ -1,4 +1,9 @@
-﻿.ribbon {
+﻿.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.ribbon {
     width: 100%;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
@@ -70,6 +75,7 @@ ul.ribbon-group {
     padding: 0 5px;
     display: inline-block;
     list-style: none;
+    margin-bottom: 0;
 }
 
 ul.ribbon-group li {
@@ -78,7 +84,7 @@ ul.ribbon-group li {
     display: block;
 }
 
-ul.ribbon-group /*li*/.ribbon-group-title {
+ul.ribbon-group .ribbon-group-title {
     clear: both;
     text-align: center;
     padding-top: 4px;
@@ -88,7 +94,7 @@ ul.ribbon-group /*li*/.ribbon-group-title {
 .ribbon-button {
     display: inline-block;
     text-align: center;
-    padding: 2px;
+    padding: 2px 4px;
     position: relative;
 }
 
