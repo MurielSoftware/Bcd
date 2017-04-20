@@ -8,6 +8,6 @@ namespace Shared.Core.Dtos
 {
     public class ReferencedDto : BaseDto
     {
-        public string Name { get; set; }
+        public string Label { get; set; }
     }
 }

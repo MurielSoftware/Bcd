@@ -29,5 +29,10 @@ namespace Bujinkan.Areas.Admin.Controllers
             ViewBag.FilterDto = userFilterDto;
             return PartialView(WebConstants.VIEW_PAGED_LIST, GetService().ReadAdministrationPaged(userFilterDto));
         }
+
+        public JsonResult GetByPrefix(string prefix)
+        {
+            return Json(new List<ReferencedDto>() { new ReferencedDto() { Id = Guid.NewGuid(), Label = "lbl" } });
+        }
     }
 }

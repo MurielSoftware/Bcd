@@ -1,8 +1,8 @@
 ﻿.input-autocomplete-frame {
     border: 1px solid #000;
     display: inline-block;
-    padding: 5px;
     background-color: #fff;
+    padding: 5px;
 }
 
 .autocomplete input, .autocomplete input:hover, .autocomplete input:focus {
@@ -12,25 +12,36 @@
 .autocomplete ul {
     list-style: none;
     padding: 0;
-    margin-top: 5px;
-    background-color: white;
+    background-color: #fefefe;
     cursor: pointer;
     position: absolute;
-    height: 40px;
+    height: 60px;
     overflow: auto;
     display: none;
+    border: 1px solid #000;
+    margin-top: 5px;
+    margin-left: -6px;
 }
 
-.autocomplete li:hover, .autocomplete .select {
-    background-color: lightblue;
+.autocomplete li {
+    padding: 4px;
 }
 
-.autocomplete .autocomplete-item {
+    .autocomplete li:hover, .autocomplete .select {
+        background-color: #1bbae1;
+        color: #eee;
+    }
+
+.autocomplete-item {
     padding: 2px 5px;
-    color: white;
-    background-color: blue;
+    color: #eee;
+    background-color: #1bbae1;
     display: inline-block;
     margin-right: 5px;
+}
+
+.autocomplete-item:hover {
+    background: #394263;
 }
 
 .autocomplete-remove {
