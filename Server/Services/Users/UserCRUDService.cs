@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Shared.Core.Context;
 using PagedList;
 using Server.Daos;
+using Shared.Core.Dtos;
 
 namespace Server.Services.Users
 {
@@ -20,6 +21,11 @@ namespace Server.Services.Users
             : base(unitOfWork)
         {
             _userDao = new UserDao(unitOfWork);
+        }
+
+        public List<ReferencedDto> GetByPrefix(UserFilterDto userFilterDto)
+        {
+            return _userDao.FindByPrefix(userFilterDto.Surname, x => new ReferencedDto() { Id = x.Id, Label = x.FirstName + " " + x.Surname });
         }
 
         public IPagedList<UserDto> ReadAdministrationPaged(UserFilterDto userFilterDto)

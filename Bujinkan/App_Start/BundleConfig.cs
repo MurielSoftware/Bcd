@@ -19,6 +19,7 @@ namespace Bujinkan
                         "~/Content/bootstrap.min.css",
                         "~/Content/bootstrap-datepicker.min.css",
                         "~/Content/font-awesome.min.css",
+                        "~/Content/ff/ff-richtextbox.css",
                         "~/Content/ff/ff-ribbon.css",
                         "~/Content/ff/ff-reference.css",
                         "~/Content/ff/ff-admin.css"));

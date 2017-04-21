@@ -44,6 +44,7 @@ namespace Shared.Dtos.Users
         public virtual string Phone { get; set; }
 
         [Display(Name = MessageKeyConstants.LABEL_DAN, ResourceType = typeof(Resource))]
+        [Range(1, 15, ErrorMessageResourceName = MessageKeyConstants.VALIDATION_RANGE_MESSAGE, ErrorMessageResourceType = typeof(Resource))]
         public virtual short? Dan { get; set; }
 
         public virtual int Order { get; set; }
@@ -55,13 +56,16 @@ namespace Shared.Dtos.Users
         public virtual Guid? DojoId { get; set; }
         public virtual Guid RoleId { get; set; }
 
-        [Reference(DaoConstants.COUNTRY_ID)]
+        [Reference(DaoConstants.ATTRIBUTE_COUNTRY)]
+        [Display(Name = MessageKeyConstants.LABEL_COUNTRY, ResourceType = typeof(Resource))]
         public virtual ReferenceString CountryReference { get; set; }
 
-        [Reference(DaoConstants.DOJO_ID)]
+        [Reference(DaoConstants.ATTRIBUTE_DOJO)]
+        [Display(Name = MessageKeyConstants.LABEL_DOJO, ResourceType = typeof(Resource))]
         public virtual ReferenceString DojoReference { get; set; }
 
-        [Reference(DaoConstants.ROLE_ID)]
+        [Reference(DaoConstants.ATTRIBUTE_ROLE)]
+        [Display(Name = MessageKeyConstants.LABEL_ROLE, ResourceType = typeof(Resource))]
         public virtual ReferenceString RoleReference { get; set; }
 
         public virtual bool HasTrainings { get; set; }

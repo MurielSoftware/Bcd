@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared.Dtos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -15,12 +16,12 @@ namespace Server.Model
         public virtual string Description { get; set; }
         public virtual int? Prize { get; set; }
         public virtual bool ShowPrize { get; set; }
-//        public virtual Currency Currency { get; set; }
+        public virtual Currency Currency { get; set; }
 
-        public virtual Guid ProductCategoryId { get; set; }
+        public virtual Guid CategoryId { get; set; }
 
-        [ForeignKey("ProductCategoryId")]
-        public virtual ProductCategory ProductCategory { get; set; }
+        [ForeignKey("CategoryId")]
+        public virtual ProductCategory Category { get; set; }
 
         public override string ToString()
         {

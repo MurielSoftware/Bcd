@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Server.Model
 {
-    public class ProductCategory : Category
+    public class LinkCategory : Category
     {
-        public static string DISC = "PRODUCT";
+        public static string DISC = "LINK";
     }
 }

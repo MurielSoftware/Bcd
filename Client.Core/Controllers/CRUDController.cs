@@ -2,6 +2,7 @@
 using Shared.Core.Constants;
 using Shared.Core.Dtos;
 using Shared.Core.Exceptions;
+using Shared.Core.Messages;
 using Shared.Core.Services;
 using System;
 using System.Collections.Generic;
@@ -56,7 +57,7 @@ namespace Client.Core.Controllers
         /// <param name="controllerName">The name of the controller</param>
         /// <param name="routeValues">The route values for redirect</param>
         /// <returns>The apropriate View</returns>
-        public virtual ActionResult DoCreate(T dto, object message, string actionName, string controllerName, object routeValues = null)
+        public virtual ActionResult DoCreate(T dto, Message message, string actionName, string controllerName, object routeValues = null)
         {
             if(!ModelState.IsValid)
             {
@@ -86,7 +87,7 @@ namespace Client.Core.Controllers
         /// <param name="controllerName">The name of the controller of the action to call after success deletion</param>
         /// <param name="message">The message ti display after deletion</param>
         /// <returns>The validation summary if the deletion is not possible or appropriate refreshed view</returns>
-        public virtual ActionResult DoDeleteConfirmed(Guid id, object message, string actionName, string controllerName, object routeValues = null)
+        public virtual ActionResult DoDeleteConfirmed(Guid id, Message message, string actionName, string controllerName, object routeValues = null)
         {
             try
             {

@@ -8,6 +8,6 @@ namespace Server.Model
 {
     public class Seminar : Event
     {
-        public static string DISC = "Seminar";
+        public static string DISC = "SEMINAR";
     }
 }

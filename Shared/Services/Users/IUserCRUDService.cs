@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Services.Users
 {
-    public interface IUserCRUDService : ICRUDService<UserDto>, IPagedListAdministrationReaderService<UserDto, UserFilterDto>
+    public interface IUserCRUDService : ICRUDService<UserDto>, IPagedListAdministrationReaderService<UserDto, UserFilterDto>, IReferenceService<UserFilterDto>
     {
     }
 }

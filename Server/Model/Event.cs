@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Shared.Dtos;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 namespace Server.Model
 {
     [Table("EVENT")]
-    public class Event : UserDefinable
+    public abstract class Event : UserDefinable
     {
         public virtual string Theme { get; set; }
         public virtual DateTime Start { get; set; }
@@ -22,7 +24,7 @@ namespace Server.Model
         public virtual bool ShowPrize { get; set; }
         public virtual short? PrizeMember { get; set; }
         public virtual short? PrizeNomember { get; set; }
-     //   public virtual Currency Currency { get; set; }
+        public virtual Currency Currency { get; set; }
         public virtual bool EnableRegistration { get; set; }
         public virtual DateTime? RegistrationDeadline { get; set; }
         public virtual int CurrentParticipiants { get; set; }
@@ -30,7 +32,9 @@ namespace Server.Model
         public virtual short? Prepayment { get; set; }
         public virtual DateTime? PrepaymentDeadline { get; set; }
         public virtual string AccountNumber { get; set; }
-        public virtual string Discriminator { get; set; }
+
+        //[Required]
+        //public virtual string Discriminator { get; set; }
 
         public virtual Guid? CountryId { get; set; }
 

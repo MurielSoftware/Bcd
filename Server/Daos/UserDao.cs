@@ -7,6 +7,8 @@ using Shared.Core.Context;
 using Shared.Dtos.Users;
 using PagedList;
 using Server.Model;
+using System.Linq.Expressions;
+using Shared.Core.Dtos;
 
 namespace Server.Daos
 {
@@ -17,11 +19,30 @@ namespace Server.Daos
         {
         }
 
+        /// <summary>
+        /// Finds paged users.
+        /// </summary>
+        /// <param name="userFilterDto">The filtering DTO</param>
+        /// <returns>The User DTO page</returns>
         internal IPagedList<UserDto> FindPaged(UserFilterDto userFilterDto)
         {
             return _modelContext.Set<User>()
                 .Select(x => new UserDto() { Id = x.Id, BujinkanTitle = x.BujinkanTitle, FirstName = x.FirstName, Surname = x.Surname })
                 .ToPagedList(userFilterDto.Page, userFilterDto.PageSize);
+        }
+
+        /// <summary>
+        /// Finds the user by prefix which is 
+        /// </summary>
+        /// <param name="prefix">The prefix for search the users</param>
+        /// <param name="selector">The specific selector</param>
+        /// <returns>The list of the referenced DTOs</returns>
+        internal List<ReferencedDto> FindByPrefix(string prefix, Expression<Func<User, ReferencedDto>> selector)
+        {
+            return _modelContext.Set<User>()
+                .Where(x => x.FirstName.Contains(prefix) || x.Surname.Contains(prefix))
+                .Select(selector)
+                .ToList();
         }
     }
 }

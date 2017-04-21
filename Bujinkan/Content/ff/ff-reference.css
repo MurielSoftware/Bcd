@@ -21,16 +21,17 @@
     border: 1px solid #000;
     margin-top: 5px;
     margin-left: -6px;
+    z-index: 1000;
 }
 
 .autocomplete li {
     padding: 4px;
 }
 
-    .autocomplete li:hover, .autocomplete .select {
-        background-color: #1bbae1;
-        color: #eee;
-    }
+.autocomplete li:hover, .autocomplete .select {
+    background-color: #1bbae1;
+    color: #eee;
+}
 
 .autocomplete-item {
     padding: 2px 5px;

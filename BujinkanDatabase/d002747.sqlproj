@@ -88,7 +88,7 @@
     <Build Include="Tables\UserDefinables\User.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="Data\Script.PostDeployment.sql" />
+    <PostDeploy Include="Data\Script.BuiltIn.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="d002747.publish.xml" />

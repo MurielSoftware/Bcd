@@ -46,6 +46,7 @@ namespace Server.Context
         {
             modelBuilder.Entity<Category>()
                 .Map<BlogCategory>(m => m.Requires("Discriminator").HasValue(BlogCategory.DISC))
+                .Map<LinkCategory>(m => m.Requires("Discriminator").HasValue(LinkCategory.DISC))
                 .Map<ProductCategory>(m => m.Requires("Discriminator").HasValue(ProductCategory.DISC));
 
             modelBuilder.Entity<Event>()

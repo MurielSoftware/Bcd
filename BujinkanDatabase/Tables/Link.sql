@@ -5,6 +5,7 @@
 	[UpdatedDate] DATETIME NOT NULL,
 	[Name] NVARCHAR(128) NOT NULL,
 	[Url] NVARCHAR(MAX) NOT NULL,
-	[LinkType] INT NOT NULL,
-	[Description] NVARCHAR(MAX) NULL
+	[Description] NVARCHAR(MAX) NULL,
+
+	[CategoryId] UNIQUEIDENTIFIER NOT NULL
 )

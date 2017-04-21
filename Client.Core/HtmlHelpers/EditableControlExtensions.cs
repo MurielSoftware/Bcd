@@ -82,8 +82,6 @@ namespace Client.Core.HtmlHelpers
             tagBuilder.MergeAttribute("name", propertyName);
             tagBuilder.InnerHtml = text;
             return MvcHtmlString.Create(tagBuilder.ToString());
-
-            //  return ExtensionsUtil.CreateLabel(propertyName, referenceString.GetValues(), htmlAttributes).ToString();
         }
     }
 }

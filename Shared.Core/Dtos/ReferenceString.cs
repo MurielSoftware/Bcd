@@ -16,7 +16,6 @@ namespace Shared.Core.Dtos
 
         public ReferenceString()
         {
-
         }
 
         public ReferenceString(string value)

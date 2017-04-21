@@ -12,9 +12,12 @@ namespace Server.Model
     {
         public virtual string Name { get; set; }
         public virtual string Url { get; set; }
-      //  public virtual LinkType LinkType { get; set; }
-
         public virtual string Description { get; set; }
+
+        public virtual Guid CategoryId { get; set; }
+
+        [ForeignKey("CategoryId")]
+        public virtual LinkCategory Category { get; set; }
 
         public override string ToString()
         {

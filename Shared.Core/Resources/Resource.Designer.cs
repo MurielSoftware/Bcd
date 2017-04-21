@@ -88,6 +88,15 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dojo.
+        /// </summary>
+        public static string label_dojo {
+            get {
+                return ResourceManager.GetString("label_dojo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to E-mail.
         /// </summary>
         public static string label_email {
@@ -111,6 +120,15 @@ namespace Shared.Core.Resources {
         public static string label_firstname {
             get {
                 return ResourceManager.GetString("label_firstname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jméno.
+        /// </summary>
+        public static string label_name {
+            get {
+                return ResourceManager.GetString("label_name", resourceCulture);
             }
         }
         

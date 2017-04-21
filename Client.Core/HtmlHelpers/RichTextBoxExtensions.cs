@@ -25,7 +25,7 @@ namespace Client.Core.HtmlHelpers
             string controllerName = htmlHelper.ViewContext.RouteData.GetRequiredString("controller");
 
             TagBuilder tagBuilder = new TagBuilder("div");
-            tagBuilder.MergeAttributes(HtmlHelper.AnonymousObjectToHtmlAttributes(new { @class = "richTextBox", data_save_action = "/Admin/" + controllerName + "/Create" }));
+            tagBuilder.MergeAttributes(HtmlHelper.AnonymousObjectToHtmlAttributes(new { @class = "richtextbox", data_save_action = "/Admin/" + controllerName + "/Create" }));
             tagBuilder.InnerHtml = CreateToolbar(htmlHelper, metadata, imageSupport) + CreateTextArea<T, U>(htmlHelper, metadata, expression);
             return MvcHtmlString.Create(tagBuilder.ToString());
         }
@@ -33,7 +33,7 @@ namespace Client.Core.HtmlHelpers
         private static string CreateToolbar<T>(this HtmlHelper<T> htmlHelper, ModelMetadata metadata, bool imageSupport)
         {
             TagBuilder tagBuilder = new TagBuilder("div");
-            tagBuilder.MergeAttributes(HtmlHelper.AnonymousObjectToHtmlAttributes(new { @class = "richTextBox-toolbar btn-toolbar", role = "toolbar" }));
+            tagBuilder.MergeAttributes(HtmlHelper.AnonymousObjectToHtmlAttributes(new { @class = "richtextbox-toolbar btn-toolbar", role = "toolbar" }));
             tagBuilder.InnerHtml = CreateFormatButtonGroup() + CreateJustifyButtonGroup() + CreateListButtonGroup() + CreateExtendButtonGroup<T>(htmlHelper, metadata, imageSupport);
             return tagBuilder.ToString();
         }

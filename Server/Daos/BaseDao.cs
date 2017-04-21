@@ -15,11 +15,6 @@ namespace Server.Daos
 
         internal BaseDao(IUnitOfWork unitOfWork)
         {
-            //var watch = System.Diagnostics.Stopwatch.StartNew();
-            //_bujinkanContext = new BujinkanContext();
-            ////_bujinkanContext.Set<User>().ToList();
-            ////watch.Stop();
-            ////var elapsedMs = watch.ElapsedMilliseconds;
             _modelContext = (BujinkanContext)unitOfWork.GetContext();
         }
 

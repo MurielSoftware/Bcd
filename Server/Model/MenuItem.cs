@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared.Core.Dtos.MenuItems;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -14,8 +15,8 @@ namespace Server.Model
         public virtual string Url { get; set; }
         public virtual bool BuiltIn { get; set; }
         public virtual int Order { get; set; }
-   //     public virtual MenuEntityType EntityType { get; set; }
-     //   public virtual AssociationType AssociationType { get; set; }
+        public virtual MenuItemEntityType EntityType { get; set; }
+        public virtual MenuItemAssociationType AssociationType { get; set; }
         public virtual Guid? BlogCategoryId { get; set; }
         public virtual int Level { get; set; }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared.Dtos.Galleries;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Server.Model
 
         public virtual string Name { get; set; }
         public virtual DateTime Date { get; set; }
-      //  public virtual GalleryType GalleryType { get; set; }
+        public virtual GalleryType GalleryType { get; set; }
         public virtual string Description { get; set; }
 
         public virtual Guid? CoverPhotoId { get; set; }

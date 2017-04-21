@@ -8,6 +8,6 @@ namespace Server.Model
 {
     public class BlogCategory : Category
     {
-        public static string DISC = "Blog";
+        public static string DISC = "BLOG";
     }
 }

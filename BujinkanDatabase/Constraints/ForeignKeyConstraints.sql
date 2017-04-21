@@ -65,3 +65,7 @@ GO
 /* Actuality */
 ALTER TABLE [dbo].[Actuality] ADD CONSTRAINT [FK_Actuality_UserDefinable] FOREIGN KEY ([UserDefinableId]) REFERENCES [dbo].[UserDefinable] (Id)
 GO
+
+/* Link */
+ALTER TABLE [dbo].[Link] ADD CONSTRAINT [FK_Link_Category] FOREIGN KEY ([CategoryId]) REFERENCES [dbo].[Category] (Id)
+GO

@@ -21,19 +21,10 @@ namespace Client.Core.HtmlHelpers
             {
                 return null;
             }
-
             TagBuilder tagBuilder = new TagBuilder("div");
             tagBuilder.MergeAttributes(HtmlHelper.AnonymousObjectToHtmlAttributes(new { @class = "alert alert-danger", role = "alert"}));
             tagBuilder.InnerHtml = "<span><i class='fa fa-warning'></i></span> <strong>Chyba</strong><br />Došlo k těmto chybám:" + ValidationExtensions.ValidationSummary(htmlHelper).ToString();
-
             return MvcHtmlString.Create(tagBuilder.ToString());
-            //StringBuilder sb = new StringBuilder();
-            //sb.Append("<div class='alert alert-danger' role='alert'>");
-            //sb.Append("<span><i class='fa fa-warning'></i></span> <strong>Chyba</strong><br />Došlo k těmto chybám:");
-            //sb.Append(ValidationExtensions.ValidationSummary(htmlHelper).ToString());
-            //sb.Append("</div>");
-
-            //return MvcHtmlString.Create(sb.ToString());
         }
     }
 }

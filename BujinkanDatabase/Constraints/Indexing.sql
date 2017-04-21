@@ -47,3 +47,7 @@ GO
 /* UsrDefinable */
 CREATE NONCLUSTERED INDEX [IX_UserDefinable_User] ON [dbo].[UserDefinable] ([UserCreatorId])
 GO
+
+/* Link */
+CREATE NONCLUSTERED INDEX [IX_Link_CategoryId] ON [dbo].[Link] ([CategoryId])
+GO

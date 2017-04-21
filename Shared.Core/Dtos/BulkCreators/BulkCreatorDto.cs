@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shared.Core.Dtos.BulkCreates
+namespace Shared.Core.Dtos.BulkCreators
 {
-    class BulkCreateDto
+    public class BulkCreatorDto
     {
     }
 }

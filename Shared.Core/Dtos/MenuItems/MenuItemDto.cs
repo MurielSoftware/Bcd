@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Core.Dtos.MenuItems
 {
-    class MenuItemDto
+    public class MenuItemDto
     {
     }
 }

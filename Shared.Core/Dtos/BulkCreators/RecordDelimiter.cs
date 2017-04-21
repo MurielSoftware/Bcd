@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Server.Model
+namespace Shared.Core.Dtos.BulkCreators
 {
-    public class ProductCategory : Category
+    public class RecordDelimiter
     {
-        public static string DISC = "PRODUCT";
     }
 }

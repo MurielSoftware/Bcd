@@ -8,9 +8,18 @@ namespace Shared.Core.Constants
 {
     public class DaoConstants
     {
-        public const string EMAIL = "Email";
-        public const string FIRSTNAME = "FirstName";
-        public const string SURNAME = "Surname";
+        public const string ENTITY_BLOG = "Blog";
+        public const string ENTITY_EVENT = "Event";
+        public const string ENTITY_PRODUCT = "Product";
+        public const string ENTITY_SEMINAR = "Seminar";
+        public const string ENTITY_TEACHER = "Teacher";
+
+        public const string ATTRIBUTE_EMAIL = "Email";
+        public const string ATTRIBUTE_FIRSTNAME = "FirstName";
+        public const string ATTRIBUTE_SURNAME = "Surname";
+        public const string ATTRIBUTE_COUNTRY = "Country";
+        public const string ATTRIBUTE_ROLE = "Role";
+        public const string ATTRIBUTE_DOJO = "Dojo";
 
         public const string COUNTRY_ID = "CountryId";
         public const string DOJO_ID = "DojoId";

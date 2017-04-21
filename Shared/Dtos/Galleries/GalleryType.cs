@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shared.Core.Dtos.BulkCreates
+namespace Shared.Dtos.Galleries
 {
-    class RecordDelimiter
+    public enum GalleryType
     {
+        GALLERY,
+        ALBUM,
+        ARTICLE
     }
 }

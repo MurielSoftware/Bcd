@@ -126,6 +126,9 @@
   <data name="label_description" xml:space="preserve">
     <value>Popis</value>
   </data>
+  <data name="label_dojo" xml:space="preserve">
+    <value>Dojo</value>
+  </data>
   <data name="label_email" xml:space="preserve">
     <value>E-mail</value>
   </data>
@@ -133,6 +136,9 @@
     <value>Facebook</value>
   </data>
   <data name="label_firstname" xml:space="preserve">
+    <value>Jméno</value>
+  </data>
+  <data name="label_name" xml:space="preserve">
     <value>Jméno</value>
   </data>
   <data name="label_password" xml:space="preserve">

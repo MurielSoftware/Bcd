@@ -69,10 +69,8 @@ namespace Client.Core.HtmlHelpers
             if (selectedValue == null)
             {
                 return DivExtensions.CreateDiv<T>(htmlHelper, selectListItem.First().Text, htmlAttributes);
-                //return MvcHtmlString.Create(selectListItem.First().Text);
             }
             return DivExtensions.CreateDiv<T>(htmlHelper, selectedValue.Text, htmlAttributes);
-            //return MvcHtmlString.Create(selectedValue.Text);
         }
 
         /// <summary>

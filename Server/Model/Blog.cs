@@ -15,13 +15,13 @@ namespace Server.Model
         public virtual bool BuiltIn { get; set; }
 
         public virtual Guid? UserId { get; set; }
-        public virtual Guid BlogCategoryId { get; set; }
+        public virtual Guid CategoryId { get; set; }
 
         [ForeignKey("UserId")]
         public virtual User User { get; set; }
 
-        [ForeignKey("BlogCategoryId")]
-        public virtual BlogCategory BlogCategory { get; set; }
+        [ForeignKey("CategoryId")]
+        public virtual BlogCategory Category { get; set; }
 
 
         public override string ToString()

@@ -28,16 +28,20 @@ namespace Client.Core.HtmlHelpers
         /// <returns>Returns the reference control</returns>
         public static MvcHtmlString ReferenceFor<T, U>(this HtmlHelper<T> htmlHelper, Expression<Func<T, U>> expression, string name, string action, int maximum)
         {
-            ModelMetadata metadataId = ModelMetadata.FromLambdaExpression(expression, htmlHelper.ViewData);
-            string referenceIconName = name + "reference";
-            StringBuilder sb = new StringBuilder();
-            sb.Append("<div class='ui-autocomplete-multiselect ui-state-default'>");
-            sb.Append("<div class=\"input-group\">");
-            sb.Append(InputExtensions.TextBox(htmlHelper, name, null, new { data_action = action, data_maximum_item = maximum, aria_describedby = referenceIconName }));
-            sb.Append("<div class=\"input-group-addon\"><i class=\"fa fa-ellipsis-h\"></i></div>");
-            sb.Append(InputExtensions.HiddenFor(htmlHelper, expression));
-            sb.Append("</div></div>");
-            return MvcHtmlString.Create(sb.ToString());
+            TagBuilder ul = new TagBuilder("ul");
+            TagBuilder inputAutocomplete = new TagBuilder("input");
+            inputAutocomplete.AddCssClass("input-autocomplete" );
+            TagBuilder autocompleteHidden = new TagBuilder("input");
+            autocompleteHidden.AddCssClass("input-autocomplete-hidden");
+            TagBuilder autocompleteFrame = new TagBuilder("div");
+            autocompleteFrame.AddCssClass("input-autocomplete-frame");
+            TagBuilder divAutocomplete = new TagBuilder("div");
+            divAutocomplete.MergeAttribute("data-action", action);
+            divAutocomplete.AddCssClass("autocomplete");
+
+            autocompleteFrame.InnerHtml = inputAutocomplete.ToString() + ul.ToString();
+            divAutocomplete.InnerHtml = autocompleteFrame.ToString() + autocompleteHidden.ToString();
+            return MvcHtmlString.Create(divAutocomplete.ToString());
         }
 
         /// <summary>

@@ -7,6 +7,6 @@
 	[Prize] INT NULL,
 	[ShowPrize] BIT NOT NULL,
 	[Currency] INT NOT NULL,
-	
+
 	[CategoryId] UNIQUEIDENTIFIER NOT NULL,
 )

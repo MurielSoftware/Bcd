@@ -13,9 +13,14 @@
         var selectedObjects = {};
         var currentValue = "";
         var isDataLoadingExecuted = false;
-        
+
+        options.action = $(this).data("action");
+
         input.keyup(function (e) {
             currentValue = $(this).val();
+            if (list.find("li").length == 0) {
+                list.append("<li>Načítám...</li>");
+            }
             list.css("width", autocomplete.width() + 12);
             list.css("display", "block");
 
@@ -76,12 +81,14 @@
                 delete selectedObjects[prev.val()];
                 prev.remove();
                 updateIds(hidden, selectedObjects);
+                list.empty();
                 list.css("display", "none");
                 return;
             }
         }
 
         function keyEscape() {
+            list.empty();
             list.css("display", "none");
         }
 
@@ -149,9 +156,13 @@
                         }
                     });
                     var listItems = "";
-                    $.each(suggestions, function (index, item) {
-                        listItems = listItems + "<li>" + item.label + "</li>"
-                    });
+                    if (suggestions.length == 0) {
+                        listItems = "<li>Nic nebylo nalezeno</li>";
+                    } else {
+                        $.each(suggestions, function (index, item) {
+                            listItems = listItems + "<li>" + item.label + "</li>"
+                        });
+                    }
                     list.html(listItems);
                     isDataLoadingExecuted = false;
                 });
@@ -173,7 +184,7 @@
     //});
 
     $.fn.autocomplete.defaults = {
-        action: "/Admin/User/GetByPrefix"
+        action: ""
     };
 }(jQuery));
 

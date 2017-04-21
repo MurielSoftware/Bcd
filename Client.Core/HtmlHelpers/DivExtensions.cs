@@ -24,8 +24,6 @@ namespace Client.Core.HtmlHelpers
             tagBuilder.MergeAttributes(HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes));
             tagBuilder.InnerHtml = text;
             return MvcHtmlString.Create(tagBuilder.ToString());
-
-            //  return ExtensionsUtil.CreateLabel(propertyName, referenceString.GetValues(), htmlAttributes).ToString();
         }
     }
 }
