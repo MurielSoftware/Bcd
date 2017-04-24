@@ -70,6 +70,15 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Administrace dat.
+        /// </summary>
+        public static string label_create_update_delete_all {
+            get {
+                return ResourceManager.GetString("label_create_update_delete_all", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dan.
         /// </summary>
         public static string label_dan {
@@ -97,6 +106,15 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Administrace dojo.
+        /// </summary>
+        public static string label_dojo_creation {
+            get {
+                return ResourceManager.GetString("label_dojo_creation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to E-mail.
         /// </summary>
         public static string label_email {
@@ -120,6 +138,15 @@ namespace Shared.Core.Resources {
         public static string label_firstname {
             get {
                 return ResourceManager.GetString("label_firstname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Administrace menu.
+        /// </summary>
+        public static string label_menu_creation {
+            get {
+                return ResourceManager.GetString("label_menu_creation", resourceCulture);
             }
         }
         
@@ -160,6 +187,15 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Administrace rolí.
+        /// </summary>
+        public static string label_role_creation {
+            get {
+                return ResourceManager.GetString("label_role_creation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Příjmení.
         /// </summary>
         public static string label_surname {
@@ -174,6 +210,15 @@ namespace Shared.Core.Resources {
         public static string label_title {
             get {
                 return ResourceManager.GetString("label_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Administrace uživatelů.
+        /// </summary>
+        public static string label_user_creation {
+            get {
+                return ResourceManager.GetString("label_user_creation", resourceCulture);
             }
         }
         

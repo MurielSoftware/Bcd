@@ -13,9 +13,10 @@ namespace Bujinkan.Areas.Admin.Controllers
 {
     public class RoleController : DialogCRUDController<RoleDto, IRoleCRUDService>
     {
-        public override ActionResult Create(RoleDto dto)
+        [HttpPost, ValidateInput(false)]
+        public override ActionResult Create(RoleDto roleDto)
         {
-            throw new NotImplementedException();
+            return DoCreate(roleDto, null, WebConstants.VIEW_PAGED_LIST, WebConstants.CONTROLLER_ROLE, null, HtmlConstants.PAGED_LIST_ROLE);
         }
 
         public override ActionResult DeleteConfirmed(DialogDto dialogDto)

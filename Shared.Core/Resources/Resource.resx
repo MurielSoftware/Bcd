@@ -120,6 +120,9 @@
   <data name="label_country" xml:space="preserve">
     <value>Země</value>
   </data>
+  <data name="label_create_update_delete_all" xml:space="preserve">
+    <value>Administrace dat</value>
+  </data>
   <data name="label_dan" xml:space="preserve">
     <value>Dan</value>
   </data>
@@ -129,6 +132,9 @@
   <data name="label_dojo" xml:space="preserve">
     <value>Dojo</value>
   </data>
+  <data name="label_dojo_creation" xml:space="preserve">
+    <value>Administrace dojo</value>
+  </data>
   <data name="label_email" xml:space="preserve">
     <value>E-mail</value>
   </data>
@@ -137,6 +143,9 @@
   </data>
   <data name="label_firstname" xml:space="preserve">
     <value>Jméno</value>
+  </data>
+  <data name="label_menu_creation" xml:space="preserve">
+    <value>Administrace menu</value>
   </data>
   <data name="label_name" xml:space="preserve">
     <value>Jméno</value>
@@ -150,11 +159,17 @@
   <data name="label_role" xml:space="preserve">
     <value>Role</value>
   </data>
+  <data name="label_role_creation" xml:space="preserve">
+    <value>Administrace rolí</value>
+  </data>
   <data name="label_surname" xml:space="preserve">
     <value>Příjmení</value>
   </data>
   <data name="label_title" xml:space="preserve">
     <value>Titul</value>
+  </data>
+  <data name="label_user_creation" xml:space="preserve">
+    <value>Administrace uživatelů</value>
   </data>
   <data name="label_web" xml:space="preserve">
     <value>Web</value>

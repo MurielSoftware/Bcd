@@ -80,6 +80,8 @@
     <Compile Include="Dtos\Roles\RoleType.cs" />
     <Compile Include="Exceptions\ValidationException.cs" />
     <Compile Include="Exceptions\ValidationResult.cs" />
+    <Compile Include="Json\JsonDialogResult.cs" />
+    <Compile Include="Json\RefreshMode.cs" />
     <Compile Include="Messages\Message.cs" />
     <Compile Include="Messages\MessageType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

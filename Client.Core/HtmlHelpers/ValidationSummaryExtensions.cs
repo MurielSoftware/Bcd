@@ -26,5 +26,28 @@ namespace Client.Core.HtmlHelpers
             tagBuilder.InnerHtml = "<span><i class='fa fa-warning'></i></span> <strong>Chyba</strong><br />Došlo k těmto chybám:" + ValidationExtensions.ValidationSummary(htmlHelper).ToString();
             return MvcHtmlString.Create(tagBuilder.ToString());
         }
+
+        public static MvcHtmlString CustomValidationSummary(string validationResult)
+        {
+            TagBuilder tagBuilder = new TagBuilder("div");
+            tagBuilder.MergeAttributes(HtmlHelper.AnonymousObjectToHtmlAttributes(new { @class = "alert alert-danger", role = "alert" }));
+            tagBuilder.InnerHtml = "<span><i class='fa fa-warning'></i></span> <strong>Chyba</strong><br />Došlo k těmto chybám:" + validationResult;
+            return MvcHtmlString.Create(tagBuilder.ToString());
+        }
+
+        internal static MvcHtmlString CustomValidationSummary(ModelStateDictionary modelState)
+        {
+            TagBuilder tagBuilder = new TagBuilder("div");
+            tagBuilder.MergeAttributes(HtmlHelper.AnonymousObjectToHtmlAttributes(new { @class = "alert alert-danger", role = "alert" }));
+            tagBuilder.InnerHtml = "<span><i class='fa fa-warning'></i></span> <strong>Chyba</strong><br />Došlo k těmto chybám:";
+            foreach (var key in modelState.Keys)
+            {
+                foreach (var err in modelState[key].Errors)
+                {
+                    tagBuilder.InnerHtml += err.ErrorMessage;
+                }
+            }
+            return MvcHtmlString.Create(tagBuilder.ToString());
+        }
     }
 }

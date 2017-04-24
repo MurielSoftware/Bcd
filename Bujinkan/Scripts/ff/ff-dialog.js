@@ -5,39 +5,52 @@
 
     $.fn.dialog = function () {
         return this.each(function (index, dialog) {
-            dialog.ready(function () {
-            });
+            $(dialog).click(function () {
+                $("#modal-dialogs").load($(dialog).attr("href"), function (result) {
+                    //initializePlugins("#modal-dialogs");
+                    //_onInit(dialog);
+                    var closeButton = $("#modal-dialogs").find(".btn-dialog-close");
+                    var removeFileButton = $("#modal-dialogs").find(".btn-modal-remove-attachement");
+                    var submitButton = $("#modal-dialogs").find(".asynchronous-form");
 
-            dialog.on("click", ".btn-dialog-close", function (e) {
-                $("#modal-dialogs").empty();
-            });
+                    closeButton.click(_close);
+                    removeFileButton.click(_removeFile);
+                    submitButton.submit(_submit);
+                });
 
-            dialog.on("click", ".btn-modal-remove-attachement", function () {
-                _onRemoveFile($(this));
-            });
-
-
-            dialog.on("submit", ".asynchronous-form", function (e) {
-                var form = $(".asynchronous-form").get(0);
-                var formData = new FormData(form);
-
-                _appendFile(formData);
-
-                var xhr = new XMLHttpRequest();
-                xhr.open("post", form.action, true);
-                xhr.upload.addEventListener('progress', function (event) {
-                    if (event.lengthComputable) {
-                        $("#modal-dialogs").find('.dialog-progress-bar').width((event.loaded / event.total) * 100 + "%");
-                    }
-                }, false);
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState == 4 && xhr.status == 200) {
-                        _onFinish(JSON.parse(xhr.response), xhr.status, xhr);
-                    }
-                };
-                xhr.send(formData);
             });
         });
+
+        function _close() {
+            $("#modal-dialogs").empty();
+        }
+
+        function _removeFile() {
+            _onRemoveFile($(this));
+        }
+
+        function _submit(e) {
+            var form = $(".asynchronous-form").get(0);
+            var formData = new FormData(form);
+
+            _appendFile(formData);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("post", form.action, true);
+            xhr.upload.addEventListener('progress', function (event) {
+                if (event.lengthComputable) {
+                    $("#modal-dialogs").find('.dialog-progress-bar').width((event.loaded / event.total) * 100 + "%");
+                }
+            }, false);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    _onFinish(JSON.parse(xhr.response), xhr.status, xhr);
+                }
+            };
+            xhr.send(formData);
+            e.preventDefault();
+        }
+
 
         function _appendFile(formData) {
             var fileInput = document.getElementById("file-input");
@@ -54,41 +67,42 @@
 
         function _onFinish(data, status, xhr) {
             if (data.Success) {
-                _afterSuccess(data);
+                _onSuccess(data);
             } else {
-                _afterFail(data);
+                _onFail(data);
             }
         }
 
         function _onSuccess(data) {
             switch (data.RefreshMode) {
+                case 1:
                 case 2:
-                    _afterSuccessTree(data);
+                    _onSuccessTable(data);
                     break;
                 case 3:
-                    _afterSuccessImageToRichTextBox(data);
+                    _onSuccessTree(data);
                     break;
-                default:
-                    _afterSuccessTable(data);
+                case 3:
+                    _onSuccessImageToRichTextBox(data);
                     break;
             }
         }
 
-        function _afterFail(data) {
+        function _onFail(data) {
             $("#" + data.TargetId).html(data.Message);
         }
 
-        function _afterSuccessTree(data) {
+        function _onSuccessTree(data) {
             $("#modal-dialogs").empty();
             $.expandTree(data.TargetId, true);
         }
 
-        function _afterSuccessImageToRichTextBox(data) {
+        function _onSuccessImageToRichTextBox(data) {
             $("#modal-dialogs").empty();
             $.richTextBoxSetImage(data.ThumbnailPath, data.Path);
         }
 
-        function _afterSuccessTable(data) {
+        function _onSuccessTable(data) {
             if (data.TargetId != null) {
                 $("#" + data.TargetId).html("<div id='loading'><i class='fa fa-circle-o-notch fa-spin'></i></div>");
                 $.post(data.Action, function (result) {

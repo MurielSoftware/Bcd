@@ -41,6 +41,7 @@
                                 @Html.LocalizedDisplay(MessageKeyConstants.LABEL_ADD)
                             </li>
                         </ul>
+                        @RenderSection("ribbon", required: false)
                     </div>
                     <div id="administration" class="tab-pane" role="tabpanel">
                         <ul class="ribbon-group">
@@ -63,6 +64,7 @@
             @RenderBody()
         </div>
     </div>
+    <div id="modal-dialogs"></div>
     @Scripts.Render("~/bundles/script-admin")
     @RenderSection("scripts", required: false)
 </body>

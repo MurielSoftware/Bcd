@@ -1,7 +1,10 @@
 ﻿using Client.Core.Constants;
+using Client.Core.HtmlHelpers;
 using Shared.Core.Constants;
 using Shared.Core.Dtos;
 using Shared.Core.Exceptions;
+using Shared.Core.Json;
+using Shared.Core.Json.Shared.Core.Jsons;
 using Shared.Core.Messages;
 using Shared.Core.Services;
 using System;
@@ -31,6 +34,10 @@ namespace Client.Core.Controllers
                 {
                     return View(Activator.CreateInstance<T>());
                 }
+                if (!(ViewData[TempDataConstants.PRECREATED_DTO] is T))
+                {
+                    return PartialView(Activator.CreateInstance<T>());
+                }
                 return View(ViewData[TempDataConstants.PRECREATED_DTO]);
             }
             T entity = GetService().Read(id.Value);
@@ -57,11 +64,11 @@ namespace Client.Core.Controllers
         /// <param name="controllerName">The name of the controller</param>
         /// <param name="routeValues">The route values for redirect</param>
         /// <returns>The apropriate View</returns>
-        public virtual ActionResult DoCreate(T dto, Message message, string actionName, string controllerName, object routeValues = null)
+        public virtual ActionResult DoCreate(T dto, Message message, string actionName, string controllerName, object routeValues = null, string targetHtmlId = null)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                return View(dto);
+                return RedirectToActionAfterClientFailCreate(dto, null);
             }
 
             try
@@ -71,11 +78,26 @@ namespace Client.Core.Controllers
                 GetUnitOfWork().EndTransaction();
                 TempData[TempDataConstants.MESSAGE] = message;
             }
-            catch(ValidationException ex)
+            catch (ValidationException ex)
             {
-                ModelState.AddModelError(TempDataConstants.SERVER_VALIDATION_ERROR, ex.GetValidationResults());
-                return View(dto);
+                return RedirectToActionAfterServerFailCreate(dto, ex.GetValidationResults());
             }
+            return RedirectToActionAfterSuccessCreate(actionName, controllerName, routeValues, targetHtmlId);
+        }
+
+        protected virtual ActionResult RedirectToActionAfterClientFailCreate(T dto, string validationResult)
+        {
+            return View(dto);
+        }
+
+        protected virtual ActionResult RedirectToActionAfterServerFailCreate(T dto, string validationResult)
+        {
+            ModelState.AddModelError(TempDataConstants.SERVER_VALIDATION_ERROR, validationResult);
+            return View(dto);
+        }
+
+        protected virtual ActionResult RedirectToActionAfterSuccessCreate(string actionName, string controllerName, object routeValues, string targetHtmlId)
+        {
             return RedirectToAction(actionName, controllerName, routeValues);
         }
 
@@ -98,9 +120,19 @@ namespace Client.Core.Controllers
             }
             catch(ValidationException ex)
             {
-
+                return RedirectToActionAfterFailDelete(ex.GetValidationResults());
             }
-            return null;
+            return RedirectToActionAfterSuccessDelete(actionName, controllerName, null, routeValues);
+        }
+
+        protected virtual ActionResult RedirectToActionAfterFailDelete(string validationResult)
+        {
+            return Json(new JsonDialogResult(false, HtmlConstants.DIALOG_VALIDATION_SUMMARY, ValidationSummaryExtensions.CustomValidationSummary(validationResult).ToString()));
+        }
+
+        protected virtual ActionResult RedirectToActionAfterSuccessDelete(string actionName, string controllerName, string targetId, object routeValues)
+        {
+            return Json(new JsonDialogResult(true, targetId, Url.Action(actionName, controllerName, routeValues), JsonRefreshMode.NONE));
         }
 
         /// <summary>

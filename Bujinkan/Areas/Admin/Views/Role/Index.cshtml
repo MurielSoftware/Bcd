@@ -6,7 +6,18 @@
     ViewBag.Title = Html.LocalizedDisplay(MessageKeyConstants.LABEL_ROLES);
 }
 
-@section header{
+@section ribbon {
+    <ul class="ribbon-group">
+        <li>
+            @Html.DialogActionLink("<i class='fa fa-cog'></i>" + Html.LocalizedDisplay(MessageKeyConstants.LABEL_ADD_ROLE), HtmlConstants.DIALOG_ROLE, WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_ROLE, null, new { @class = "ribbon-button" })
+        </li>
+        <li class="ribbon-group-title">
+            @Html.LocalizedDisplay(MessageKeyConstants.LABEL_ROLE)
+        </li>
+    </ul>
+}
+
+@section header {
     <div class="header-section-title">
         <h1><i class="fa fa-cogs"></i> @Html.LocalizedDisplay(MessageKeyConstants.LABEL_ROLES)</h1>
         <small>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_ROLES)</small>

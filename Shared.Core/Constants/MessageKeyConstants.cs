@@ -9,6 +9,7 @@ namespace Shared.Core.Constants
     public class MessageKeyConstants
     {
         public const string LABEL_ADD = "label_add";
+        public const string LABEL_ADD_ROLE = "label_add_role";
         public const string LABEL_ADDRESS = "label_address";
         public const string LABEL_ADMINISTRATION = "label_administration";
         public const string LABEL_ADMINISTRATION_OF_BCD = "label_administration_of_bcd";
