@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Entry]
+﻿CREATE TABLE [dbo].[ENTRY]
 (
 	[Id] UNIQUEIDENTIFIER NOT NULL,
 	[CreatedDate] DATETIME NOT NULL,

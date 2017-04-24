@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Resource]
+﻿CREATE TABLE [dbo].[RESOURCE]
 (
 	[Id] UNIQUEIDENTIFIER NOT NULL,
 	[CreatedDate] DATETIME NOT NULL,

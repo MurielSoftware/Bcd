@@ -1,4 +1,5 @@
-﻿using Shared.Dtos.Users;
+﻿using Shared.Core.Context;
+using Shared.Dtos.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace Server.Model
 {
     [Table("USER")]
-    public class User : UserDefinable
+    public class User : UserDefinable, IOrderableEntity
     {
         public virtual BujinkanTitle BujinkanTitle { get; set; }
         public virtual string FirstName { get; set; }

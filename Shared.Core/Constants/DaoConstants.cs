@@ -16,6 +16,7 @@ namespace Shared.Core.Constants
 
         public const string ATTRIBUTE_EMAIL = "Email";
         public const string ATTRIBUTE_FIRSTNAME = "FirstName";
+        public const string ATTRIBUTE_NAME = "Name";
         public const string ATTRIBUTE_SURNAME = "Surname";
         public const string ATTRIBUTE_COUNTRY = "Country";
         public const string ATTRIBUTE_ROLE = "Role";

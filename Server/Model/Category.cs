@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Server.Model
 {
     [Table("CATEGORY")]
-    public abstract class Category : BaseEntity
+    public abstract class Category : UserDefinable
     {
         public virtual string Name { get; set; }        
         public virtual bool BuiltIn { get; set; }

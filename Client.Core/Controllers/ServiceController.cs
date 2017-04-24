@@ -34,5 +34,10 @@ namespace Client.Core.Controllers
         {
             return _unitOfWork;
         }
+
+        protected ServiceManager GetServiceManager()
+        {
+            return _serviceManager;
+        }
     }
 }

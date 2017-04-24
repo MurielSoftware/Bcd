@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[User]
+﻿CREATE TABLE [dbo].[USER]
 (
 	[Id] UNIQUEIDENTIFIER NOT NULL,
 	[BujinkanTitle] INT NOT NULL,

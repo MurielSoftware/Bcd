@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Vocabulary]
+﻿CREATE TABLE [dbo].[VOCABULARY]
 (
 	[Id] UNIQUEIDENTIFIER NOT NULL,
 	[CreatedDate] DATETIME NOT NULL,

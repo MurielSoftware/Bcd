@@ -44,8 +44,7 @@ namespace Client.Core.HtmlHelpers
         public static MvcHtmlString RemoteDropDownListFor<T, U>(this HtmlHelper<T> htmlHelper, Expression<Func<T, U>> expression, string action)
         {
             ModelMetadata metadata = ModelMetadata.FromLambdaExpression(expression, htmlHelper.ViewData);
-            StringBuilder sb = new StringBuilder();
-            return SelectExtensions.DropDownList(htmlHelper, metadata.PropertyName, new List<SelectListItem>(), new { @class = "remoteDropDownList form-control", data_action = action, data_selected = metadata.Model });
+            return SelectExtensions.DropDownList(htmlHelper, metadata.PropertyName, new List<SelectListItem>(), new { @class = "referencelist form-control", data_action = action, data_selected = metadata.Model });
         }
 
         /// <summary>

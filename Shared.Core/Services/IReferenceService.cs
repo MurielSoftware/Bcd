@@ -18,6 +18,6 @@ namespace Shared.Core.Services
         /// </summary>
         /// <param name="baseFilterDto">The value for the filtering</param>
         /// <returns>Returns the list of the ReferencedDtos which was found</returns>
-        List<ReferencedDto> GetByPrefix(T baseFilterDto);
+        List<ReferenceDto> GetByPrefix(T baseFilterDto);
     }
 }

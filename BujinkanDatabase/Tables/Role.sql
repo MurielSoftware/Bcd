@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Role]
+﻿CREATE TABLE [dbo].[ROLE]
 (
 	[Id] UNIQUEIDENTIFIER NOT NULL,
 	[CreatedDate] DATETIME NOT NULL,

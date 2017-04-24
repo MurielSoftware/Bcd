@@ -58,7 +58,7 @@ namespace Server.Context
                 .WithMany(y => y.Events)
                 .Map(m =>
                 {
-                    m.ToTable("USER_EVENT");
+                    m.ToTable("JOIN_USER_EVENT");
                     m.MapLeftKey("EventId");
                     m.MapRightKey("UserId");
                 }

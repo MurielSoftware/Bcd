@@ -12,7 +12,9 @@ namespace Bujinkan
                         "~/Scripts/jquery-3.2.1.min.js",
                         "~/Scripts/bootstrap.min.js",
                         "~/Scripts/ff/ff-inlineeditable.js",
+                        "~/Scripts/ff/ff-remotecontent.js",
                         "~/Scripts/ff/ff-reference.js",
+                        "~/Scripts/ff/ff-referencelist.js",
                         "~/Scripts/ff/ff-admin.js"));
 
             bundles.Add(new StyleBundle("~/Content/css-admin").Include(

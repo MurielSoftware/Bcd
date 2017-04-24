@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Event]
+﻿CREATE TABLE [dbo].[EVENT]
 (
 	[Id] UNIQUEIDENTIFIER NOT NULL,
 	[Theme] NVARCHAR(128) NOT NULL,
@@ -21,7 +21,7 @@
 	[Prepayment] SMALLINT NULL,
 	[PrepaymentDeadline] DATETIME NULL,
 	[AccountNumber] NVARCHAR(32) NULL,
-	[Discriminator] NVARCHAR(32) NOT NULL,
+	[Discriminator] NVARCHAR(128) NOT NULL,
 
 	[CountryId] UNIQUEIDENTIFIER NULL,
 )

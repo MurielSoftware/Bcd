@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Gallery]
+﻿CREATE TABLE [dbo].[GALLERY]
 (
 	[Id] UNIQUEIDENTIFIER NOT NULL,
 	[GalleryType] INT NOT NULL,

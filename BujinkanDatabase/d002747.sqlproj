@@ -73,10 +73,9 @@
     <Build Include="Tables\Question.sql" />
     <Build Include="Tables\Link.sql" />
     <Build Include="Tables\Actuality.sql" />
-    <Build Include="Tables\Category.sql" />
     <Build Include="Tables\MenuItem.sql" />
     <Build Include="Tables\Resource.sql" />
-    <Build Include="Tables\Join_UserEvent.sql" />
+    <Build Include="Tables\Join_User_Event.sql" />
     <Build Include="Tables\Entry.sql" />
     <Build Include="Tables\UserDefinables\UserDefinable.sql" />
     <Build Include="Tables\UserDefinables\Blog.sql" />
@@ -86,6 +85,8 @@
     <Build Include="Tables\UserDefinables\Product.sql" />
     <Build Include="Tables\UserDefinables\Training.sql" />
     <Build Include="Tables\UserDefinables\User.sql" />
+    <Build Include="Tables\UserDefinables\Category.sql" />
+    <Build Include="Tables\__Migration_History.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Data\Script.BuiltIn.PostDeployment.sql" />

@@ -19,17 +19,6 @@ namespace Client.Core.Controllers
     {
 
         /// <summary>
-        /// Gets the view for the creation of the entity with the predefined values.
-        /// </summary>
-        /// <param name="precreatedDto">Precreated DTO</param>
-        /// <returns>The create view with the predefined DTO</returns>
-        public virtual ActionResult CreatePredefined(T precreatedDto)
-        {
-            TempData[TempDataConstants.PRECREATED_DTO] = precreatedDto;
-            return RedirectToAction(WebConstants.VIEW_CREATE);
-        }
-
-        /// <summary>
         /// Gets the View for create the new entity.
         /// </summary>
         /// <returns>The view for create the new entity.</returns>
@@ -46,6 +35,17 @@ namespace Client.Core.Controllers
             }
             T entity = GetService().Read(id.Value);
             return View(entity);
+        }
+
+        /// <summary>
+        /// Gets the view for the creation of the entity with the predefined values.
+        /// </summary>
+        /// <param name="precreatedDto">Precreated DTO</param>
+        /// <returns>The create view with the predefined DTO</returns>
+        public virtual ActionResult CreatePredefined(T precreatedDto)
+        {
+            TempData[TempDataConstants.PRECREATED_DTO] = precreatedDto;
+            return RedirectToAction(WebConstants.VIEW_CREATE);
         }
 
         /// <summary>

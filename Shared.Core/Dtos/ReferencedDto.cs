@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Core.Dtos
 {
-    public class ReferencedDto : BaseDto
+    public class ReferenceDto : BaseDto
     {
         public string Label { get; set; }
     }

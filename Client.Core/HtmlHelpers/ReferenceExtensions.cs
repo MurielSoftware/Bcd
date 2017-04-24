@@ -29,18 +29,21 @@ namespace Client.Core.HtmlHelpers
         public static MvcHtmlString ReferenceFor<T, U>(this HtmlHelper<T> htmlHelper, Expression<Func<T, U>> expression, string name, string action, int maximum)
         {
             TagBuilder ul = new TagBuilder("ul");
-            TagBuilder inputAutocomplete = new TagBuilder("input");
-            inputAutocomplete.AddCssClass("input-autocomplete" );
-            TagBuilder autocompleteHidden = new TagBuilder("input");
-            autocompleteHidden.AddCssClass("input-autocomplete-hidden");
+            //TagBuilder inputAutocomplete = new TagBuilder("input");
+            //inputAutocomplete.AddCssClass("input-autocomplete" );
+            //TagBuilder autocompleteHidden = new TagBuilder("input");
+            //autocompleteHidden.MergeAttribute("Name", )
+            //autocompleteHidden.AddCssClass("input-autocomplete-hidden");
+            MvcHtmlString input = InputExtensions.TextBox(htmlHelper, name, null, new { @class = "input-autocomplete" });
+            MvcHtmlString hidden = InputExtensions.TextBoxFor(htmlHelper, expression, new { @class = "input-autocomplete-hidden" });
             TagBuilder autocompleteFrame = new TagBuilder("div");
             autocompleteFrame.AddCssClass("input-autocomplete-frame");
             TagBuilder divAutocomplete = new TagBuilder("div");
             divAutocomplete.MergeAttribute("data-action", action);
             divAutocomplete.AddCssClass("autocomplete");
 
-            autocompleteFrame.InnerHtml = inputAutocomplete.ToString() + ul.ToString();
-            divAutocomplete.InnerHtml = autocompleteFrame.ToString() + autocompleteHidden.ToString();
+            autocompleteFrame.InnerHtml = input.ToString() + ul.ToString();
+            divAutocomplete.InnerHtml = autocompleteFrame.ToString() + hidden.ToString();
             return MvcHtmlString.Create(divAutocomplete.ToString());
         }
 

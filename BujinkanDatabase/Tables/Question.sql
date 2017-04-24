@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Question]
+﻿CREATE TABLE [dbo].[QUESTION]
 (
 	[Id] UNIQUEIDENTIFIER NOT NULL,
 	[CreatedDate] DATETIME NOT NULL,

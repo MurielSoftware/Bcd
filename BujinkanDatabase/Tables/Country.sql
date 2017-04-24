@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Country]
+﻿CREATE TABLE [dbo].[COUNTRY]
 (
 	[Id] UNIQUEIDENTIFIER NOT NULL,
 	[CreatedDate] DATETIME NOT NULL,

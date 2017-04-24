@@ -1,0 +1,37 @@
+﻿@using Client.Core.HtmlHelpers
+@using Shared.Core.Constants
+@using Shared.Core.Utils
+
+@{
+    ViewBag.Title = Html.LocalizedDisplay(MessageKeyConstants.LABEL_ROLES);
+}
+
+@section header{
+    <div class="header-section-title">
+        <h1><i class="fa fa-cogs"></i> @Html.LocalizedDisplay(MessageKeyConstants.LABEL_ROLES)</h1>
+        <small>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_ROLES)</small>
+    </div>
+    <img src="/Content/images/admin/admin-cover.jpg" />
+}
+
+@section breadcrumb {
+    <ul class="breadcrumb">
+        <li>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_HOME)</li>
+        <li>@Html.LocalizedActionLink(MessageKeyConstants.LABEL_ROLES, WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_ROLE)</li>
+    </ul>
+}
+
+<div class="panel">
+    <div class="panel-heading">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#form" data-toggle="tab">
+                    <i class="fa fa-list"></i> @Html.LocalizedDisplay(MessageKeyConstants.LABEL_TEACHERS)
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="panel-body">
+        @Ajax.RemoteContent(WebConstants.VIEW_PAGED_LIST, WebConstants.CONTROLLER_ROLE, WebConstants.AREA_ADMIN)
+    </div>
+</div>

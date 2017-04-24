@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Link]
+﻿CREATE TABLE [dbo].[LINK]
 (
 	[Id] UNIQUEIDENTIFIER NOT NULL,
 	[CreatedDate] DATETIME NOT NULL,

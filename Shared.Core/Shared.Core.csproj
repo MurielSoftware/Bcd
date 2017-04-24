@@ -39,6 +39,7 @@
       <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,12 +63,14 @@
     <Compile Include="Context\ExpressionQueryBuilder.cs" />
     <Compile Include="Context\IBaseEntity.cs" />
     <Compile Include="Context\IDatabaseContext.cs" />
+    <Compile Include="Context\IOrderableEntity.cs" />
     <Compile Include="Context\IUnitOfWork.cs" />
     <Compile Include="Dtos\BaseDto.cs" />
     <Compile Include="Dtos\BaseFilterDto.cs" />
     <Compile Include="Dtos\BulkCreators\BulkCreatorDto.cs" />
     <Compile Include="Dtos\BulkCreators\RecordDelimiter.cs" />
     <Compile Include="Dtos\DialogDto.cs" />
+    <Compile Include="Dtos\ListReferenceDto.cs" />
     <Compile Include="Dtos\MenuItems\MenuItemAssociationType.cs" />
     <Compile Include="Dtos\MenuItems\MenuItemDto.cs" />
     <Compile Include="Dtos\MenuItems\MenuItemEntityType.cs" />
@@ -87,9 +90,11 @@
     </Compile>
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\ICRUDService.cs" />
+    <Compile Include="Services\IListReferenceService.cs" />
     <Compile Include="Services\IPagedListAdministrationReaderService.cs" />
     <Compile Include="Services\IReferenceService.cs" />
     <Compile Include="Services\IService.cs" />
+    <Compile Include="Utils\PasswordUtils.cs" />
     <Compile Include="Utils\ResourceUtils.cs" />
     <Compile Include="Utils\StringUtils.cs" />
     <Compile Include="Utils\UrlUtils.cs" />

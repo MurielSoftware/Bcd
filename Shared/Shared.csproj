@@ -54,6 +54,7 @@
     <Compile Include="Dtos\Users\UserFilterDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Dojos\IDojoCRUDService.cs" />
+    <Compile Include="Services\Roles\IRoleCRUDService.cs" />
     <Compile Include="Services\Trainings\ITrainingCRUDService.cs" />
     <Compile Include="Services\Users\IUserCRUDService.cs" />
   </ItemGroup>

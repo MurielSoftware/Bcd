@@ -27,6 +27,7 @@ namespace Server.Daos
         internal IPagedList<UserDto> FindPaged(UserFilterDto userFilterDto)
         {
             return _modelContext.Set<User>()
+                .OrderBy(x => x.Surname)
                 .Select(x => new UserDto() { Id = x.Id, BujinkanTitle = x.BujinkanTitle, FirstName = x.FirstName, Surname = x.Surname })
                 .ToPagedList(userFilterDto.Page, userFilterDto.PageSize);
         }
@@ -37,12 +38,50 @@ namespace Server.Daos
         /// <param name="prefix">The prefix for search the users</param>
         /// <param name="selector">The specific selector</param>
         /// <returns>The list of the referenced DTOs</returns>
-        internal List<ReferencedDto> FindByPrefix(string prefix, Expression<Func<User, ReferencedDto>> selector)
+        internal List<ReferenceDto> FindByPrefix(string prefix, Expression<Func<User, ReferenceDto>> selector)
         {
             return _modelContext.Set<User>()
                 .Where(x => x.FirstName.Contains(prefix) || x.Surname.Contains(prefix))
                 .Select(selector)
                 .ToList();
+        }
+
+        /// <summary>
+        /// Finds max order value.
+        /// </summary>
+        /// <returns>The max value of the order column</returns>
+        internal int FindMaxOrderValue()
+        {
+            return _modelContext.Set<User>()
+                .Max(x => (int?)x.Order) ?? 0;
+        }
+
+        /// <summary>
+        /// Finds the User with the greater order than the specified ID.
+        /// </summary>
+        /// <param name="id">The ID of the User</param>
+        /// <param name="order">The order of the User</param>
+        /// <returns>The first User with the greater order.</returns>
+        internal User FindUserWithGreaterOrder(Guid id, int order)
+        {
+            return _modelContext.Set<User>()
+                .Where(x => x.Order > order)
+                .OrderBy(x => x.Order)
+                .FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Finds the User with the lower order than the specified ID.
+        /// </summary>
+        /// <param name="id">The ID of the User</param>
+        /// <param name="order">The order of the User</param>
+        /// <returns>The first Use rwith the lower order</returns>
+        internal User FindUserWithLowerOrder(Guid id, int order)
+        {
+            return _modelContext.Set<User>()
+                .Where(x => x.Order < order)
+                .OrderByDescending(x => x.Order)
+                .FirstOrDefault();
         }
     }
 }

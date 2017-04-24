@@ -10,6 +10,7 @@ namespace Shared.Core.Constants
     {
         public const string LABEL_ADD = "label_add";
         public const string LABEL_ADDRESS = "label_address";
+        public const string LABEL_ADMINISTRATION = "label_administration";
         public const string LABEL_ADMINISTRATION_OF_BCD = "label_administration_of_bcd";
         public const string LABEL_AGREEMENT = "label_agreement";
         public const string LABEL_ARTICLES = "label_articles";
@@ -17,12 +18,15 @@ namespace Shared.Core.Constants
         public const string LABEL_BUILTIN = "label_builtin";
         public const string LABEL_CITY = "label_city";
         public const string LABEL_CIVIC_ASSOCIATION_REGISTRATION = "label_civic_association_registration";
+        public const string LABEL_CLOSE = "label_close";
         public const string LABEL_COUNTRY = "label_country";
+        public const string LABEL_CREATE_UPDATE_DELETE_ALL = "label_create_update_delete_all";
         public const string LABEL_CZK = "label_czk";
         public const string LABEL_DAN = "label_dan";
         public const string LABEL_DAY = "label_day";
         public const string LABEL_DESCRIPTION = "label_description";
         public const string LABEL_DOJO = "label_dojo";
+        public const string LABEL_DOJO_CREATION = "label_dojo_creation";
         public const string LABEL_EMAIL = "label_email";
         public const string LABEL_EMPTY = "label_empty";
         public const string LABEL_EMPTY_LINK = "label_empty_link";
@@ -41,6 +45,7 @@ namespace Shared.Core.Constants
         public const string LABEL_LINK_TO_LIST = "label_link_to_list";
         public const string LABEL_LINK_TO_SPECIFIC = "label_link_to_specific";
         public const string LABEL_LIST = "label_list";
+        public const string LABEL_MENU_CREATION = "label_menu_creation";
         public const string LABEL_MONDAY = "label_monday";
         public const string LABEL_NAME = "label_name";
         public const string LABEL_NO = "label_no";
@@ -48,6 +53,8 @@ namespace Shared.Core.Constants
         public const string LABEL_PASSWORD = "label_password";
         public const string LABEL_PHONE = "label_phone";
         public const string LABEL_ROLE = "label_role";
+        public const string LABEL_ROLES = "label_roles";
+        public const string LABEL_ROLE_CREATION = "label_role_creation";
         public const string LABEL_SATURDAY = "label_saturday";
         public const string LABEL_SAVE = "label_save";
         public const string LABEL_SECTION_MENU = "label_section_menu";
@@ -66,6 +73,7 @@ namespace Shared.Core.Constants
         public const string LABEL_TRAININGS = "label_trainings";
         public const string LABEL_TUESDAY = "label_tuesday";
         public const string LABEL_USD = "label_usd";
+        public const string LABEL_USER_CREATION = "label_user_creation";
         public const string LABEL_WEB = "label_web";
         public const string LABEL_WEDNESDAY = "label_wednesday";
         public const string LABEL_WELCOME = "label_welcome";

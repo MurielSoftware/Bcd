@@ -1,8 +1,13 @@
-﻿.input-autocomplete-frame {
+﻿.autocomplete {
+    width: 100%;
+}
+
+.input-autocomplete-frame {
     border: 1px solid #000;
     display: inline-block;
     background-color: #fff;
     padding: 5px;
+    width: 100%;
 }
 
 .autocomplete input, .autocomplete input:hover, .autocomplete input:focus {

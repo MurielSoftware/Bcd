@@ -9,5 +9,6 @@ namespace Shared.Core.Constants
     public class HtmlConstants
     {
         public const string PAGED_LIST_USER = "paged-list-user";
+        public const string PAGED_LIST_ROLE = "paged-list-role";
     }
 }

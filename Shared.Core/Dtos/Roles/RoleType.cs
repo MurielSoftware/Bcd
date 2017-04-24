@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Core.Dtos.Roles
 {
-    class RoleType
+    public enum RoleType
     {
     }
 }

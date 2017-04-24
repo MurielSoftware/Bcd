@@ -1,8 +1,10 @@
 ﻿using Server.Services.Dojos;
+using Server.Services.Roles;
 using Server.Services.Trainings;
 using Server.Services.Users;
 using Shared.Core.Context;
 using Shared.Services.Dojos;
+using Shared.Services.Roles;
 using Shared.Services.Trainings;
 using Shared.Services.Users;
 using System;
@@ -35,6 +37,7 @@ namespace Server.Core
             map.Add(typeof(IUserCRUDService), typeof(UserCRUDService));
             map.Add(typeof(ITrainingCRUDService), typeof(TrainingCRUDService));
             map.Add(typeof(IDojoCRUDService), typeof(DojoCRUDService));
+            map.Add(typeof(IRoleCRUDService), typeof(RoleCRUDService));
             return map;
         }
     }

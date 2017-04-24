@@ -48,7 +48,7 @@ namespace Server.Daos
         /// <param name="baseFilterDto">The filtering DTO to make the where part</param>
         /// <param name="selector">The selector for select the attributes</param>
         /// <returns>The list of the referencedDto for the appropriate search DTO</returns>
-        internal List<ReferencedDto> FindByPrefix<T>(BaseFilterDto baseFilterDto, Expression<Func<T, ReferencedDto>> selector) where T : BaseEntity
+        internal List<ReferenceDto> FindByPrefix<T>(BaseFilterDto baseFilterDto, Expression<Func<T, ReferenceDto>> selector) where T : BaseEntity
         {
             return _modelContext.Set<T>()
                 .Where(ExpressionQueryBuilder.BuildWhere<T>(baseFilterDto))

@@ -2,7 +2,9 @@
 using Shared.Core.Constants;
 using Shared.Core.Dtos;
 using Shared.Core.Messages;
+using Shared.Dtos.Dojos;
 using Shared.Dtos.Users;
+using Shared.Services.Dojos;
 using Shared.Services.Users;
 using System;
 using System.Collections.Generic;
@@ -14,6 +16,14 @@ namespace Bujinkan.Areas.Admin.Controllers
 {
     public class UserController : CRUDController<UserDto, IUserCRUDService>
     {
+        public override ActionResult CreatePredefined(UserDto userDto)
+        {
+            IDojoCRUDService dojoCRUDService = GetServiceManager().Get<IDojoCRUDService>();
+            DojoDto dojoDto = dojoCRUDService.Read(GuidConstants.DOJO_BUJINKAN_ID);
+            userDto.DojoReference = new ReferenceString(dojoDto.Id, dojoDto.Name);
+            return base.CreatePredefined(userDto);
+        }
+
         [HttpPost, ValidateInput(false)]
         public override ActionResult Create(UserDto userDto)
         {

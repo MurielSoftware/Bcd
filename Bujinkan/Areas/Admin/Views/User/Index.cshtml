@@ -32,6 +32,6 @@
         </ul>
     </div>
     <div class="panel-body">
-        @Html.Action(WebConstants.VIEW_PAGED_LIST, WebConstants.CONTROLLER_USER, new { Page = 1, PageSize = 15 })
+        @Ajax.RemoteContent(WebConstants.VIEW_PAGED_LIST, WebConstants.CONTROLLER_USER, WebConstants.AREA_ADMIN)
     </div>
 </div>

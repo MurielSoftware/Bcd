@@ -64,7 +64,7 @@ namespace Shared.Dtos.Users
         [Display(Name = MessageKeyConstants.LABEL_DOJO, ResourceType = typeof(Resource))]
         public virtual ReferenceString DojoReference { get; set; }
 
-        [Reference(DaoConstants.ATTRIBUTE_ROLE)]
+        [ListReference(DaoConstants.ATTRIBUTE_ROLE)]
         [Display(Name = MessageKeyConstants.LABEL_ROLE, ResourceType = typeof(Resource))]
         public virtual ReferenceString RoleReference { get; set; }
 

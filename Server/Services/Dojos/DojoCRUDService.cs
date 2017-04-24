@@ -19,9 +19,9 @@ namespace Server.Services.Dojos
         {
         }
 
-        public List<ReferencedDto> GetByPrefix(DojoFilterDto baseFilterDto)
+        public List<ReferenceDto> GetByPrefix(DojoFilterDto baseFilterDto)
         {
-            return _genericDao.FindByPrefix<Dojo>(new DojoFilterDto() { Name = baseFilterDto.Name }, x => new ReferencedDto() { Id = x.Id, Label = x.Name });
+            return _genericDao.FindByPrefix<Dojo>(new DojoFilterDto() { Name = baseFilterDto.Name }, x => new ReferenceDto() { Id = x.Id, Label = x.Name });
         }
 
         public IPagedList<DojoDto> ReadAdministrationPaged(DojoFilterDto baseFilterDto)
