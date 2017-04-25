@@ -61,6 +61,114 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Číslo účtu.
+        /// </summary>
+        public static string label_account_number {
+            get {
+                return ResourceManager.GetString("label_account_number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Přidání.
+        /// </summary>
+        public static string label_add {
+            get {
+                return ResourceManager.GetString("label_add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adresa.
+        /// </summary>
+        public static string label_address {
+            get {
+                return ResourceManager.GetString("label_address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Administrace.
+        /// </summary>
+        public static string label_administration {
+            get {
+                return ResourceManager.GetString("label_administration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Administrace Bujinkan Czech Dojo.
+        /// </summary>
+        public static string label_administration_of_bcd {
+            get {
+                return ResourceManager.GetString("label_administration_of_bcd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dle domluvy.
+        /// </summary>
+        public static string label_agreement {
+            get {
+                return ResourceManager.GetString("label_agreement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Built-In.
+        /// </summary>
+        public static string label_builtin {
+            get {
+                return ResourceManager.GetString("label_builtin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Město.
+        /// </summary>
+        public static string label_city {
+            get {
+                return ResourceManager.GetString("label_city", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registrace.
+        /// </summary>
+        public static string label_civic_association_registration {
+            get {
+                return ResourceManager.GetString("label_civic_association_registration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zavřít.
+        /// </summary>
+        public static string label_close {
+            get {
+                return ResourceManager.GetString("label_close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Potvrzení.
+        /// </summary>
+        public static string label_confirmation {
+            get {
+                return ResourceManager.GetString("label_confirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pokračovat.
+        /// </summary>
+        public static string label_continue {
+            get {
+                return ResourceManager.GetString("label_continue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Země.
         /// </summary>
         public static string label_country {
@@ -79,11 +187,56 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Měna.
+        /// </summary>
+        public static string label_currency {
+            get {
+                return ResourceManager.GetString("label_currency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aktuální počet účastníků.
+        /// </summary>
+        public static string label_current_participiants {
+            get {
+                return ResourceManager.GetString("label_current_participiants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kč.
+        /// </summary>
+        public static string label_czk {
+            get {
+                return ResourceManager.GetString("label_czk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dan.
         /// </summary>
         public static string label_dan {
             get {
                 return ResourceManager.GetString("label_dan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Datum.
+        /// </summary>
+        public static string label_date {
+            get {
+                return ResourceManager.GetString("label_date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Den.
+        /// </summary>
+        public static string label_day {
+            get {
+                return ResourceManager.GetString("label_day", resourceCulture);
             }
         }
         
@@ -124,11 +277,47 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Povolit registraci.
+        /// </summary>
+        public static string label_enable_registration {
+            get {
+                return ResourceManager.GetString("label_enable_registration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Konec.
+        /// </summary>
+        public static string label_end {
+            get {
+                return ResourceManager.GetString("label_end", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Euro.
+        /// </summary>
+        public static string label_euro {
+            get {
+                return ResourceManager.GetString("label_euro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Facebook.
         /// </summary>
         public static string label_facebook {
             get {
                 return ResourceManager.GetString("label_facebook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vyplnit formulář.
+        /// </summary>
+        public static string label_fill_form {
+            get {
+                return ResourceManager.GetString("label_fill_form", resourceCulture);
             }
         }
         
@@ -142,6 +331,87 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Určeno pro děti.
+        /// </summary>
+        public static string label_for_children {
+            get {
+                return ResourceManager.GetString("label_for_children", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pátek.
+        /// </summary>
+        public static string label_friday {
+            get {
+                return ResourceManager.GetString("label_friday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Map.
+        /// </summary>
+        public static string label_gps {
+            get {
+                return ResourceManager.GetString("label_gps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Domů.
+        /// </summary>
+        public static string label_home {
+            get {
+                return ResourceManager.GetString("label_home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IČ.
+        /// </summary>
+        public static string label_ic {
+            get {
+                return ResourceManager.GetString("label_ic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instruktor.
+        /// </summary>
+        public static string label_instructor {
+            get {
+                return ResourceManager.GetString("label_instructor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to JPY.
+        /// </summary>
+        public static string label_jpy {
+            get {
+                return ResourceManager.GetString("label_jpy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seznam.
+        /// </summary>
+        public static string label_list {
+            get {
+                return ResourceManager.GetString("label_list", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximum počtu účastníků.
+        /// </summary>
+        public static string label_maximum_participiants {
+            get {
+                return ResourceManager.GetString("label_maximum_participiants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Administrace menu.
         /// </summary>
         public static string label_menu_creation {
@@ -151,11 +421,56 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pondělí.
+        /// </summary>
+        public static string label_monday {
+            get {
+                return ResourceManager.GetString("label_monday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Jméno.
         /// </summary>
         public static string label_name {
             get {
                 return ResourceManager.GetString("label_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nový.
+        /// </summary>
+        public static string label_new {
+            get {
+                return ResourceManager.GetString("label_new", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ne.
+        /// </summary>
+        public static string label_no {
+            get {
+                return ResourceManager.GetString("label_no", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Organizace.
+        /// </summary>
+        public static string label_organization {
+            get {
+                return ResourceManager.GetString("label_organization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Typ organizace.
+        /// </summary>
+        public static string label_organization_type {
+            get {
+                return ResourceManager.GetString("label_organization_type", resourceCulture);
             }
         }
         
@@ -178,6 +493,51 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Záloha.
+        /// </summary>
+        public static string label_prepayment {
+            get {
+                return ResourceManager.GetString("label_prepayment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Datum poslání zálohy.
+        /// </summary>
+        public static string label_prepayment_deadline {
+            get {
+                return ResourceManager.GetString("label_prepayment_deadline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cena (člen).
+        /// </summary>
+        public static string label_prize_member {
+            get {
+                return ResourceManager.GetString("label_prize_member", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cena (nečlen).
+        /// </summary>
+        public static string label_prize_nomember {
+            get {
+                return ResourceManager.GetString("label_prize_nomember", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Datum ukončení registrace.
+        /// </summary>
+        public static string label_registration_deadline {
+            get {
+                return ResourceManager.GetString("label_registration_deadline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Role.
         /// </summary>
         public static string label_role {
@@ -196,11 +556,137 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Role.
+        /// </summary>
+        public static string label_roles {
+            get {
+                return ResourceManager.GetString("label_roles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sobota.
+        /// </summary>
+        public static string label_saturday {
+            get {
+                return ResourceManager.GetString("label_saturday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uložit.
+        /// </summary>
+        public static string label_save {
+            get {
+                return ResourceManager.GetString("label_save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seminář.
+        /// </summary>
+        public static string label_seminar {
+            get {
+                return ResourceManager.GetString("label_seminar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Semináře.
+        /// </summary>
+        public static string label_seminars {
+            get {
+                return ResourceManager.GetString("label_seminars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shidoshi.
+        /// </summary>
+        public static string label_shidoshi {
+            get {
+                return ResourceManager.GetString("label_shidoshi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shihan.
+        /// </summary>
+        public static string label_shihan {
+            get {
+                return ResourceManager.GetString("label_shihan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ukázat cenu.
+        /// </summary>
+        public static string label_show_prize {
+            get {
+                return ResourceManager.GetString("label_show_prize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Začátek.
+        /// </summary>
+        public static string label_start {
+            get {
+                return ResourceManager.GetString("label_start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Neděle.
+        /// </summary>
+        public static string label_sunday {
+            get {
+                return ResourceManager.GetString("label_sunday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Příjmení.
         /// </summary>
         public static string label_surname {
             get {
                 return ResourceManager.GetString("label_surname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Učitel.
+        /// </summary>
+        public static string label_teacher {
+            get {
+                return ResourceManager.GetString("label_teacher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Učitelé.
+        /// </summary>
+        public static string label_teachers {
+            get {
+                return ResourceManager.GetString("label_teachers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Téma.
+        /// </summary>
+        public static string label_theme {
+            get {
+                return ResourceManager.GetString("label_theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Čtvrtek.
+        /// </summary>
+        public static string label_thursday {
+            get {
+                return ResourceManager.GetString("label_thursday", resourceCulture);
             }
         }
         
@@ -214,6 +700,42 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Trénink.
+        /// </summary>
+        public static string label_training {
+            get {
+                return ResourceManager.GetString("label_training", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tréninky.
+        /// </summary>
+        public static string label_trainings {
+            get {
+                return ResourceManager.GetString("label_trainings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Úterý.
+        /// </summary>
+        public static string label_tuesday {
+            get {
+                return ResourceManager.GetString("label_tuesday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to USD.
+        /// </summary>
+        public static string label_usd {
+            get {
+                return ResourceManager.GetString("label_usd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Administrace uživatelů.
         /// </summary>
         public static string label_user_creation {
@@ -223,11 +745,56 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Náhledy.
+        /// </summary>
+        public static string label_views {
+            get {
+                return ResourceManager.GetString("label_views", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Web.
         /// </summary>
         public static string label_web {
             get {
                 return ResourceManager.GetString("label_web", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Středa.
+        /// </summary>
+        public static string label_wednesday {
+            get {
+                return ResourceManager.GetString("label_wednesday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vítejte.
+        /// </summary>
+        public static string label_welcome {
+            get {
+                return ResourceManager.GetString("label_welcome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ano.
+        /// </summary>
+        public static string label_yes {
+            get {
+                return ResourceManager.GetString("label_yes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PSČ.
+        /// </summary>
+        public static string label_zipcode {
+            get {
+                return ResourceManager.GetString("label_zipcode", resourceCulture);
             }
         }
         

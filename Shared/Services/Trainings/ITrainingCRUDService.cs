@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Services.Trainings
 {
-    public interface ITrainingCRUDService : ICRUDService<TrainingDto>
+    public interface ITrainingCRUDService : ICRUDService<TrainingDto>, IPagedListAdministrationReaderService<TrainingDto, TrainingFilterDto>
     {
     }
 }

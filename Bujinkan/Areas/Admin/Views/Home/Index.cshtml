@@ -21,7 +21,7 @@
                 <h1>
                     @Html.LocalizedDisplay(MessageKeyConstants.LABEL_SEMINARS)
                     <small>
-                        @Html.LocalizedActionLink(MessageKeyConstants.LABEL_ADD, WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_TRAINING) | @Html.LocalizedActionLink(MessageKeyConstants.LABEL_LIST, WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_SEMINAR)
+                        @Html.LocalizedActionLink(MessageKeyConstants.LABEL_ADD, WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_SEMINAR) | @Html.LocalizedActionLink(MessageKeyConstants.LABEL_LIST, WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_SEMINAR)
                     </small>
                 </h1>
             </div>
@@ -34,7 +34,7 @@
                 <h1>
                     @Html.LocalizedDisplay(MessageKeyConstants.LABEL_TRAININGS)
                     <small>
-                        @Html.LocalizedActionLink(MessageKeyConstants.LABEL_ADD, WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_TRAINING) | @Html.LocalizedActionLink(MessageKeyConstants.LABEL_LIST, WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_SEMINAR)
+                        @Html.LocalizedActionLink(MessageKeyConstants.LABEL_ADD, WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_TRAINING) | @Html.LocalizedActionLink(MessageKeyConstants.LABEL_LIST, WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_TRAINING)
                     </small>
                 </h1>
             </div>
@@ -65,14 +65,5 @@
                 </h1>
             </div>
         </div>
-    </div>
-    <div class="autocomplete">
-        Enter your state:<br />
-        <div class="input-autocomplete-frame">
-            <input class="input-autocomplete" />
-            <ul>
-            </ul>
-        </div>
-        <input class="input-autocomplete-hidden" />
     </div>
 </div>

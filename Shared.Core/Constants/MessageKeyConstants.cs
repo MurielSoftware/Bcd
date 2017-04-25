@@ -8,6 +8,7 @@ namespace Shared.Core.Constants
 {
     public class MessageKeyConstants
     {
+        public const string LABEL_ACCOUNT_NUMBER = "label_account_number";
         public const string LABEL_ADD = "label_add";
         public const string LABEL_ADD_ROLE = "label_add_role";
         public const string LABEL_ADDRESS = "label_address";
@@ -20,17 +21,24 @@ namespace Shared.Core.Constants
         public const string LABEL_CITY = "label_city";
         public const string LABEL_CIVIC_ASSOCIATION_REGISTRATION = "label_civic_association_registration";
         public const string LABEL_CLOSE = "label_close";
+        public const string LABEL_CONFIRMATION = "label_confirmation";
+        public const string LABEL_CONTINUE = "label_continue";
         public const string LABEL_COUNTRY = "label_country";
         public const string LABEL_CREATE_UPDATE_DELETE_ALL = "label_create_update_delete_all";
+        public const string LABEL_CURRENCY = "label_currency";
+        public const string LABEL_CURRENT_PARTICIPIANTS = "label_current_participiants";
         public const string LABEL_CZK = "label_czk";
         public const string LABEL_DAN = "label_dan";
+        public const string LABEL_DATE = "label_date";
         public const string LABEL_DAY = "label_day";
+        public const string LABEL_DELETE = "label_delete";
         public const string LABEL_DESCRIPTION = "label_description";
         public const string LABEL_DOJO = "label_dojo";
         public const string LABEL_DOJO_CREATION = "label_dojo_creation";
         public const string LABEL_EMAIL = "label_email";
         public const string LABEL_EMPTY = "label_empty";
         public const string LABEL_EMPTY_LINK = "label_empty_link";
+        public const string LABEL_ENABLE_REGISTRATION = "label_enable_registration";
         public const string LABEL_END = "label_end";
         public const string LABEL_EURO = "label_euro";
         public const string LABEL_FACEBOOK = "label_facebook";
@@ -38,6 +46,7 @@ namespace Shared.Core.Constants
         public const string LABEL_FIRSTNAME = "label_firstname";
         public const string LABEL_FOR_CHILDREN = "label_for_children";
         public const string LABEL_FRIDAY = "label_friday";
+        public const string LABEL_GPS = "label_gps";
         public const string LABEL_HOME = "label_home";
         public const string LABEL_IC = "label_ic";
         public const string LABEL_INSTRUCTOR = "label_instructor";
@@ -46,13 +55,20 @@ namespace Shared.Core.Constants
         public const string LABEL_LINK_TO_LIST = "label_link_to_list";
         public const string LABEL_LINK_TO_SPECIFIC = "label_link_to_specific";
         public const string LABEL_LIST = "label_list";
+        public const string LABEL_MAXIMUM_PARTICIPIANTS = "label_maximum_participiants";
         public const string LABEL_MENU_CREATION = "label_menu_creation";
         public const string LABEL_MONDAY = "label_monday";
         public const string LABEL_NAME = "label_name";
         public const string LABEL_NO = "label_no";
+        public const string LABEL_ORGANISATION = "label_organization";
         public const string LABEL_ORGANIZATION_TYPE = "label_organization_type";
         public const string LABEL_PASSWORD = "label_password";
+        public const string LABEL_PREPAYMENT = "label_prepayment";
+        public const string LABEL_PREPAYMENT_DEADLINE = "label_prepayment_deadline";
+        public const string LABEL_PRIZE_MEMBER = "label_prize_member";
+        public const string LABEL_PRIZE_NOMEMBER = "label_prize_nomember";
         public const string LABEL_PHONE = "label_phone";
+        public const string LABEL_REGISTRATION_DEADLINE = "label_registration_deadline";
         public const string LABEL_ROLE = "label_role";
         public const string LABEL_ROLES = "label_roles";
         public const string LABEL_ROLE_CREATION = "label_role_creation";
@@ -63,18 +79,23 @@ namespace Shared.Core.Constants
         public const string LABEL_SEMINARS = "label_seminars";
         public const string LABEL_SHIDOSHI = "label_shidoshi";
         public const string LABEL_SHIHAN = "label_shihan";
+        public const string LABEL_SHOW_PRIZE = "label_show_prize";
         public const string LABEL_START = "label_start";
         public const string LABEL_SUNDAY = "label_sunday";
         public const string LABEL_SURNAME = "label_surname";
         public const string LABEL_TEACHER = "label_teacher";
         public const string LABEL_TEACHERS = "label_teachers";
-        public const string LABEL_TITLE = "label_title";
+        public const string LABEL_THEME = "label_theme";
         public const string LABEL_THURSDAY = "label_thursday";
+        public const string LABEL_TITLE = "label_title";
+        public const string LABEL_TIME = "label_time";
         public const string LABEL_TRAINING = "label_training";
         public const string LABEL_TRAININGS = "label_trainings";
         public const string LABEL_TUESDAY = "label_tuesday";
+        public const string LABEL_UPDATE = "label_update";
         public const string LABEL_USD = "label_usd";
         public const string LABEL_USER_CREATION = "label_user_creation";
+        public const string LABEL_VIEWS = "label_views";
         public const string LABEL_WEB = "label_web";
         public const string LABEL_WEDNESDAY = "label_wednesday";
         public const string LABEL_WELCOME = "label_welcome";
@@ -88,6 +109,9 @@ namespace Shared.Core.Constants
 
         public const string OBJECT_SAVE_SUCCESS_MESSAGE = "object_save_success_message";
         public const string DOJO_INFORMATION_DELETE_MESSAGE = "dojo_information_delete_message";
+        public const string ROLE_INFORMATION_DELETE_MESSAGE = "role_information_delete_message";
+        public const string SEMINAR_INFORMATION_DELETE_MESSAGE = "seminar_information_delete_message";
+        public const string TRAINING_INFORMATION_DELETE_MESSAGE = "training_information_delete_message";
         public const string USER_INFORMATION_DELETE_MESSAGE = "user_information_delete_message";
     }
 }

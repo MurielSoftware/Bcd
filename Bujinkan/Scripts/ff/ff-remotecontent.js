@@ -13,6 +13,7 @@
 
         function _onSuccess(remoteContent, result) {
             $(remoteContent).html(result);
+            initPluginsOnRemoteContent();
         }
     }
 

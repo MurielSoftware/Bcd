@@ -14,12 +14,18 @@
 </head>
 <body>
     <div class="wrapper">
+        @Html.Partial(WebConstants.VIEW_MESSAGE)
         <header class="navbar navbar-default">
             <div class="ribbon">
                 <ul class="nav nav-tabs">
                     <li class="active">
                         <a href="#home" role="tab" data-toggle="tab">
                             @Html.LocalizedDisplay(MessageKeyConstants.LABEL_HOME)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#dojo" role="tab" data-toggle="tab">
+                            @Html.LocalizedDisplay(MessageKeyConstants.LABEL_DOJO)
                         </a>
                     </li>
                     <li>
@@ -37,11 +43,39 @@
                             <li>
                                 @Html.LocalizedActionLink(@"<i class='fa fa-graduation-cap'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_TRAINING), WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_TRAINING, null, new { @class = "ribbon-button" })
                             </li>
+                            <li>
+                                @Html.LocalizedActionLink(@"<i class='fa fa-child'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_SEMINAR), WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_SEMINAR, null, new { @class = "ribbon-button" })
+                            </li>
                             <li class="ribbon-group-title">
                                 @Html.LocalizedDisplay(MessageKeyConstants.LABEL_ADD)
                             </li>
                         </ul>
+                        <ul class="ribbon-group">
+                            <li>
+                                @Html.LocalizedActionLink(@"<i class='fa fa-home'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_HOME), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_HOME, null, new { @class = "ribbon-button" })
+                            </li>
+                            <li>
+                                <div class="ribbon-button-group">
+                                    @Html.LocalizedActionLink(@"<i class='fa fa-child'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_SEMINARS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_SEMINAR, null, new { @class = "ribbon-button-sm" })
+                                    @Html.LocalizedActionLink(@"<i class='fa fa-graduation-cap'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_TRAININGS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_TRAINING, null, new { @class = "ribbon-button-sm" })
+                                    @Html.LocalizedActionLink(@"<i class='fa fa-user'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_TEACHERS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_USER, null, new { @class = "ribbon-button-sm" })
+                                </div>
+                            </li>
+                            <li class="ribbon-group-title">
+                                @Html.LocalizedDisplay(MessageKeyConstants.LABEL_VIEWS)
+                            </li>
+                        </ul>
                         @RenderSection("ribbon", required: false)
+                    </div>
+                    <div id="dojo" class="tab-pane" role="tabpanel">
+                        <ul class="ribbon-group">
+                            <li>
+                                @Html.LocalizedActionLink(@"<i class='fa fa-institution'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_ORGANISATION), WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_DOJO, new { id = GuidConstants.DOJO_BUJINKAN_ID }, new { @class = "ribbon-button" })
+                            </li> 
+                            <li class="ribbon-group-title">
+                                @Html.LocalizedDisplay(MessageKeyConstants.LABEL_DOJO)
+                            </li>
+                        </ul>
                     </div>
                     <div id="administration" class="tab-pane" role="tabpanel">
                         <ul class="ribbon-group">

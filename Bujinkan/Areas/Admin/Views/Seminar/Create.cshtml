@@ -1,0 +1,189 @@
+﻿@model Shared.Dtos.Events.SeminarDto
+
+@using Client.Core.HtmlHelpers
+@using Shared.Core.Constants
+
+@{
+    ViewBag.Title = Html.LocalizedDisplay(MessageKeyConstants.LABEL_SEMINAR);
+}
+
+@section header{
+    <div class="header-section-title">
+        <h1><i class="fa fa-user"></i> @Html.LocalizedDisplay(MessageKeyConstants.LABEL_SEMINAR)</h1>
+        <small>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_SEMINAR)</small>
+    </div>
+    <img src="/Content/images/admin/admin-cover.jpg" />
+}
+
+@section breadcrumb {
+    <ul class="breadcrumb">
+        <li>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_HOME)</li>
+        <li>@Html.LocalizedActionLink(MessageKeyConstants.LABEL_SEMINAR, WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_SEMINAR)</li>
+    </ul>
+}
+
+<div class="panel">
+    <div class="panel-heading">
+        <ul class="nav nav-tabs remoteTabs">
+            <li class="active">
+                <a href="#form" data-toggle="tab"><i class='fa fa-pencil'></i> @Html.LocalizedDisplay(MessageKeyConstants.LABEL_FILL_FORM)</a>
+            </li>
+            <li>
+                <a class="remoteTab" href="#participiants" data-action="/Admin/Entry/List" data-id="@Model.Id" data-key="EventId" data-toggle="tab"><i class='fa fa-user'></i> @Html.LocalizedDisplay(MessageKeyConstants.LABEL_CURRENT_PARTICIPIANTS)</a>
+            </li>
+        </ul>
+    </div>
+    <div class="panel-body">
+        <div class="tab-content">
+            <div class="tab-pane active" id="form">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken();
+                    if (Model.Id != Guid.Empty)
+                    {
+                        @Html.HiddenFor(model => model.Id)
+                        @Html.HiddenFor(model => model.CreatedDate)
+                        @Html.HiddenFor(model => model.CurrentParticipiants)
+                        @Html.HiddenFor(model => model.UserCreatorId)
+                    }
+                    <div class="form-horizontal">
+                        @Html.CustomValidationSummary()
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Theme, new { @class = "control-label col-sm-2 form-control-title form-control-required" })
+                            <div class="col-sm-10">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.Theme, new { @class = "form-control-editable form-control-title" }), Html.EditorFor(model => model.Theme, new { htmlAttributes = new { @class = "form-control form-control-title" } }))
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.UsersReference, new { @class = "control-label col-sm-2 form-control-required" })
+                            <div class="col-sm-10">
+                                @Html.InlineEditableControl(Html.ReferenceLabelFor(model => model.UsersReference, null, null, new { @class = "form-control-editable" }), @Html.ReferenceFor(model => model.UsersReference.Value, "Users", "/Admin/User/GetByPrefix", 20))
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Start, new { @class = "control-label col-sm-2 form-control-required" })
+                            <div class="col-sm-4">
+                                @Html.InlineEditableControl(Html.EditableDateRangeLabelFor(model => model.Start, model => model.End, new { @class = "form-control-editable" }), Html.DateRangeFor(model => model.Start, model => model.End, new { @class = "form-control" }))
+                            </div>
+                            @Html.LabelFor(model => model.TimeStart, new { @class = "control-label col-sm-1 form-control-required" })
+                            <div class="col-sm-2">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.TimeStart, new { @class = "form-control-editable" }), Html.EditorFor(model => model.TimeStart, new { htmlAttributes = new { @class = "form-control", @data_mask = "99 : 99", @placeholder = "__ : __" } }))
+                            </div>
+                            @Html.LabelFor(model => model.TimeEnd, new { @class = "control-label col-sm-1 form-control-required" })
+                            <div class="col-sm-2">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.TimeEnd, new { @class = "form-control-editable" }), Html.EditorFor(model => model.TimeEnd, new { htmlAttributes = new { @class = "form-control", @data_mask = "99 : 99", @placeholder = "__ : __" } }))
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Address, new { @class = "control-label col-sm-2" })
+                            <div class="col-sm-10">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.Address, new { @class = "form-control-editable" }), Html.TextAreaFor(model => model.Address, new { @class = "form-control" }))
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.City, new { @class = "control-label col-sm-2 form-control-required" })
+                            <div class="col-sm-6">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.City, new { @class = "form-control-editable" }), Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } }))
+                            </div>
+                            @Html.LabelFor(model => model.Zipcode, new { @class = "control-label col-sm-2" })
+                            <div class="col-sm-2">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.Zipcode, new { @class = "form-control-editable" }), Html.EditorFor(model => model.Zipcode, new { htmlAttributes = new { @class = "form-control" } }))
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CountryReference, new { @class = "control-label col-sm-2" })
+                            <div class="col-sm-10">
+                                @Html.InlineEditableControl(Html.ReferenceLabelFor(model => model.CountryReference, null, null, new { @class = "form-control-editable" }), @Html.ReferenceFor(model => model.CountryReference.Value, "Country", "/Admin/Country/GetByPrefix", 1))
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                @Html.GoogleMapFor(model => model.Gps, new { @class = "editable", @style = "width: 100%; height: 180px;" })
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Facebook, new { @class = "control-label col-sm-2" })
+                            <div class="col-sm-10">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.Facebook, new { @class = "form-control-editable" }), Html.EditorFor(model => model.Facebook, new { htmlAttributes = new { @class = "form-control", @placeholder = "http://www.address.cz" } }))
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Description, new { @class = "control-label col-sm-2" })
+                            <div class="col-sm-10">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.Description, new { @class = "form-control-editable form-control-textarea" }), @Html.RichTextBoxFor(model => model.Description, false))
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PrizeMember, new { @class = "control-label col-sm-2" })
+                            <div class="col-sm-3">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.PrizeMember, new { @class = "form-control-editable" }), @Html.EditorFor(model => model.PrizeMember, new { htmlAttributes = new { @class = "form-control" } }))
+                            </div>
+                            @Html.LabelFor(model => model.PrizeNomember, new { @class = "control-label col-sm-2" })
+                            <div class="col-sm-3">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.PrizeNomember, new { @class = "form-control-editable" }), @Html.EditorFor(model => model.PrizeNomember, new { htmlAttributes = new { @class = "form-control" } }))
+                            </div>
+                            <div class="col-sm-2">
+                                @Html.InlineEditableControl(Html.LocalizedDropDownDisplayFor(model => model.Currency, new { @class = "form-control-editable" }), @Html.LocalizedDropDownListFor(model => model.Currency, new { @class = "form-control" }))
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ShowPrize, new { @class = "control-label col-sm-2" })
+                            <div class="col-sm-1">
+                                @Html.InlineEditableControl(Html.EditableCheckLabelFor(model => model.ShowPrize, new { @class = "form-control-editable" }), @Html.EditorFor(model => model.ShowPrize, new { htmlAttributes = new { @class = "form-control" } }))
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MaximumParticipiants, new { @class = "control-label col-sm-2" })
+                            <div class="col-sm-4">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.MaximumParticipiants, new { @class = "form-control-editable" }), Html.EditorFor(model => model.MaximumParticipiants, new { htmlAttributes = new { @class = "form-control" } }))
+                            </div>
+                            @Html.LabelFor(model => model.RegistrationDeadline, new { @class = "control-label col-sm-2" })
+                            <div class="col-sm-4">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.RegistrationDeadline, new { @class = "form-control-editable" }), Html.DateFor(model => model.RegistrationDeadline))
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.EnableRegistration, new { @class = "control-label col-sm-2" })
+                            <div class="col-sm-1">
+                                @Html.InlineEditableControl(Html.EditableCheckLabelFor(model => model.EnableRegistration, new { @class = "form-control-editable" }), @Html.EditorFor(model => model.EnableRegistration, new { htmlAttributes = new { @class = "form-control" } }))
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Prepayment, new { @class = "control-label col-sm-2" })
+                            <div class="col-sm-4">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.Prepayment, new { @class = "form-control-editable" }), @Html.EditorFor(model => model.Prepayment, new { htmlAttributes = new { @class = "form-control" } }))
+                            </div>
+                            @Html.LabelFor(model => model.PrepaymentDeadline, new { @class = "control-label col-sm-2" })
+                            <div class="col-sm-4">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.PrepaymentDeadline, new { @class = "form-control-editable" }), @Html.DateFor(model => model.PrepaymentDeadline))
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.AccountNumber, new { @class = "control-label col-sm-2" })
+                            <div class="col-sm-4">
+                                @Html.InlineEditableControl(Html.EditableLabelFor(model => model.AccountNumber, new { @class = "form-control-editable" }), @Html.EditorFor(model => model.AccountNumber, new { htmlAttributes = new { @class = "form-control" } }))
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-12">
+                                <div class="pull-right">
+                                    <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> @Html.LocalizedDisplay(MessageKeyConstants.LABEL_SAVE)</button>
+                                    @*@if (Model.Id != Guid.Empty)
+                                    {
+                                        @Html.LocalizedActionLink("<i class='fa fa-feed'></i> " + Html.LocalizedDisplay(MessageKeyConstants.LABEL_ADD_TO_ACTUALITY), SharedConstants.ACTION_CREATE_ACTUALITY_FROM_OBJECT, SharedConstants.CONTROLLER_ACTUALITY, new { id = Model.Id, entityType = EntityType.SEMINAR }, new { @class = "btn btn-info" })
+                                    }*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="tab-pane" id="participiants">
+            </div>
+        </div>
+    </div>
+</div>
