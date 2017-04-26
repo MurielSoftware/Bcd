@@ -1,0 +1,48 @@
+﻿@model PagedList.IPagedList<Shared.Dtos.Trainings.TrainingDto>
+
+@using Client.Core.HtmlHelpers
+@using Shared.Core.Constants
+@using PagedList.Mvc
+
+@{
+   // Culture = UICulture = Shared.Core.Utils.LocalizationUtils.GetCultureString();
+}
+
+<div id="@HtmlConstants.PAGED_LIST_TRAINING">
+    @*@Html.Action(SharedConstants.VIEW_FILTER)*@
+    <table class="table table-hover">
+        <thead>
+            <tr role="row">
+                <th class="th-icon"></th>
+                <th>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_TEACHER)</th>
+                <th>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_DAY)</th>
+                <th>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_TIME)</th>
+                <th>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_CITY)</th>
+                <th class="th-administration-box"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td><i class='fa fa-graduation-cap'></i></td>
+                    <td>@Html.LocalizedActionLinkFor(modelItem => item.UserReference, WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_USER, new { id = item.UserId })</td>
+                    <td>@Html.LocalizedDropDownDisplayFor(modelItem => item.Day)</td>
+                    <td>@Html.DisplayTimeFor(modelItem => item.Start) - @Html.DisplayTimeFor(modelItem => item.End)</td>
+                    <td>@Html.DisplayFor(modelItem => item.City)</td>
+                    <td>
+                        @*@if (Html.IsLoggedUserWithSpecificIds(Shared.Core.Dto.RoleType.CUD_ALL, item.UserCreatorId, item.UserId))
+                        {*@
+                            @Html.LocalizedActionLink(@"<i class='fa fa-pencil-square-o'></i>", WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_TRAINING, new { id = item.Id }, new { @class = "tooltips", @title = Html.LocalizedDisplay(MessageKeyConstants.LABEL_UPDATE), @data_placement = "top" })
+                            @Html.DialogActionLink("<i class='fa fa-remove'></i>", HtmlConstants.DIALOG_CONFIRMATION, WebConstants.DIALOG_CONFIRMATION, WebConstants.CONTROLLER_TRAINING, new { id = item.Id, message = MessageKeyConstants.TRAINING_INFORMATION_DELETE_MESSAGE, afterSuccessAction = WebConstants.VIEW_DELETE_CONFIRMED }, new { title = MessageKeyConstants.LABEL_DELETE })
+                        @*}*@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @if (Model.PageCount > 1)
+    {
+        @*@Html.PagedListPager(Model, page => Url.Action(WebConstants.VIEW_PAGED_LIST, new Shared.Core.Url.PageRouteValueDictionary(ViewBag.FilterDto, new Dictionary<string, object>() { { "page", page } })), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions() { HttpMethod = "GET", UpdateTargetId = HtmlConstants.PAGED_LIST_TRAINING, LoadingElementId = "loading" }));*@
+    }
+</div>

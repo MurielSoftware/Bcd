@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared.Core.Dtos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,11 @@ namespace Client.Core.Controllers
             ViewData[propertyName] = TempData[propertyName];
             TempData[propertyName] = ViewData[propertyName];
             return ViewData[propertyName];
+        }
+
+        public ActionResult DialogConfirmation(Guid id, string message, string afterSuccessAction)
+        {
+            return PartialView("_ConfirmationDialog", new DialogDto() { Id = id, MessageResourceKey = message, Action = afterSuccessAction });
         }
     }
 }

@@ -25,5 +25,13 @@ namespace Client.Core.HtmlHelpers
             tagBuilder.InnerHtml = text;
             return MvcHtmlString.Create(tagBuilder.ToString());
         }
+
+        public static MvcHtmlString CreateSpan<T>(this HtmlHelper<T> htmlHelper, string text, object htmlAttributes)
+        {
+            TagBuilder tagBuilder = new TagBuilder("span");
+            tagBuilder.MergeAttributes(HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes));
+            tagBuilder.InnerHtml = text;
+            return MvcHtmlString.Create(tagBuilder.ToString());
+        }
     }
 }

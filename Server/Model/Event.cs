@@ -33,9 +33,6 @@ namespace Server.Model
         public virtual DateTime? PrepaymentDeadline { get; set; }
         public virtual string AccountNumber { get; set; }
 
-        //[Required]
-        //public virtual string Discriminator { get; set; }
-
         public virtual Guid? CountryId { get; set; }
 
         [ForeignKey("CountryId")]

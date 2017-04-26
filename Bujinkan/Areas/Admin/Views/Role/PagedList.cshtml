@@ -34,8 +34,8 @@
                     <td class="text-center">@Html.DisplayFor(modelItem => item.RoleCreation)</td>
                     <td class="text-center">@Html.DisplayFor(modelItem => item.MenuCreation)</td>
                     <td>
-                        @*@Html.DialogActionLink("<i class='fa fa-pencil-square-o'></i>", HtmlConstants.DIALOG_ROLE, SharedConstants.DIALOG_UPDATE, SharedConstants.CONTROLLER_ROLE, new { elementId = item.Id }, new { title = MessageKeys.EDIT })
-                        @Html.DialogActionLink("<i class='fa fa-remove'></i>", HtmlConstants.DIALOG_CONFIRMATION, SharedConstants.DIALOG_CONFIRMATION, SharedConstants.CONTROLLER_ROLE, new { elementId = item.Id, message = MessageKeys.ROLE_DELETE_INFORMATION, afterSuccessAction = SharedConstants.ACTION_DIALOG_DELETE_CONFIRMED }, new { title = MessageKeys.DELETE })*@
+                        @Html.DialogActionLink("<i class='fa fa-pencil-square-o'></i>", HtmlConstants.DIALOG_ROLE, WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_ROLE, new { id = item.Id }, new { title = MessageKeyConstants.LABEL_UPDATE })
+                        @Html.DialogActionLink("<i class='fa fa-remove'></i>", HtmlConstants.DIALOG_CONFIRMATION, WebConstants.DIALOG_CONFIRMATION, WebConstants.CONTROLLER_ROLE, new { id = item.Id, message = MessageKeyConstants.ROLE_INFORMATION_DELETE_MESSAGE, afterSuccessAction = WebConstants.VIEW_DELETE_CONFIRMED }, new { title = MessageKeyConstants.LABEL_DELETE })
                     </td>
                 </tr>
             }

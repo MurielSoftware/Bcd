@@ -117,14 +117,65 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label_account_number" xml:space="preserve">
+    <value>Číslo účtu</value>
+  </data>
+  <data name="label_add" xml:space="preserve">
+    <value>Přidání</value>
+  </data>
+  <data name="label_address" xml:space="preserve">
+    <value>Adresa</value>
+  </data>
+  <data name="label_administration" xml:space="preserve">
+    <value>Administrace</value>
+  </data>
+  <data name="label_administration_of_bcd" xml:space="preserve">
+    <value>Administrace Bujinkan Czech Dojo</value>
+  </data>
+  <data name="label_agreement" xml:space="preserve">
+    <value>Dle domluvy</value>
+  </data>
+  <data name="label_builtin" xml:space="preserve">
+    <value>Built-In</value>
+  </data>
+  <data name="label_city" xml:space="preserve">
+    <value>Město</value>
+  </data>
+  <data name="label_civic_association_registration" xml:space="preserve">
+    <value>Registrace</value>
+  </data>
+  <data name="label_close" xml:space="preserve">
+    <value>Zavřít</value>
+  </data>
+  <data name="label_confirmation" xml:space="preserve">
+    <value>Potvrzení</value>
+  </data>
+  <data name="label_continue" xml:space="preserve">
+    <value>Pokračovat</value>
+  </data>
   <data name="label_country" xml:space="preserve">
     <value>Země</value>
   </data>
   <data name="label_create_update_delete_all" xml:space="preserve">
     <value>Administrace dat</value>
   </data>
+  <data name="label_currency" xml:space="preserve">
+    <value>Měna</value>
+  </data>
+  <data name="label_current_participiants" xml:space="preserve">
+    <value>Aktuální počet účastníků</value>
+  </data>
+  <data name="label_czk" xml:space="preserve">
+    <value>Kč</value>
+  </data>
   <data name="label_dan" xml:space="preserve">
     <value>Dan</value>
+  </data>
+  <data name="label_date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="label_day" xml:space="preserve">
+    <value>Den</value>
   </data>
   <data name="label_description" xml:space="preserve">
     <value>Popis</value>
@@ -138,17 +189,71 @@
   <data name="label_email" xml:space="preserve">
     <value>E-mail</value>
   </data>
+  <data name="label_enable_registration" xml:space="preserve">
+    <value>Povolit registraci</value>
+  </data>
+  <data name="label_end" xml:space="preserve">
+    <value>Konec</value>
+  </data>
+  <data name="label_euro" xml:space="preserve">
+    <value>Euro</value>
+  </data>
   <data name="label_facebook" xml:space="preserve">
     <value>Facebook</value>
+  </data>
+  <data name="label_fill_form" xml:space="preserve">
+    <value>Vyplnit formulář</value>
   </data>
   <data name="label_firstname" xml:space="preserve">
     <value>Jméno</value>
   </data>
+  <data name="label_for_children" xml:space="preserve">
+    <value>Určeno pro děti</value>
+  </data>
+  <data name="label_friday" xml:space="preserve">
+    <value>Pátek</value>
+  </data>
+  <data name="label_gps" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="label_home" xml:space="preserve">
+    <value>Domů</value>
+  </data>
+  <data name="label_ic" xml:space="preserve">
+    <value>IČ</value>
+  </data>
+  <data name="label_instructor" xml:space="preserve">
+    <value>Instruktor</value>
+  </data>
+  <data name="label_jpy" xml:space="preserve">
+    <value>JPY</value>
+  </data>
+  <data name="label_list" xml:space="preserve">
+    <value>Seznam</value>
+  </data>
+  <data name="label_maximum_participiants" xml:space="preserve">
+    <value>Maximum počtu účastníků</value>
+  </data>
   <data name="label_menu_creation" xml:space="preserve">
     <value>Administrace menu</value>
   </data>
+  <data name="label_monday" xml:space="preserve">
+    <value>Pondělí</value>
+  </data>
   <data name="label_name" xml:space="preserve">
     <value>Jméno</value>
+  </data>
+  <data name="label_new" xml:space="preserve">
+    <value>Nový</value>
+  </data>
+  <data name="label_no" xml:space="preserve">
+    <value>Ne</value>
+  </data>
+  <data name="label_organization" xml:space="preserve">
+    <value>Organizace</value>
+  </data>
+  <data name="label_organization_type" xml:space="preserve">
+    <value>Typ organizace</value>
   </data>
   <data name="label_password" xml:space="preserve">
     <value>Heslo</value>
@@ -156,23 +261,107 @@
   <data name="label_phone" xml:space="preserve">
     <value>Telefon</value>
   </data>
+  <data name="label_prepayment" xml:space="preserve">
+    <value>Záloha</value>
+  </data>
+  <data name="label_prepayment_deadline" xml:space="preserve">
+    <value>Datum poslání zálohy</value>
+  </data>
+  <data name="label_prize_member" xml:space="preserve">
+    <value>Cena (člen)</value>
+  </data>
+  <data name="label_prize_nomember" xml:space="preserve">
+    <value>Cena (nečlen)</value>
+  </data>
+  <data name="label_registration_deadline" xml:space="preserve">
+    <value>Datum ukončení registrace</value>
+  </data>
   <data name="label_role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="label_roles" xml:space="preserve">
     <value>Role</value>
   </data>
   <data name="label_role_creation" xml:space="preserve">
     <value>Administrace rolí</value>
   </data>
+  <data name="label_saturday" xml:space="preserve">
+    <value>Sobota</value>
+  </data>
+  <data name="label_save" xml:space="preserve">
+    <value>Uložit</value>
+  </data>
+  <data name="label_seminar" xml:space="preserve">
+    <value>Seminář</value>
+  </data>
+  <data name="label_seminars" xml:space="preserve">
+    <value>Semináře</value>
+  </data>
+  <data name="label_shidoshi" xml:space="preserve">
+    <value>Shidoshi</value>
+  </data>
+  <data name="label_shihan" xml:space="preserve">
+    <value>Shihan</value>
+  </data>
+  <data name="label_show_prize" xml:space="preserve">
+    <value>Ukázat cenu</value>
+  </data>
+  <data name="label_start" xml:space="preserve">
+    <value>Začátek</value>
+  </data>
+  <data name="label_sunday" xml:space="preserve">
+    <value>Neděle</value>
+  </data>
   <data name="label_surname" xml:space="preserve">
     <value>Příjmení</value>
+  </data>
+  <data name="label_teacher" xml:space="preserve">
+    <value>Učitel</value>
+  </data>
+  <data name="label_teachers" xml:space="preserve">
+    <value>Učitelé</value>
+  </data>
+  <data name="label_theme" xml:space="preserve">
+    <value>Téma</value>
+  </data>
+  <data name="label_thursday" xml:space="preserve">
+    <value>Čtvrtek</value>
   </data>
   <data name="label_title" xml:space="preserve">
     <value>Titul</value>
   </data>
+  <data name="label_training" xml:space="preserve">
+    <value>Trénink</value>
+  </data>
+  <data name="label_trainings" xml:space="preserve">
+    <value>Tréninky</value>
+  </data>
+  <data name="label_tuesday" xml:space="preserve">
+    <value>Úterý</value>
+  </data>
+  <data name="label_usd" xml:space="preserve">
+    <value>USD</value>
+  </data>
   <data name="label_user_creation" xml:space="preserve">
     <value>Administrace uživatelů</value>
   </data>
+  <data name="label_views" xml:space="preserve">
+    <value>Náhledy</value>
+  </data>
   <data name="label_web" xml:space="preserve">
     <value>Web</value>
+  </data>
+  <data name="label_wednesday" xml:space="preserve">
+    <value>Středa</value>
+  </data>
+  <data name="label_welcome" xml:space="preserve">
+    <value>Vítejte</value>
+  </data>
+  <data name="label_yes" xml:space="preserve">
+    <value>Ano</value>
+  </data>
+  <data name="label_zipcode" xml:space="preserve">
+    <value>PSČ</value>
   </data>
   <data name="validation_email_message" xml:space="preserve">
     <value>'{0}' je neplatný e-mail</value>

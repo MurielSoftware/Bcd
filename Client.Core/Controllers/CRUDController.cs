@@ -36,7 +36,7 @@ namespace Client.Core.Controllers
                 }
                 if (!(ViewData[TempDataConstants.PRECREATED_DTO] is T))
                 {
-                    return PartialView(Activator.CreateInstance<T>());
+                    return View(Activator.CreateInstance<T>());
                 }
                 return View(ViewData[TempDataConstants.PRECREATED_DTO]);
             }
@@ -109,7 +109,7 @@ namespace Client.Core.Controllers
         /// <param name="controllerName">The name of the controller of the action to call after success deletion</param>
         /// <param name="message">The message ti display after deletion</param>
         /// <returns>The validation summary if the deletion is not possible or appropriate refreshed view</returns>
-        public virtual ActionResult DoDeleteConfirmed(Guid id, Message message, string actionName, string controllerName, object routeValues = null)
+        public virtual ActionResult DoDeleteConfirmed(Guid id, Message message, string actionName, string controllerName, object routeValues = null, string targetHtmlId = null)
         {
             try
             {
@@ -122,7 +122,7 @@ namespace Client.Core.Controllers
             {
                 return RedirectToActionAfterFailDelete(ex.GetValidationResults());
             }
-            return RedirectToActionAfterSuccessDelete(actionName, controllerName, null, routeValues);
+            return RedirectToActionAfterSuccessDelete(actionName, controllerName, targetHtmlId, routeValues);
         }
 
         protected virtual ActionResult RedirectToActionAfterFailDelete(string validationResult)
@@ -132,7 +132,7 @@ namespace Client.Core.Controllers
 
         protected virtual ActionResult RedirectToActionAfterSuccessDelete(string actionName, string controllerName, string targetId, object routeValues)
         {
-            return Json(new JsonDialogResult(true, targetId, Url.Action(actionName, controllerName, routeValues), JsonRefreshMode.NONE));
+            return Json(new JsonDialogResult(true, targetId, Url.Action(actionName, controllerName, routeValues), JsonRefreshMode.PARTIAL));
         }
 
         /// <summary>

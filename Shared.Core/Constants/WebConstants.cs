@@ -10,15 +10,18 @@ namespace Shared.Core.Constants
     {
         public const string AREA_ADMIN = "Admin";
 
+        public const string VIEW_CONFIRMATION = "Confirmation";
         public const string VIEW_CREATE = "Create";
         public const string VIEW_CREATE_PREDEFINED = "CreatePredefined";
         public const string VIEW_DELETE = "Delete";
+        public const string VIEW_DELETE_CONFIRMED = "DeleteConfirmed";
         public const string VIEW_EDIT = "Edit";
         public const string VIEW_INDEX = "";
         public const string VIEW_LIST = "List";
         public const string VIEW_PROFILE = "Profil";
         public const string VIEW_FILTER = "Filter";
         public const string VIEW_PAGED_LIST = "PagedList";
+        public const string VIEW_MESSAGE = "_Message";
 
         public const string DIALOG_CHANGE_PASSWORD = "DialogChangePassword";
         public const string DIALOG_CONFIRMATION = "DialogConfirmation";

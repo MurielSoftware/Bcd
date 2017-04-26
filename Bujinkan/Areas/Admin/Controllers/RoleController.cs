@@ -21,7 +21,7 @@ namespace Bujinkan.Areas.Admin.Controllers
 
         public override ActionResult DeleteConfirmed(DialogDto dialogDto)
         {
-            throw new NotImplementedException();
+            return DoDeleteConfirmed(dialogDto.Id, null, WebConstants.VIEW_PAGED_LIST, WebConstants.CONTROLLER_ROLE, null, HtmlConstants.PAGED_LIST_ROLE);
         }
 
         public ActionResult PagedList(BaseFilterDto baseFilterDto)

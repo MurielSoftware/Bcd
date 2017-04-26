@@ -3,21 +3,20 @@
         cache: false
     });
 
+    $("body").on("click", ".show-dialog", function () {
+        $(this).dialog();
+    })
+
     $.fn.dialog = function () {
         return this.each(function (index, dialog) {
-            $(dialog).click(function () {
-                $("#modal-dialogs").load($(dialog).attr("href"), function (result) {
-                    //initializePlugins("#modal-dialogs");
-                    //_onInit(dialog);
-                    var closeButton = $("#modal-dialogs").find(".btn-dialog-close");
-                    var removeFileButton = $("#modal-dialogs").find(".btn-modal-remove-attachement");
-                    var submitButton = $("#modal-dialogs").find(".asynchronous-form");
+            $("#modal-dialogs").load($(dialog).attr("href"), function (result) {
+                var closeButton = $("#modal-dialogs").find(".btn-dialog-close");
+                var removeFileButton = $("#modal-dialogs").find(".btn-modal-remove-attachement");
+                var submitButton = $("#modal-dialogs").find(".asynchronous-form");
 
-                    closeButton.click(_close);
-                    removeFileButton.click(_removeFile);
-                    submitButton.submit(_submit);
-                });
-
+                closeButton.click(_close);
+                removeFileButton.click(_removeFile);
+                submitButton.submit(_submit);
             });
         });
 

@@ -52,8 +52,10 @@
     <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\DialogCRUDController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="HtmlHelpers\DateExtensions.cs" />
     <Compile Include="HtmlHelpers\DivExtensions.cs" />
     <Compile Include="HtmlHelpers\EditableControlExtensions.cs" />
+    <Compile Include="HtmlHelpers\GoogleExtensions.cs" />
     <Compile Include="HtmlHelpers\LocalizedActionLinkExtensions.cs" />
     <Compile Include="HtmlHelpers\LocalizedDisplayExtensions.cs" />
     <Compile Include="HtmlHelpers\LocalizedDropDownListExtensions.cs" />
