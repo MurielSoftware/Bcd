@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shared.Dtos.Events
+namespace Shared.Dtos.Categories
 {
-    public class SeminarDto : BaseEventDto
+    public class ProductCategoryDto : CategoryDto
     {
     }
 }

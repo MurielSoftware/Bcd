@@ -16,7 +16,7 @@ using System.Web.Mvc;
 
 namespace Bujinkan.Areas.Admin.Controllers
 {
-    public class LinkController : CRUDController<LinkDto, ILinkCRUDService>
+    public class LinkController : DialogCRUDController<LinkDto, ILinkCRUDService>
     {
         [HttpPost, ValidateInput(false)]
         public override ActionResult Create(LinkDto linkDto)

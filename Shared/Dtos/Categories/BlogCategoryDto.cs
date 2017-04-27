@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Server.Model
+namespace Shared.Dtos.Categories
 {
-    public class PublicEvent : Event
+    public class BlogCategoryDto : CategoryDto
     {
-        public static string DISC = "EVENT";
     }
 }

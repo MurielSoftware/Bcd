@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Dtos.Events
 {
-    public abstract class EventDto : UserDefinableDto
+    public abstract class BaseEventDto : UserDefinableDto
     {
         [Display(Name = MessageKeyConstants.LABEL_THEME, ResourceType = typeof(Resource))]
         [Required(ErrorMessageResourceName = MessageKeyConstants.VALIDATION_REQUIRED_MESSAGE, ErrorMessageResourceType = typeof(Resource))]

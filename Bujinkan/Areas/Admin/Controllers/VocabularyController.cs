@@ -14,7 +14,7 @@ using System.Web.Mvc;
 
 namespace Bujinkan.Areas.Admin.Controllers
 {
-    public class VocabularyController : CRUDController<VocabularyDto, IVocabularyCRUDService>
+    public class VocabularyController : DialogCRUDController<VocabularyDto, IVocabularyCRUDService>
     {
         [HttpPost, ValidateInput(false)]
         public override ActionResult Create(VocabularyDto vocabularyDto)

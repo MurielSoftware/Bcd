@@ -76,6 +76,7 @@
     <Compile Include="Dtos\MenuItems\MenuItemEntityType.cs" />
     <Compile Include="Dtos\ReferencedDto.cs" />
     <Compile Include="Dtos\ReferenceString.cs" />
+    <Compile Include="Dtos\ResourceDto.cs" />
     <Compile Include="Dtos\Roles\RoleDto.cs" />
     <Compile Include="Dtos\Roles\RoleType.cs" />
     <Compile Include="Exceptions\ValidationException.cs" />

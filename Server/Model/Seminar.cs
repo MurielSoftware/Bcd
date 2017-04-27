@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Server.Model
 {
-    public class Seminar : Event
+    public class Seminar : BaseEvent
     {
         public static string DISC = "SEMINAR";
     }

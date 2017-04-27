@@ -155,6 +155,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\BlogCategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\DojoController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
@@ -341,6 +343,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\Vocabulary\PagedList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Views\BlogCategory\" />
+    <Folder Include="Areas\Admin\Views\ProductCategory\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -16,7 +16,7 @@ using System.Web.Mvc;
 
 namespace Bujinkan.Areas.Admin.Controllers
 {
-    public class QuestionController : CRUDController<QuestionDto, IQuestionCRUDService>
+    public class QuestionController : DialogCRUDController<QuestionDto, IQuestionCRUDService>
     {
         [HttpPost, ValidateInput(false)]
         public override ActionResult Create(QuestionDto questionDto)

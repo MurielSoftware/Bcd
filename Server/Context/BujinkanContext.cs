@@ -49,8 +49,8 @@ namespace Server.Context
                 .Map<LinkCategory>(m => m.Requires("Discriminator").HasValue(LinkCategory.DISC))
                 .Map<ProductCategory>(m => m.Requires("Discriminator").HasValue(ProductCategory.DISC));
 
-            modelBuilder.Entity<Event>()
-                .Map<PublicEvent>(m => m.Requires("Discriminator").HasValue(PublicEvent.DISC))
+            modelBuilder.Entity<BaseEvent>()
+                .Map<Event>(m => m.Requires("Discriminator").HasValue(Event.DISC))
                 .Map<Seminar>(m => m.Requires("Discriminator").HasValue(Seminar.DISC));
 
             modelBuilder.Entity<Event>()

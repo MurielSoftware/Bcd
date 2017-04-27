@@ -75,6 +75,7 @@
     <Compile Include="Converters\References\Utils\ReferenceConversionUtils.cs" />
     <Compile Include="Daos\BaseDao.cs" />
     <Compile Include="Daos\BlogDao.cs" />
+    <Compile Include="Daos\CategoryDao.cs" />
     <Compile Include="Daos\GalleryDao.cs" />
     <Compile Include="Daos\GenericDao.cs" />
     <Compile Include="Daos\LinkDao.cs" />
@@ -93,14 +94,14 @@
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Country.cs" />
     <Compile Include="Model\Dojo.cs" />
-    <Compile Include="Model\Event.cs" />
+    <Compile Include="Model\BaseEvent.cs" />
     <Compile Include="Model\Gallery.cs" />
     <Compile Include="Model\Link.cs" />
     <Compile Include="Model\LinkCategory.cs" />
     <Compile Include="Model\MenuItem.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\ProductCategory.cs" />
-    <Compile Include="Model\PublicEvent.cs" />
+    <Compile Include="Model\Event.cs" />
     <Compile Include="Model\Question.cs" />
     <Compile Include="Model\Resource.cs" />
     <Compile Include="Model\Role.cs" />
@@ -110,6 +111,9 @@
     <Compile Include="Model\UserDefinable.cs" />
     <Compile Include="Model\Vocabulary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Categories\BlogCategoryCRUDService.cs" />
+    <Compile Include="Services\Categories\CategoryCRUDService.cs" />
+    <Compile Include="Services\Categories\ProductCategoryCRUDService.cs" />
     <Compile Include="Services\Countries\CountryCRUDService.cs" />
     <Compile Include="Services\Dojos\DojoCRUDService.cs" />
     <Compile Include="Services\Events\SeminarCRUDService.cs" />
