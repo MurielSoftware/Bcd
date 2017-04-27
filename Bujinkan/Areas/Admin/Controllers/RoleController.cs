@@ -30,7 +30,7 @@ namespace Bujinkan.Areas.Admin.Controllers
             return PartialView(WebConstants.VIEW_PAGED_LIST, GetService().ReadAdministrationPaged(baseFilterDto));
         }
 
-        public ActionResult GetAllRolesReferences(BaseFilterDto baseFilterDto)
+        public ActionResult GetAllRoleReferences(BaseFilterDto baseFilterDto)
         {
             return Json(GetService().GetAllReferences(baseFilterDto).References.ToList());
         }

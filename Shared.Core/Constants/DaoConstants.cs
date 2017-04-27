@@ -14,6 +14,7 @@ namespace Shared.Core.Constants
         public const string ENTITY_SEMINAR = "Seminar";
         public const string ENTITY_TEACHER = "Teacher";
 
+        public const string ATTRIBUTE_CATEGORY = "Category";
         public const string ATTRIBUTE_EMAIL = "Email";
         public const string ATTRIBUTE_FIRSTNAME = "FirstName";
         public const string ATTRIBUTE_NAME = "Name";
@@ -21,6 +22,7 @@ namespace Shared.Core.Constants
         public const string ATTRIBUTE_COUNTRY = "Country";
         public const string ATTRIBUTE_ROLE = "Role";
         public const string ATTRIBUTE_DOJO = "Dojo";
+        public const string ATTRIBUTE_USER = "User";
         public const string ATTRIBUTE_USERS = "Users";
 
         public const string COUNTRY_ID = "CountryId";

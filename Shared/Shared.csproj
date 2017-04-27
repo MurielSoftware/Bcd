@@ -41,14 +41,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\Blogs\BlogDto.cs" />
+    <Compile Include="Dtos\Blogs\BlogFilterDto.cs" />
+    <Compile Include="Dtos\Countries\CountryDto.cs" />
+    <Compile Include="Dtos\Countries\CountryFilterDto.cs" />
     <Compile Include="Dtos\Currency.cs" />
     <Compile Include="Dtos\Dojos\DojoDto.cs" />
     <Compile Include="Dtos\Dojos\DojoFilterDto.cs" />
     <Compile Include="Dtos\Dojos\OrganizationType.cs" />
     <Compile Include="Dtos\Events\EventDto.cs" />
     <Compile Include="Dtos\Events\EventFilterDto.cs" />
+    <Compile Include="Dtos\Galleries\GalleryDto.cs" />
+    <Compile Include="Dtos\Galleries\GalleryFilterDto.cs" />
     <Compile Include="Dtos\Galleries\GalleryType.cs" />
     <Compile Include="Dtos\Events\SeminarDto.cs" />
+    <Compile Include="Dtos\Links\LinkDto.cs" />
+    <Compile Include="Dtos\Links\LinkFilterDto.cs" />
+    <Compile Include="Dtos\Products\ProductDto.cs" />
+    <Compile Include="Dtos\Products\ProductFilterDto.cs" />
+    <Compile Include="Dtos\Questions\QuestionDto.cs" />
+    <Compile Include="Dtos\Questions\QuestionFilterDto.cs" />
     <Compile Include="Dtos\Trainings\Day.cs" />
     <Compile Include="Dtos\Trainings\TrainingDto.cs" />
     <Compile Include="Dtos\Trainings\TrainingFilterDto.cs" />
@@ -56,12 +68,21 @@
     <Compile Include="Dtos\Users\BujinkanTitle.cs" />
     <Compile Include="Dtos\Users\UserDto.cs" />
     <Compile Include="Dtos\Users\UserFilterDto.cs" />
+    <Compile Include="Dtos\Vocabularies\VocabularyDto.cs" />
+    <Compile Include="Dtos\Vocabularies\VocabularyFilterDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Blogs\IBlogCRUDService.cs" />
+    <Compile Include="Services\Countries\ICountryCRUDService.cs" />
     <Compile Include="Services\Dojos\IDojoCRUDService.cs" />
     <Compile Include="Services\Events\ISeminarCRUDService.cs" />
+    <Compile Include="Services\Galleries\IGalleryCRUDService.cs" />
+    <Compile Include="Services\Links\ILinkCRUDService.cs" />
+    <Compile Include="Services\Products\IProductCRUDService.cs" />
+    <Compile Include="Services\Questions\IQuestionCRUDService.cs" />
     <Compile Include="Services\Roles\IRoleCRUDService.cs" />
     <Compile Include="Services\Trainings\ITrainingCRUDService.cs" />
     <Compile Include="Services\Users\IUserCRUDService.cs" />
+    <Compile Include="Services\Vocabularies\IVocabularyCRUDService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shared.Core\Shared.Core.csproj">

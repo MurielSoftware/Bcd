@@ -1,4 +1,6 @@
-﻿using Shared.Core.Dtos;
+﻿using Shared.Core.Attributes;
+using Shared.Core.Constants;
+using Shared.Core.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,5 +19,8 @@ namespace Shared.Dtos.Products
         public virtual Currency Currency { get; set; }
 
         public virtual Guid CategoryId { get; set; }
+
+        [Reference(DaoConstants.ATTRIBUTE_CATEGORY)]
+        public virtual ReferenceString CategoryReference { get; set; }
     }
 }

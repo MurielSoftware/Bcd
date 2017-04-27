@@ -1,4 +1,5 @@
-﻿using Shared.Core.Constants;
+﻿using Shared.Core.Attributes;
+using Shared.Core.Constants;
 using Shared.Core.Dtos;
 using Shared.Core.Resources;
 using System;
@@ -25,5 +26,11 @@ namespace Shared.Dtos.Blogs
 
         public virtual Guid? UserId { get; set; }
         public virtual Guid CategoryId { get; set; }
+
+        [Reference(DaoConstants.ATTRIBUTE_USER)]
+        public virtual ReferenceString UserReference { get; set; }
+
+        [Reference(DaoConstants.ATTRIBUTE_CATEGORY)]
+        public virtual ReferenceString CategoryReference { get; set; }
     }
 }

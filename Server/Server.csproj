@@ -74,12 +74,18 @@
     <Compile Include="Converters\References\Reference\EntityToDto\SingleReferenceAttributeEntityToDtoConverter.cs" />
     <Compile Include="Converters\References\Utils\ReferenceConversionUtils.cs" />
     <Compile Include="Daos\BaseDao.cs" />
+    <Compile Include="Daos\BlogDao.cs" />
+    <Compile Include="Daos\GalleryDao.cs" />
     <Compile Include="Daos\GenericDao.cs" />
+    <Compile Include="Daos\LinkDao.cs" />
     <Compile Include="Daos\OrderDao.cs" />
+    <Compile Include="Daos\ProductDao.cs" />
+    <Compile Include="Daos\QuestionDao.cs" />
     <Compile Include="Daos\RoleDao.cs" />
     <Compile Include="Daos\SeminarDao.cs" />
     <Compile Include="Daos\TrainingDao.cs" />
     <Compile Include="Daos\UserDao.cs" />
+    <Compile Include="Daos\VocabularyDao.cs" />
     <Compile Include="Model\Actuality.cs" />
     <Compile Include="Model\BaseEntity.cs" />
     <Compile Include="Model\Blog.cs" />
@@ -104,13 +110,19 @@
     <Compile Include="Model\UserDefinable.cs" />
     <Compile Include="Model\Vocabulary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Countries\CountryCRUDService.cs" />
     <Compile Include="Services\Dojos\DojoCRUDService.cs" />
     <Compile Include="Services\Events\SeminarCRUDService.cs" />
+    <Compile Include="Services\Galleries\GalleryCRUDService.cs" />
     <Compile Include="Services\GenericCRUDService.cs" />
+    <Compile Include="Services\Links\LinkCRUDService.cs" />
+    <Compile Include="Services\Products\ProductCRUDService.cs" />
+    <Compile Include="Services\Questions\QuestionCRUDService.cs" />
     <Compile Include="Services\Roles\RoleCRUDService.cs" />
     <Compile Include="Services\Trainings\TrainingCRUDService.cs" />
     <Compile Include="Services\UserDefinableCRUDService.cs" />
     <Compile Include="Services\Users\UserCRUDService.cs" />
+    <Compile Include="Services\Vocabularies\VocabularyCRUDService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

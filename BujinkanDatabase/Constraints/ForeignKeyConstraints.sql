@@ -57,19 +57,19 @@ ALTER TABLE [dbo].[JOIN_USER_EVENT] ADD CONSTRAINT [FK_Join_UserEvent_Event] FOR
 GO
 
 /* Entry */
-ALTER TABLE [dbo].[Entry] ADD CONSTRAINT [FK_Entry_Event] FOREIGN KEY ([EventId]) REFERENCES [dbo].[Event] (Id)
+ALTER TABLE [dbo].[ENTRY] ADD CONSTRAINT [FK_Entry_Event] FOREIGN KEY ([EventId]) REFERENCES [dbo].[EVENT] (Id)
 GO
 
 /* UserDefinable */
-ALTER TABLE [dbo].[USER_DEFINABLE] ADD CONSTRAINT [FK_UserDefinable_User] FOREIGN KEY ([UserCreatorId]) REFERENCES [dbo].[User] (Id)
+ALTER TABLE [dbo].[USER_DEFINABLE] ADD CONSTRAINT [FK_UserDefinable_User] FOREIGN KEY ([UserCreatorId]) REFERENCES [dbo].[USER] (Id)
 GO
 
 /* Actuality */
-ALTER TABLE [dbo].[Actuality] ADD CONSTRAINT [FK_Actuality_UserDefinable] FOREIGN KEY ([UserDefinableId]) REFERENCES [dbo].[USER_DEFINABLE] (Id)
+ALTER TABLE [dbo].[ACTUALITY] ADD CONSTRAINT [FK_Actuality_UserDefinable] FOREIGN KEY ([UserDefinableId]) REFERENCES [dbo].[USER_DEFINABLE] (Id)
 GO
 
 /* Link */
-ALTER TABLE [dbo].[Link] ADD CONSTRAINT [FK_Link_Category] FOREIGN KEY ([CategoryId]) REFERENCES [dbo].[Category] (Id)
+ALTER TABLE [dbo].[LINK] ADD CONSTRAINT [FK_Link_Category] FOREIGN KEY ([CategoryId]) REFERENCES [dbo].[CATEGORY] (Id)
 GO
 
 /* Category */

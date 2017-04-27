@@ -75,7 +75,7 @@ namespace Client.Core.HtmlHelpers
             return MvcHtmlString.Create(sb.ToString());
         }
 
-        private static MvcHtmlString CreateLabel<T>(this HtmlHelper<T> htmlHelper, string propertyName, string text, object htmlAttributes)
+        public static MvcHtmlString CreateLabel<T>(this HtmlHelper<T> htmlHelper, string propertyName, string text, object htmlAttributes)
         {
             TagBuilder tagBuilder = new TagBuilder("label");
             tagBuilder.MergeAttributes(HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes));
