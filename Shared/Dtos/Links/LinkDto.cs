@@ -1,4 +1,5 @@
-﻿using Shared.Core.Constants;
+﻿using Shared.Core.Attributes;
+using Shared.Core.Constants;
 using Shared.Core.Dtos;
 using Shared.Core.Resources;
 using System;
@@ -25,5 +26,9 @@ namespace Shared.Dtos.Links
         public virtual string Description { get; set; }
 
         public virtual Guid CategoryId { get; set; }
+
+        [Display(Name = MessageKeyConstants.LABEL_CATEGORY, ResourceType = typeof(Resource))]
+        [ListReference(DaoConstants.ATTRIBUTE_CATEGORY)]
+        public virtual ReferenceString CategoryReference { get; set; }
     }
 }

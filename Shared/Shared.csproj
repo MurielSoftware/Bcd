@@ -46,6 +46,7 @@
     <Compile Include="Dtos\Categories\BlogCategoryDto.cs" />
     <Compile Include="Dtos\Categories\CategoryDto.cs" />
     <Compile Include="Dtos\Categories\CategoryFilterDto.cs" />
+    <Compile Include="Dtos\Categories\LinkCategoryDto.cs" />
     <Compile Include="Dtos\Categories\ProductCategoryDto.cs" />
     <Compile Include="Dtos\Countries\CountryDto.cs" />
     <Compile Include="Dtos\Countries\CountryFilterDto.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Blogs\IBlogCRUDService.cs" />
     <Compile Include="Services\Categories\IBlogCategoryCRUDService.cs" />
+    <Compile Include="Services\Categories\ILinkCategoryCRUDService.cs" />
     <Compile Include="Services\Categories\IProductCategoryCRUDService.cs" />
     <Compile Include="Services\Countries\ICountryCRUDService.cs" />
     <Compile Include="Services\Dojos\IDojoCRUDService.cs" />

@@ -51,5 +51,6 @@ namespace Shared.Core.Constants
         public const string CONTROLLER_USER = "User";
         public const string CONTROLLER_VIDEO = "Video";
         public const string CONTROLLER_VOCABULARY = "Vocabulary";
+        public const string CONTROLLER_LINK_CATEGORY = "LinkCategory";
     }
 }

@@ -35,6 +35,7 @@ namespace Shared.Dtos.Products
 
         public virtual Guid CategoryId { get; set; }
 
+        [Display(Name = MessageKeyConstants.LABEL_CATEGORY, ResourceType = typeof(Resource))]
         [ListReference(DaoConstants.ATTRIBUTE_CATEGORY)]
         public virtual ReferenceString CategoryReference { get; set; }
     }

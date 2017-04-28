@@ -105,7 +105,7 @@ input[type=file]:hover {
 
 .form-control-title {
     font-size: 18px;
-    height: 42px;
+    /*height: 42px;*/
 }
 
 .form-control-required {
@@ -121,6 +121,7 @@ input[type=file]:hover {
     background: #fafafa;
     color: #000;
     border: 1px solid #f0f0f0;
+    font-weight: bold;
 }
 
 .form-control-editable:hover {

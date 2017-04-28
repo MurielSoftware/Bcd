@@ -97,6 +97,15 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Přidat produkt.
+        /// </summary>
+        public static string label_add_product {
+            get {
+                return ResourceManager.GetString("label_add_product", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Přidat otázku.
         /// </summary>
         public static string label_add_question {
@@ -547,6 +556,15 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kategorie.
+        /// </summary>
+        public static string label_link_category {
+            get {
+                return ResourceManager.GetString("label_link_category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Odkazy.
         /// </summary>
         public static string label_links {
@@ -678,6 +696,15 @@ namespace Shared.Core.Resources {
         public static string label_prepayment_deadline {
             get {
                 return ResourceManager.GetString("label_prepayment_deadline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cena.
+        /// </summary>
+        public static string label_prize {
+            get {
+                return ResourceManager.GetString("label_prize", resourceCulture);
             }
         }
         

@@ -114,6 +114,7 @@
     <Compile Include="Services\Blogs\BlogCRUDService.cs" />
     <Compile Include="Services\Categories\BlogCategoryCRUDService.cs" />
     <Compile Include="Services\Categories\CategoryCRUDService.cs" />
+    <Compile Include="Services\Categories\LinkCategoryCRUDService.cs" />
     <Compile Include="Services\Categories\ProductCategoryCRUDService.cs" />
     <Compile Include="Services\Countries\CountryCRUDService.cs" />
     <Compile Include="Services\Dojos\DojoCRUDService.cs" />

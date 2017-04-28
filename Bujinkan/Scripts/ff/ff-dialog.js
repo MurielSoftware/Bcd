@@ -17,6 +17,8 @@
                 closeButton.click(_close);
                 removeFileButton.click(_removeFile);
                 submitButton.submit(_submit);
+
+                initPluginsOnRemoteContent();
             });
         });
 

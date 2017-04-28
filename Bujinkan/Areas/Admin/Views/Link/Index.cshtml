@@ -11,6 +11,9 @@
         <li>
             @Html.DialogActionLink("<i class='" + @HtmlConstants.FA_IMAGE_LINK + "'></i>" + Html.LocalizedDisplay(MessageKeyConstants.LABEL_ADD_LINK), HtmlConstants.DIALOG_LINK, WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_LINK, null, new { @class = "ribbon-button" })
         </li>
+        <li>
+            @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_CATEGORY + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_CATEGORY), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_LINK_CATEGORY, null, new { @class = "ribbon-button" })
+        </li>
         <li class="ribbon-group-title">
             @Html.LocalizedDisplay(MessageKeyConstants.LABEL_LINKS)
         </li>

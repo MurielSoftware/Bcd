@@ -86,6 +86,7 @@ namespace Shared.Dtos.Events
         public virtual Guid? CountryId { get; set; }
 
         [Reference(DaoConstants.COUNTRY_ID)]
+        [Display(Name = MessageKeyConstants.LABEL_COUNTRY, ResourceType = typeof(Resource))]
         public virtual ReferenceString CountryReference { get; set; }
 
         [Display(Name = MessageKeyConstants.LABEL_TEACHERS, ResourceType = typeof(Resource))]

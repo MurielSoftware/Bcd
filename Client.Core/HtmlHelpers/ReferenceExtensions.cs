@@ -63,7 +63,7 @@ namespace Client.Core.HtmlHelpers
             ModelMetadata metadata = ModelMetadata.FromLambdaExpression(expression, htmlHelper.ViewData);
             if (metadata.Model == null || !(metadata.Model is ReferenceString))
             {
-                return DivExtensions.CreateDiv<T>(htmlHelper, SharedConstants.EMPTY_STRING, htmlAttributes);
+                return DivExtensions.CreateSpan<T>(htmlHelper, SharedConstants.EMPTY_STRING, htmlAttributes);
                // return ExtensionsUtil.CreateLabel(metadata.PropertyName, SharedConstants.EMPTY_STRING, htmlAttributes);
             }
 
@@ -71,7 +71,7 @@ namespace Client.Core.HtmlHelpers
 
             if (action == null && controller == null)
             {
-                return DivExtensions.CreateDiv<T>(htmlHelper, (metadata.Model as ReferenceString).GetValues(), htmlAttributes);
+                return DivExtensions.CreateSpan<T>(htmlHelper, (metadata.Model as ReferenceString).GetValues(), htmlAttributes);
             }
             return MvcHtmlString.Create(CreateLinks<T>(htmlHelper, metadata.Model as ReferenceString, action, controller, htmlAttributes));
         }
