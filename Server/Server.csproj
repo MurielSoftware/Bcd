@@ -79,6 +79,7 @@
     <Compile Include="Daos\GalleryDao.cs" />
     <Compile Include="Daos\GenericDao.cs" />
     <Compile Include="Daos\LinkDao.cs" />
+    <Compile Include="Daos\MenuItemDao.cs" />
     <Compile Include="Daos\OrderDao.cs" />
     <Compile Include="Daos\ProductDao.cs" />
     <Compile Include="Daos\QuestionDao.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="Services\Galleries\GalleryCRUDService.cs" />
     <Compile Include="Services\GenericCRUDService.cs" />
     <Compile Include="Services\Links\LinkCRUDService.cs" />
+    <Compile Include="Services\MenuItemCRUDService.cs" />
     <Compile Include="Services\Products\ProductCRUDService.cs" />
     <Compile Include="Services\Questions\QuestionCRUDService.cs" />
     <Compile Include="Services\Roles\RoleCRUDService.cs" />

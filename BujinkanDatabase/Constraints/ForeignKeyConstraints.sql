@@ -41,6 +41,8 @@ ALTER TABLE [dbo].[MENU_ITEM] ADD CONSTRAINT [FK_MenuItem_ParentMenuItem] FOREIG
 GO
 ALTER TABLE [dbo].[MENU_ITEM] ADD CONSTRAINT [FK_MenuItem_UserDefinable] FOREIGN KEY ([UserDefinableId]) REFERENCES [dbo].[USER_DEFINABLE] (Id)
 GO
+ALTER TABLE [dbo].[MENU_ITEM] ADD CONSTRAINT [FK_MenuItem_Category] FOREIGN KEY ([CategoryId]) REFERENCES [dbo].[CATEGORY] (Id)
+GO
 
 /* Gallery */
 ALTER TABLE [dbo].[GALLERY] ADD CONSTRAINT [FK_Gallery_CoverPhoto] FOREIGN KEY ([CoverPhotoId]) REFERENCES [dbo].[RESOURCE] (Id)

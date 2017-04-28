@@ -94,9 +94,11 @@
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\ICRUDService.cs" />
     <Compile Include="Services\IListReferenceService.cs" />
+    <Compile Include="Services\IMenuItemCRUDService.cs" />
     <Compile Include="Services\IPagedListAdministrationReaderService.cs" />
     <Compile Include="Services\IReferenceService.cs" />
     <Compile Include="Services\IService.cs" />
+    <Compile Include="Services\ITreeCRUDService.cs" />
     <Compile Include="Utils\PasswordUtils.cs" />
     <Compile Include="Utils\ResourceUtils.cs" />
     <Compile Include="Utils\StringUtils.cs" />

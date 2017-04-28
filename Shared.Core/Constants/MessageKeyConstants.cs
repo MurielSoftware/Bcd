@@ -23,6 +23,7 @@ namespace Shared.Core.Constants
         public const string LABEL_ANSWER = "label_answer";
         public const string LABEL_ARTICLES = "label_articles";
         public const string LABEL_ASSOCIATION = "label_association";
+        public const string LABEL_ASSOCIATION_TYPE = "label_association_type";
         public const string LABEL_BLOG = "label_blog";
         public const string LABEL_BLOG_CATEGORY = "label_blog_category";
         public const string LABEL_BLOG_CATEGORIES = "label_blog_categories";

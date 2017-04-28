@@ -48,7 +48,7 @@ namespace Client.Core.Controllers
             return Json(new JsonDialogResult(false, HtmlConstants.DIALOG_VALIDATION_SUMMARY, validationResult));
         }
 
-        protected override ActionResult RedirectToActionAfterSuccessCreate(string actionName, string controllerName, object routeValues, string targetHtmlId)
+        protected override ActionResult RedirectToActionAfterSuccessCreate(Guid id, string actionName, string controllerName, object routeValues, string targetHtmlId, JsonRefreshMode refreshMode)
         {
             return Json(new JsonDialogResult(true, targetHtmlId, Url.Action(actionName, controllerName, routeValues), JsonRefreshMode.FULL));
         }

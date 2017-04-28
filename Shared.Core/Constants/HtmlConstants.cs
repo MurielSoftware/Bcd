@@ -49,5 +49,7 @@ namespace Shared.Core.Constants
         public const string FA_IMAGE_ROLE = "fa fa-cogs";
         public const string FA_IMAGE_VIDEO = "fa fa-video-camera";
         public const string FA_IMAGE_HOME = "fa fa-home";
+
+        public const string TREE_MENU_ITEM = "tree-menu-item";
     }
 }
