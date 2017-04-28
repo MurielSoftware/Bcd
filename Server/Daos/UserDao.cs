@@ -54,7 +54,7 @@ namespace Server.Daos
         internal int FindMaxOrderValue()
         {
             return _modelContext.Set<User>()
-                .Max(x => (int?)x.Order) ?? 0;
+                .Max(x => x.Order);
         }
 
         /// <summary>

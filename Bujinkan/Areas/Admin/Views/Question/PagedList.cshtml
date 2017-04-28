@@ -27,8 +27,8 @@
                     <td>
                         @*@if (Html.IsLoggedUserWithSpecificIds(Shared.Core.Dto.RoleType.CUD_ALL, item.UserCreatorId, item.UserId))
                         {*@
-                            @Html.LocalizedActionLink(@"<i class='fa fa-pencil-square-o'></i>", WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_BLOG, new { id = item.Id }, new { @class = "tooltips", @title = Html.LocalizedDisplay(MessageKeyConstants.LABEL_UPDATE), @data_placement = "top" })
-                            @Html.DialogActionLink("<i class='fa fa-remove'></i>", HtmlConstants.DIALOG_CONFIRMATION, WebConstants.DIALOG_CONFIRMATION, WebConstants.CONTROLLER_BLOG, new { id = item.Id, message = MessageKeyConstants.OBJECT_INFORMATION_DELETE_MESSAGE, afterSuccessAction = WebConstants.VIEW_DELETE_CONFIRMED }, new { title = MessageKeyConstants.LABEL_DELETE })
+                            @Html.LocalizedActionLink(@"<i class='fa fa-pencil-square-o'></i>", WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_QUESTION, new { id = item.Id }, new { @class = "tooltips", @title = Html.LocalizedDisplay(MessageKeyConstants.LABEL_UPDATE), @data_placement = "top" })
+                            @Html.DialogActionLink("<i class='fa fa-remove'></i>", HtmlConstants.DIALOG_CONFIRMATION, WebConstants.DIALOG_CONFIRMATION, WebConstants.CONTROLLER_QUESTION, new { id = item.Id, message = MessageKeyConstants.OBJECT_INFORMATION_DELETE_MESSAGE, afterSuccessAction = WebConstants.VIEW_DELETE_CONFIRMED }, new { title = MessageKeyConstants.LABEL_DELETE })
                         @*}*@
                     </td>
                 </tr>

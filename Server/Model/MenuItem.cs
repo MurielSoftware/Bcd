@@ -1,6 +1,7 @@
 ﻿using Shared.Core.Dtos.MenuItems;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,9 @@ namespace Server.Model
     [Table("MENU_ITEM")]
     public class MenuItem : BaseEntity//, IOrderableEntity
     {
+        [Required]
         public virtual string Name { get; set; }
+
         public virtual string Url { get; set; }
         public virtual bool BuiltIn { get; set; }
         public virtual int Order { get; set; }

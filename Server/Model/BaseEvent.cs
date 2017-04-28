@@ -12,11 +12,16 @@ namespace Server.Model
     [Table("EVENT")]
     public abstract class BaseEvent : UserDefinable
     {
+        [Required]
         public virtual string Theme { get; set; }
+
         public virtual DateTime Start { get; set; }
         public virtual DateTime End { get; set; }
         public virtual string Address { get; set; }
+
+        [Required]
         public virtual string City { get; set; }
+
         public virtual string Zipcode { get; set; }
         public virtual string Gps { get; set; }
         public virtual string Facebook { get; set; }

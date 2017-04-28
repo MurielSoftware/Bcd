@@ -21,7 +21,7 @@ namespace Server.Model
         public virtual string Gps { get; set; }
         public virtual string Description { get; set; }
 
-        public virtual Guid? UserId { get; set; }
+        public virtual Guid UserId { get; set; }
         public virtual Guid? CountryId { get; set; }
 
         [ForeignKey("UserId")]

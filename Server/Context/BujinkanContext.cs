@@ -37,9 +37,9 @@ namespace Server.Context
             Configuration.LazyLoadingEnabled = true;
             Configuration.AutoDetectChangesEnabled = false;
 
-#if DEBUG
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<BujinkanContext>());
-#endif
+//#if DEBUG
+//            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<BujinkanContext>());
+//#endif
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -53,7 +53,7 @@ namespace Server.Context
                 .Map<Event>(m => m.Requires("Discriminator").HasValue(Event.DISC))
                 .Map<Seminar>(m => m.Requires("Discriminator").HasValue(Seminar.DISC));
 
-            modelBuilder.Entity<Event>()
+            modelBuilder.Entity<BaseEvent>()
                 .HasMany(x => x.Users)
                 .WithMany(y => y.Events)
                 .Map(m =>

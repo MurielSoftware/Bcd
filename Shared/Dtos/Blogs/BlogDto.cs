@@ -30,7 +30,7 @@ namespace Shared.Dtos.Blogs
         [Reference(DaoConstants.ATTRIBUTE_USER)]
         public virtual ReferenceString UserReference { get; set; }
 
-        [Reference(DaoConstants.ATTRIBUTE_CATEGORY)]
+        [ListReference(DaoConstants.ATTRIBUTE_CATEGORY)]
         public virtual ReferenceString CategoryReference { get; set; }
     }
 }

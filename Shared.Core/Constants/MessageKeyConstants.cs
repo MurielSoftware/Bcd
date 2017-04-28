@@ -10,12 +10,17 @@ namespace Shared.Core.Constants
     {
         public const string LABEL_ACCOUNT_NUMBER = "label_account_number";
         public const string LABEL_ADD = "label_add";
+        public const string LABEL_ADD_LINK = "label_add_link";
+        public const string LABEL_ADD_PRODUCT = "label_add_product";
+        public const string LABEL_ADD_QUESTION = "label_add_question";
         public const string LABEL_ADD_ROLE = "label_add_role";
         public const string LABEL_ADD_CATEGORY = "label_add_category";
+        public const string LABEL_ADD_VOCABULARY = "label_add_vocabulary";
         public const string LABEL_ADDRESS = "label_address";
         public const string LABEL_ADMINISTRATION = "label_administration";
         public const string LABEL_ADMINISTRATION_OF_BCD = "label_administration_of_bcd";
         public const string LABEL_AGREEMENT = "label_agreement";
+        public const string LABEL_ANSWER = "label_answer";
         public const string LABEL_ARTICLES = "label_articles";
         public const string LABEL_ASSOCIATION = "label_association";
         public const string LABEL_BLOG = "label_blog";
@@ -78,6 +83,7 @@ namespace Shared.Core.Constants
         public const string LABEL_PASSWORD = "label_password";
         public const string LABEL_PREPAYMENT = "label_prepayment";
         public const string LABEL_PREPAYMENT_DEADLINE = "label_prepayment_deadline";
+        public const string LABEL_PRIZE = "label_prize";
         public const string LABEL_PRIZE_MEMBER = "label_prize_member";
         public const string LABEL_PRIZE_NOMEMBER = "label_prize_nomember";
         public const string LABEL_PRODUCT = "label_product";

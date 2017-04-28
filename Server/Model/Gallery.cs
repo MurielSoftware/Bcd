@@ -1,6 +1,7 @@
 ﻿using Shared.Dtos.Galleries;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -11,8 +12,9 @@ namespace Server.Model
     [Table("GALLERY")]
     public class Gallery : UserDefinable
     {
-
+        [Required]
         public virtual string Name { get; set; }
+
         public virtual DateTime Date { get; set; }
         public virtual GalleryType GalleryType { get; set; }
         public virtual string Description { get; set; }

@@ -11,5 +11,6 @@ namespace Server.Model
     public abstract class UserDefinable : BaseEntity
     {
         public virtual bool Public { get; set; }
+        public virtual Guid? UserCreatorId { get; set; }
     }
 }

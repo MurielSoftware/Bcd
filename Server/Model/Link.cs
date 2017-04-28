@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,9 @@ namespace Server.Model
     [Table("LINK")]
     public class Link : BaseEntity
     {
+        [Required]
         public virtual string Name { get; set; }
+
         public virtual string Url { get; set; }
         public virtual string Description { get; set; }
 

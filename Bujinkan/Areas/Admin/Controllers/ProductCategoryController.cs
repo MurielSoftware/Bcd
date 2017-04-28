@@ -29,5 +29,10 @@ namespace Bujinkan.Areas.Admin.Controllers
             ViewBag.FilterDto = categoryFilterDto;
             return PartialView(WebConstants.VIEW_PAGED_LIST, GetService().ReadAdministrationPaged(categoryFilterDto));
         }
+
+        public ActionResult GetAllCategoryReferences(CategoryFilterDto categoryFilterDto)
+        {
+            return Json(GetService().GetAllReferences(categoryFilterDto).References.ToList());
+        }
     }
 }

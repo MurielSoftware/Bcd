@@ -34,6 +34,7 @@ namespace Shared.Dtos.Dojos
         public virtual string Email { get; set; }
 
         [Display(Name = MessageKeyConstants.LABEL_FACEBOOK, ResourceType = typeof(Resource))]
+        [Url(ErrorMessageResourceName = MessageKeyConstants.VALIDATION_URL_MESSAGE, ErrorMessageResourceType = typeof(Resource))]
         public virtual string Facebook { get; set; }
     }
 }

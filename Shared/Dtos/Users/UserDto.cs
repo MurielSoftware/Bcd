@@ -33,11 +33,11 @@ namespace Shared.Dtos.Users
         public virtual string Password { get; set; }
 
         [Display(Name = MessageKeyConstants.LABEL_WEB, ResourceType = typeof(Resource))]
-        [EmailAddress(ErrorMessageResourceName = MessageKeyConstants.VALIDATION_URL_MESSAGE, ErrorMessageResourceType = typeof(Resource))]
+        [Url(ErrorMessageResourceName = MessageKeyConstants.VALIDATION_URL_MESSAGE, ErrorMessageResourceType = typeof(Resource))]
         public virtual string Web { get; set; }
 
         [Display(Name = MessageKeyConstants.LABEL_FACEBOOK, ResourceType = typeof(Resource))]
-        [EmailAddress(ErrorMessageResourceName = MessageKeyConstants.VALIDATION_URL_MESSAGE, ErrorMessageResourceType = typeof(Resource))]
+        [Url(ErrorMessageResourceName = MessageKeyConstants.VALIDATION_URL_MESSAGE, ErrorMessageResourceType = typeof(Resource))]
         public virtual string Facebook { get; set; }
 
         [Display(Name = MessageKeyConstants.LABEL_PHONE, ResourceType = typeof(Resource))]

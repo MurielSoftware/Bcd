@@ -375,4 +375,100 @@
   <data name="validation_url_message" xml:space="preserve">
     <value>'{0}' je neplatná url adresa</value>
   </data>
+  <data name="label_add_category" xml:space="preserve">
+    <value>Přidat kategorii</value>
+  </data>
+  <data name="label_blog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="label_blog_category" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="label_category" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="label_events" xml:space="preserve">
+    <value>Události</value>
+  </data>
+  <data name="label_gallery" xml:space="preserve">
+    <value>Galerie</value>
+  </data>
+  <data name="label_information" xml:space="preserve">
+    <value>Informace</value>
+  </data>
+  <data name="label_link" xml:space="preserve">
+    <value>Odkaz</value>
+  </data>
+  <data name="label_links" xml:space="preserve">
+    <value>Odkazy</value>
+  </data>
+  <data name="label_menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="label_products" xml:space="preserve">
+    <value>Produkty</value>
+  </data>
+  <data name="label_questions" xml:space="preserve">
+    <value>Otázky</value>
+  </data>
+  <data name="label_settings" xml:space="preserve">
+    <value>Nastavení</value>
+  </data>
+  <data name="label_shop" xml:space="preserve">
+    <value>Budoshop</value>
+  </data>
+  <data name="label_time" xml:space="preserve">
+    <value>Čas</value>
+  </data>
+  <data name="label_time_end" xml:space="preserve">
+    <value>Konec</value>
+  </data>
+  <data name="label_time_start" xml:space="preserve">
+    <value>Začátek</value>
+  </data>
+  <data name="label_video" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="label_vocabulary" xml:space="preserve">
+    <value>Slovník</value>
+  </data>
+  <data name="label_answer" xml:space="preserve">
+    <value>Odpověď</value>
+  </data>
+  <data name="label_articles" xml:space="preserve">
+    <value>Články</value>
+  </data>
+  <data name="label_blogs" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="label_blog_categories" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="label_event" xml:space="preserve">
+    <value>Událost</value>
+  </data>
+  <data name="label_galleries" xml:space="preserve">
+    <value>Galerie</value>
+  </data>
+  <data name="label_product_category" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="label_translate" xml:space="preserve">
+    <value>Překlad</value>
+  </data>
+  <data name="label_word" xml:space="preserve">
+    <value>Slovo</value>
+  </data>
+  <data name="label_add_link" xml:space="preserve">
+    <value>Přidat odkaz</value>
+  </data>
+  <data name="label_add_question" xml:space="preserve">
+    <value>Přidat otázku</value>
+  </data>
+  <data name="label_add_vocabulary" xml:space="preserve">
+    <value>Přidat překlad</value>
+  </data>
+  <data name="label_question" xml:space="preserve">
+    <value>Otázka</value>
+  </data>
 </root>

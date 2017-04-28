@@ -2,6 +2,7 @@
 using Shared.Dtos.Users;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -13,10 +14,19 @@ namespace Server.Model
     public class User : UserDefinable, IOrderableEntity
     {
         public virtual BujinkanTitle BujinkanTitle { get; set; }
+
+        [Required]
         public virtual string FirstName { get; set; }
+
+        [Required]
         public virtual string Surname { get; set; }
+
+        [Required]
         public virtual string Email { get; set; }
+
+        [Required]
         public virtual string Password { get; set; }
+
         public virtual string Web { get; set; }
         public virtual string Facebook { get; set; }
         public virtual string Phone { get; set; }
@@ -37,7 +47,7 @@ namespace Server.Model
         [ForeignKey("RoleId")]
         public virtual Role Role { get; set; }
 
-        public virtual ICollection<Event> Events { get; set; }
+        public virtual ICollection<BaseEvent> Events { get; set; }
         public virtual ICollection<Training> Trainings { get; set; }
     }
 }
