@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Services.Categories
 {
-    public interface IBlogCategoryCRUDService : ICRUDService<BlogCategoryDto>, IListReferenceService<CategoryFilterDto>
+    public interface IBlogCategoryCRUDService : ICRUDService<BlogCategoryDto>, IListReferenceService<CategoryFilterDto>, IPagedListAdministrationReaderService<BlogCategoryDto, CategoryFilterDto>
     {
     }
 }

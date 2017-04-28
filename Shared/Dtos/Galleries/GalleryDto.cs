@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Dtos.Galleries
 {
-    public class GalleryDto : BaseDto
+    public class GalleryDto : UserDefinableDto
     {
         public virtual string Name { get; set; }
         public virtual DateTime Date { get; set; }

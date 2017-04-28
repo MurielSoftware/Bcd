@@ -11,15 +11,20 @@
 
             $.post(options.action, null, function (data) {
                 var items = [];
-                $.each(data, function (i, option) {
-                    if (option.Key == thisReferenceList.data("selected")) {
-                        items[i] = "<option value='" + option.Key + "' selected='selected'>" + option.Value + "</option>";
-                        _setSelected(targetControl, option.Value, true);
-                    } else {
-                        items[i] = "<option value='" + option.Key + "'>" + option.Value + "</option>";
-                        _setSelected(targetControl, option.Value, false);
-                    }
-                })
+                if (data.length == 0) {
+                    items[0] = "<option>Nic nebylo nalezeno</option>";
+                    _setSelected(targetControl, "Nic nebylo nalezeno", true);
+                } else {
+                    $.each(data, function (i, option) {
+                        if (option.Key == thisReferenceList.data("selected")) {
+                            items[i] = "<option value='" + option.Key + "' selected='selected'>" + option.Value + "</option>";
+                            _setSelected(targetControl, option.Value, true);
+                        } else {
+                            items[i] = "<option value='" + option.Key + "'>" + option.Value + "</option>";
+                            _setSelected(targetControl, option.Value, false);
+                        }
+                    })
+                }
                 thisReferenceList.empty().append(items.join(""));
             });
 

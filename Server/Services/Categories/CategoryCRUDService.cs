@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Shared.Core.Context;
 using Server.Daos;
 using Shared.Core.Dtos;
+using PagedList;
 
 namespace Server.Services.Categories
 {
@@ -25,7 +26,7 @@ namespace Server.Services.Categories
 
         public ListReferenceDto GetAllReferences(CategoryFilterDto categoryFilterDto)
         {
-            return _categoryDao.FindAllReferences<BlogCategory>(categoryFilterDto);
+            return _categoryDao.FindAllReferences<U>(categoryFilterDto);
         }
     }
 }

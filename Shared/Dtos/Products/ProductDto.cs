@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Dtos.Products
 {
-    public class ProductDto : BaseDto
+    public class ProductDto : UserDefinableDto
     {
         public virtual string Name { get; set; }
         public virtual string Url { get; set; }

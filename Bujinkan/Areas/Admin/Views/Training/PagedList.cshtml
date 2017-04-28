@@ -25,7 +25,7 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td><i class='fa fa-graduation-cap'></i></td>
+                    <td><i class='@HtmlConstants.FA_IMAGE_TRAINING'></i></td>
                     <td>@Html.LocalizedActionLinkFor(modelItem => item.UserReference, WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_USER, new { id = item.UserId })</td>
                     <td>@Html.LocalizedDropDownDisplayFor(modelItem => item.Day)</td>
                     <td>@Html.DisplayTimeFor(modelItem => item.Start) - @Html.DisplayTimeFor(modelItem => item.End)</td>

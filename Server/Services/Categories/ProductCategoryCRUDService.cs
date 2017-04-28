@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Shared.Core.Context;
 using Shared.Services.Categories;
+using PagedList;
 
 namespace Server.Services.Categories
 {
@@ -15,6 +16,11 @@ namespace Server.Services.Categories
         public ProductCategoryCRUDService(IUnitOfWork unitOfWork) 
             : base(unitOfWork)
         {
+        }
+
+        public IPagedList<ProductCategoryDto> ReadAdministrationPaged(CategoryFilterDto categoryFilterDto)
+        {
+            return _categoryDao.FindPaged<ProductCategoryDto, ProductCategory>(categoryFilterDto);
         }
     }
 }

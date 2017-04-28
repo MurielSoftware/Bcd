@@ -20,7 +20,10 @@ namespace Bujinkan.Areas.Admin.Controllers
         {
             IDojoCRUDService dojoCRUDService = GetServiceManager().Get<IDojoCRUDService>();
             DojoDto dojoDto = dojoCRUDService.Read(GuidConstants.DOJO_BUJINKAN_ID);
-            userDto.DojoReference = new ReferenceString(dojoDto.Id, dojoDto.Name);
+            if (dojoDto != null)
+            {
+                userDto.DojoReference = new ReferenceString(dojoDto.Id, dojoDto.Name);
+            }
             return base.CreatePredefined(userDto);
         }
 

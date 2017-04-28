@@ -38,19 +38,19 @@
                     <div id="home" class="tab-pane active" role="tabpanel">
                         <ul class="ribbon-group">
                             <li>
-                                @Html.LocalizedActionLink(@"<i class='fa fa-user'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_TEACHER), WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_USER, null, new { @class = "ribbon-button" })
+                                @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_USER + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_TEACHER), WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_USER, null, new { @class = "ribbon-button" })
                             </li>
                             <li>
-                                @Html.LocalizedActionLink(@"<i class='fa fa-graduation-cap'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_TRAINING), WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_TRAINING, null, new { @class = "ribbon-button" })
+                                @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_TRAINING + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_TRAINING), WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_TRAINING, null, new { @class = "ribbon-button" })
                             </li>
                             <li>
-                                @Html.LocalizedActionLink(@"<i class='fa fa-child'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_SEMINAR), WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_SEMINAR, null, new { @class = "ribbon-button" })
+                                @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_SEMINAR + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_SEMINAR), WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_SEMINAR, null, new { @class = "ribbon-button" })
                             </li>
                             <li>
                                 <div class="ribbon-button-group">
-                                    @Html.LocalizedActionLink(@"<i class='fa fa-beer'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_EVENT), WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_EVENT, null, new { @class = "ribbon-button-sm" })
-                                    @Html.LocalizedActionLink(@"<i class='fa fa-image'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_GALLERY), WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_GALLERY, null, new { @class = "ribbon-button-sm" })
-                                    @Html.LocalizedActionLink(@"<i class='fa fa-file-text-o'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_BLOG), WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_BLOG, null, new { @class = "ribbon-button-sm" })
+                                    @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_EVENT + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_EVENT), WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_EVENT, null, new { @class = "ribbon-button-sm" })
+                                    @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_GALLERY + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_GALLERY), WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_GALLERY, null, new { @class = "ribbon-button-sm" })
+                                    @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_BLOG + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_BLOG), WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_BLOG, null, new { @class = "ribbon-button-sm" })
                                 </div>
                             </li>
                             <li class="ribbon-group-title">
@@ -59,25 +59,25 @@
                         </ul>
                         <ul class="ribbon-group">
                             <li>
-                                @Html.LocalizedActionLink(@"<i class='fa fa-home'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_HOME), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_HOME, null, new { @class = "ribbon-button" })
+                                @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_HOME + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_HOME), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_HOME, null, new { @class = "ribbon-button" })
                             </li>
                             <li>
                                 <div class="ribbon-button-group">
-                                    @Html.LocalizedActionLink(@"<i class='fa fa-child'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_SEMINARS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_SEMINAR, null, new { @class = "ribbon-button-sm" })
-                                    @Html.LocalizedActionLink(@"<i class='fa fa-graduation-cap'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_TRAININGS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_TRAINING, null, new { @class = "ribbon-button-sm" })
-                                    @Html.LocalizedActionLink(@"<i class='fa fa-user'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_TEACHERS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_USER, null, new { @class = "ribbon-button-sm" })
+                                    @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_SEMINAR + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_SEMINARS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_SEMINAR, null, new { @class = "ribbon-button-sm" })
+                                    @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_TRAINING + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_TRAININGS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_TRAINING, null, new { @class = "ribbon-button-sm" })
+                                    @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_USER + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_TEACHERS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_USER, null, new { @class = "ribbon-button-sm" })
                                 </div>
                             </li>
                             <li>
                                 <div class="ribbon-button-group">
-                                    @Html.LocalizedActionLink(@"<i class='fa fa-beer'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_EVENTS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_EVENT, null, new { @class = "ribbon-button-sm" })
-                                    @Html.LocalizedActionLink(@"<i class='fa fa-image'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_GALLERIES), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_GALLERY, null, new { @class = "ribbon-button-sm" })
-                                    @Html.LocalizedActionLink(@"<i class='fa fa-file-text-o'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_BLOGS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_BLOG, null, new { @class = "ribbon-button-sm" })
+                                    @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_EVENT + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_EVENTS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_EVENT, null, new { @class = "ribbon-button-sm" })
+                                    @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_GALLERY + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_GALLERIES), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_GALLERY, null, new { @class = "ribbon-button-sm" })
+                                    @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_BLOG + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_BLOGS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_BLOG, null, new { @class = "ribbon-button-sm" })
                                 </div>
                             </li>
                             <li>
                                 <div class="ribbon-button-group">
-                                    @Html.LocalizedActionLink(@"<i class='fa fa-list'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_BLOG_CATEGORIES), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_BLOG_CATEGORY, null, new { @class = "ribbon-button-sm" })
+                                    @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_CATEGORY + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_BLOG_CATEGORIES), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_BLOG_CATEGORY, null, new { @class = "ribbon-button-sm" })
                                 </div>
                             </li>
                             <li class="ribbon-group-title">
@@ -89,7 +89,7 @@
                     <div id="dojo" class="tab-pane" role="tabpanel">
                         <ul class="ribbon-group">
                             <li>
-                                @Html.LocalizedActionLink(@"<i class='fa fa-institution'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_ORGANISATION), WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_DOJO, new { id = GuidConstants.DOJO_BUJINKAN_ID }, new { @class = "ribbon-button" })
+                                @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_ORGANISATION + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_ORGANISATION), WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_DOJO, new { id = GuidConstants.DOJO_BUJINKAN_ID }, new { @class = "ribbon-button" })
                             </li> 
                             <li class="ribbon-group-title">
                                 @Html.LocalizedDisplay(MessageKeyConstants.LABEL_DOJO)
@@ -97,16 +97,16 @@
                         </ul>
                         <ul class="ribbon-group">
                             <li>
-                                @Html.LocalizedActionLink(@"<i class='fa fa-question'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_QUESTIONS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_QUESTION, null, new { @class = "ribbon-button" })
+                                @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_QUESTION + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_QUESTIONS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_QUESTION, null, new { @class = "ribbon-button" })
                             </li>
                             <li>
-                                @Html.LocalizedActionLink(@"<i class='fa fa-book'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_VOCABULARY), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_VOCABULARY, null, new { @class = "ribbon-button" })
+                                @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_VOCABULARY + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_VOCABULARY), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_VOCABULARY, null, new { @class = "ribbon-button" })
                             </li>
                             <li>
-                                @Html.LocalizedActionLink(@"<i class='fa fa-random'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_LINKS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_LINK, null, new { @class = "ribbon-button" })
+                                @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_LINK + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_LINKS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_LINK, null, new { @class = "ribbon-button" })
                             </li>
                             <li>
-                                @Html.LocalizedActionLink(@"<i class='fa fa-video-camera'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_VIDEO), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_VIDEO, null, new { @class = "ribbon-button" })
+                                @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_VIDEO + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_VIDEO), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_VIDEO, null, new { @class = "ribbon-button" })
                             </li>
                             <li class="ribbon-group-title">
                                 @Html.LocalizedDisplay(MessageKeyConstants.LABEL_INFORMATION)
@@ -114,10 +114,10 @@
                         </ul>
                         <ul class="ribbon-group">
                             <li>
-                                @Html.LocalizedActionLink(@"<i class='fa fa-shopping-cart'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_PRODUCTS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_PRODUCT, null, new { @class = "ribbon-button" })
+                                @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_PRODUCT + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_PRODUCTS), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_PRODUCT, null, new { @class = "ribbon-button" })
                             </li>
                             <li>
-                                @Html.LocalizedActionLink(@"<i class='fa fa-archive'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_CATEGORY), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_PRODUCT_CATEGORY, null, new { @class = "ribbon-button" })
+                                @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_CATEGORY + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_CATEGORY), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_PRODUCT_CATEGORY, null, new { @class = "ribbon-button" })
                             </li>
                             <li class="ribbon-group-title">
                                 @Html.LocalizedDisplay(MessageKeyConstants.LABEL_SHOP)
@@ -125,7 +125,7 @@
                         </ul>
                         <ul class="ribbon-group">
                             <li>
-                                @Html.LocalizedActionLink(@"<i class='fa fa-map-signs'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_MENU), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_MENU_ITEM, null, new { @class = "ribbon-button" })
+                                @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_MENU + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_MENU), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_MENU_ITEM, null, new { @class = "ribbon-button" })
                             </li>
                             <li class="ribbon-group-title">
                                 @Html.LocalizedDisplay(MessageKeyConstants.LABEL_SETTINGS)
@@ -135,7 +135,7 @@
                     <div id="administration" class="tab-pane" role="tabpanel">
                         <ul class="ribbon-group">
                             <li>
-                                @Html.LocalizedActionLink(@"<i class='fa fa-cogs'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_ROLES), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_ROLE, null, new { @class = "ribbon-button" })
+                                @Html.LocalizedActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_ROLE + "'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_ROLES), WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_ROLE, null, new { @class = "ribbon-button" })
                             </li>
                             <li class="ribbon-group-title">
                                 @Html.LocalizedDisplay(MessageKeyConstants.LABEL_ADMINISTRATION)

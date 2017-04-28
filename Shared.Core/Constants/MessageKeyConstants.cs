@@ -11,6 +11,7 @@ namespace Shared.Core.Constants
         public const string LABEL_ACCOUNT_NUMBER = "label_account_number";
         public const string LABEL_ADD = "label_add";
         public const string LABEL_ADD_ROLE = "label_add_role";
+        public const string LABEL_ADD_CATEGORY = "label_add_category";
         public const string LABEL_ADDRESS = "label_address";
         public const string LABEL_ADMINISTRATION = "label_administration";
         public const string LABEL_ADMINISTRATION_OF_BCD = "label_administration_of_bcd";
@@ -80,6 +81,7 @@ namespace Shared.Core.Constants
         public const string LABEL_PRIZE_MEMBER = "label_prize_member";
         public const string LABEL_PRIZE_NOMEMBER = "label_prize_nomember";
         public const string LABEL_PRODUCT = "label_product";
+        public const string LABEL_PRODUCT_CATEGORY = "label_product_category";
         public const string LABEL_PRODUCTS = "label_products";
         public const string LABEL_PHONE = "label_phone";
         public const string LABEL_QUESTION = "label_question";

@@ -20,7 +20,7 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td><i class='fa fa-user'></i></td>
+                    <td><i class='@HtmlConstants.FA_IMAGE_USER'></i></td>
                     <td>@Html.LocalizedDropDownDisplayFor(model => item.BujinkanTitle) @Html.DisplayFor(model => item.FirstName) @Html.DisplayFor(model => item.Surname)</td>
                     <td>@Html.DisplayFor(modelItem => item.Email)</td>
                     <td>@Html.DisplayFor(modelItem => item.Phone)</td>

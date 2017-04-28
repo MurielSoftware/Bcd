@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Dtos.Blogs
 {
-    public class BlogDto : BaseDto
+    public class BlogDto : UserDefinableDto
     {
         [Display(Name = MessageKeyConstants.LABEL_NAME, ResourceType = typeof(Resource))]
         [Required(ErrorMessageResourceName = MessageKeyConstants.VALIDATION_REQUIRED_MESSAGE, ErrorMessageResourceType = typeof(Resource))]

@@ -36,7 +36,7 @@ namespace Server.Converters
             U target = CreateInstance(unitOfWork, source);
             if(source == null)
             {
-                return target;
+                return default(U);
             }
             foreach(IConverter<T, U> converter in _converters)
             {

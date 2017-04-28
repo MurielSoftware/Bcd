@@ -22,7 +22,7 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td><i class='fa fa-graduation-cap'></i></td>
+                    <td><i class='@HtmlConstants.FA_IMAGE_CATEGORY'></i></td>
                     <td>@Html.DisplayFor(modelItem => item.Name)</td>
                     <td>
                         @*@if (Html.IsLoggedUserWithSpecificIds(Shared.Core.Dto.RoleType.CUD_ALL, item.UserCreatorId, item.UserId))
