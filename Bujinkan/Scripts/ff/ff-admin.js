@@ -3,6 +3,7 @@
     $(".notification").fadeOut(5000);
 
     $(".form-control-editable").inlineEditable();
+    $(".richtextbox").richTextBox();
     //$(".autocomplete").autocomplete();
     //$(".referencelist").referenceList();
     //$(".remotecontent").remoteContent();

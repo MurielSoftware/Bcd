@@ -480,4 +480,7 @@
   <data name="label_prize" xml:space="preserve">
     <value>Cena</value>
   </data>
+  <data name="label_add_role" xml:space="preserve">
+    <value>Přidat roli</value>
+  </data>
 </root>

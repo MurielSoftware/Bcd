@@ -9,7 +9,7 @@
 @section ribbon {
     <ul class="ribbon-group">
         <li>
-            @Html.DialogActionLink("<i class='fa fa-cog'></i>" + Html.LocalizedDisplay(MessageKeyConstants.LABEL_ADD_CATEGORY), HtmlConstants.DIALOG_PRODUCT_CATEGORY, WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_PRODUCT_CATEGORY, null, new { @class = "ribbon-button" })
+            @Html.DialogActionLink(@"<i class='" + HtmlConstants.FA_IMAGE_CATEGORY + "'></i> " + Html.LocalizedDisplay(MessageKeyConstants.LABEL_ADD_CATEGORY), HtmlConstants.DIALOG_PRODUCT_CATEGORY, WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_PRODUCT_CATEGORY, null, new { @class = "ribbon-button" })
         </li>
         <li class="ribbon-group-title">
             @Html.LocalizedDisplay(MessageKeyConstants.LABEL_PRODUCT_CATEGORY)

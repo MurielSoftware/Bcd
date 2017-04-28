@@ -16,15 +16,19 @@ namespace Shared.Dtos.Trainings
         [Display(Name = MessageKeyConstants.LABEL_DAY, ResourceType = typeof(Resource))]
         public virtual Day Day { get; set; }
 
-        [Display(Name = MessageKeyConstants.LABEL_START, ResourceType = typeof(Resource))]
+        [Display(Name = MessageKeyConstants.LABEL_DATE, ResourceType = typeof(Resource))]
+        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy HH:mm}", ApplyFormatInEditMode = true)]
         public virtual DateTime Start { get; set; }
-    
+
+        [Display(Name = MessageKeyConstants.LABEL_START, ResourceType = typeof(Resource))]
         [Required(ErrorMessageResourceName = MessageKeyConstants.VALIDATION_REQUIRED_MESSAGE, ErrorMessageResourceType = typeof(Resource))]
         public virtual string TimeStart { get; set; }
 
         [Display(Name = MessageKeyConstants.LABEL_END, ResourceType = typeof(Resource))]
+        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy HH:mm}", ApplyFormatInEditMode = true)]
         public virtual DateTime End { get; set; }
 
+        [Display(Name = MessageKeyConstants.LABEL_END, ResourceType = typeof(Resource))]
         [Required(ErrorMessageResourceName = MessageKeyConstants.VALIDATION_REQUIRED_MESSAGE, ErrorMessageResourceType = typeof(Resource))]
         public virtual string TimeEnd { get; set; }
 

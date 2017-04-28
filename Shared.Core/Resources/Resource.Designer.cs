@@ -115,6 +115,15 @@ namespace Shared.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Přidat roli.
+        /// </summary>
+        public static string label_add_role {
+            get {
+                return ResourceManager.GetString("label_add_role", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Přidat překlad.
         /// </summary>
         public static string label_add_vocabulary {

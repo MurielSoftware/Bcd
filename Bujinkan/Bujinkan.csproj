@@ -201,6 +201,7 @@
     <Content Include="Scripts\ff\ff-reference.js" />
     <Content Include="Scripts\ff\ff-referencelist.js" />
     <Content Include="Scripts\ff\ff-remotecontent.js" />
+    <Content Include="Scripts\ff\ff-richtextbox.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
