@@ -82,7 +82,7 @@ namespace Client.Core.Controllers
             {
                 return RedirectToActionAfterServerFailCreate(dto, ex.GetValidationResults());
             }
-            return RedirectToActionAfterSuccessCreate(actionName, controllerName, routeValues, targetHtmlId);
+            return RedirectToActionAfterSuccessCreate(dto.Id, actionName, controllerName, routeValues, targetHtmlId, JsonRefreshMode.FULL);
         }
 
         protected virtual ActionResult RedirectToActionAfterClientFailCreate(T dto, string validationResult)
@@ -96,7 +96,7 @@ namespace Client.Core.Controllers
             return View(dto);
         }
 
-        protected virtual ActionResult RedirectToActionAfterSuccessCreate(string actionName, string controllerName, object routeValues, string targetHtmlId)
+        protected virtual ActionResult RedirectToActionAfterSuccessCreate(Guid id, string actionName, string controllerName, object routeValues, string targetHtmlId, JsonRefreshMode jsonRefreshMode)
         {
             return RedirectToAction(actionName, controllerName, routeValues);
         }
@@ -122,7 +122,7 @@ namespace Client.Core.Controllers
             {
                 return RedirectToActionAfterFailDelete(ex.GetValidationResults());
             }
-            return RedirectToActionAfterSuccessDelete(actionName, controllerName, targetHtmlId, routeValues);
+            return RedirectToActionAfterSuccessDelete(id, actionName, controllerName, targetHtmlId, routeValues, JsonRefreshMode.PARTIAL);
         }
 
         protected virtual ActionResult RedirectToActionAfterFailDelete(string validationResult)
@@ -130,9 +130,9 @@ namespace Client.Core.Controllers
             return Json(new JsonDialogResult(false, HtmlConstants.DIALOG_VALIDATION_SUMMARY, ValidationSummaryExtensions.CustomValidationSummary(validationResult).ToString()));
         }
 
-        protected virtual ActionResult RedirectToActionAfterSuccessDelete(string actionName, string controllerName, string targetId, object routeValues)
+        protected virtual ActionResult RedirectToActionAfterSuccessDelete(Guid id, string actionName, string controllerName, string targetId, object routeValues, JsonRefreshMode refreshMode)
         {
-            return Json(new JsonDialogResult(true, targetId, Url.Action(actionName, controllerName, routeValues), JsonRefreshMode.PARTIAL));
+            return Json(new JsonDialogResult(true, targetId, Url.Action(actionName, controllerName, routeValues), refreshMode));
         }
 
         /// <summary>

@@ -23,6 +23,7 @@ namespace Shared.I18n.Constants
         public const string LABEL_ANSWER = "label_answer";
         public const string LABEL_ARTICLES = "label_articles";
         public const string LABEL_ASSOCIATION = "label_association";
+        public const string LABEL_ASSOCIATION_TYPE = "label_association_type";
         public const string LABEL_BLOG = "label_blog";
         public const string LABEL_BLOG_CATEGORY = "label_blog_category";
         public const string LABEL_BLOG_CATEGORIES = "label_blog_categories";
@@ -68,6 +69,7 @@ namespace Shared.I18n.Constants
         public const string LABEL_INSTRUCTOR = "label_instructor";
         public const string LABEL_JPY = "label_jpy";
         public const string LABEL_LINK = "label_link";
+        public const string LABEL_LINK_CATEGORY = "label_link_category";
         public const string LABEL_LINKS = "label_link";
         public const string LABEL_LINK_TO_LIST = "label_link_to_list";
         public const string LABEL_LINK_TO_SPECIFIC = "label_link_to_specific";

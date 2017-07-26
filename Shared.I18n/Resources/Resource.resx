@@ -471,4 +471,16 @@
   <data name="label_question" xml:space="preserve">
     <value>Otázka</value>
   </data>
+  <data name="label_add_product" xml:space="preserve">
+    <value>Přidat produkt</value>
+  </data>
+  <data name="label_link_category" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="label_prize" xml:space="preserve">
+    <value>Cena</value>
+  </data>
+  <data name="label_add_role" xml:space="preserve">
+    <value>Přidat roli</value>
+  </data>
 </root>

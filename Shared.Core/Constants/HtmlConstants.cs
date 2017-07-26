@@ -20,6 +20,7 @@ namespace Shared.Core.Constants
         public const string PAGED_LIST_QUESTION = "paged-list-question";
         public const string PAGED_LIST_BLOG_CATEGORY = "paged-list-blog-category";
         public const string PAGED_LIST_PRODUCT_CATEGORY = "paged-list-product-category";
+        public const string PAGED_LIST_LINK_CATEGORY = "paged-list-link-category";
         public const string PAGED_LIST_DOJO = "paged-list-dojo";
 
         public const string DIALOG_CONFIRMATION = "dialog-confirmation";
@@ -30,6 +31,7 @@ namespace Shared.Core.Constants
         public const string DIALOG_VOCABULARY = "dialog-vocabulary";
         public const string DIALOG_BLOG_CATEGORY = "dialog-blog-category";
         public const string DIALOG_PRODUCT_CATEGORY = "dialog-product-category";
+        public const string DIALOG_LINK_CATEGORY = "dialog-link-category";
 
         public const string FA_IMAGE_USER = "fa fa-user";
         public const string FA_IMAGE_TRAINING = "fa fa-graduation-cap";
@@ -47,5 +49,7 @@ namespace Shared.Core.Constants
         public const string FA_IMAGE_ROLE = "fa fa-cogs";
         public const string FA_IMAGE_VIDEO = "fa fa-video-camera";
         public const string FA_IMAGE_HOME = "fa fa-home";
+
+        public const string TREE_MENU_ITEM = "tree-menu-item";
     }
 }

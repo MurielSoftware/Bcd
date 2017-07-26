@@ -15,6 +15,7 @@ namespace Bujinkan
                         "~/Scripts/ff/ff-remotecontent.js",
                         "~/Scripts/ff/ff-reference.js",
                         "~/Scripts/ff/ff-referencelist.js",
+                        "~/Scripts/ff/ff-richtextbox.js",
                         "~/Scripts/ff/ff-dialog.js",
                         "~/Scripts/ff/ff-admin.js"));
 

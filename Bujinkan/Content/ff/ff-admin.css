@@ -121,6 +121,7 @@ input[type=file]:hover {
     background: #fafafa;
     color: #000;
     border: 1px solid #f0f0f0;
+    font-weight: bold;
 }
 
 .form-control-editable:hover {
@@ -206,4 +207,25 @@ input[type=file]:hover {
 
 .color-tyrcis {
     background-color: #1bbae1;
+}
+
+.notification {
+    z-index: 5000;
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+
+.notification .alert {
+    border: none;
+    border-radius: 0;
+    color: #eee;
+}
+
+.notification .alert-success {
+    background-color: #3e9d16
+}
+
+.notification .alert-danger {
+    background-color: #9d1616;
 }

@@ -51,6 +51,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\DialogCRUDController.cs" />
+    <Compile Include="Controllers\DialogTreeCRUDController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="HtmlHelpers\DateExtensions.cs" />
     <Compile Include="HtmlHelpers\DivExtensions.cs" />

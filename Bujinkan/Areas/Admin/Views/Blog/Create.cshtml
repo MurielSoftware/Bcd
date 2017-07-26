@@ -54,11 +54,9 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.CategoryReference, new { @class = "control-label col-sm-2 form-control-required" })
-                        <div class="col-sm-4">
-                            @Html.InlineEditableControl(Html.ReferenceLabelFor(model => model.CategoryReference, null, null, new { @class = "form-control-editable" }), Html.RemoteDropDownListFor(model => model.CategoryId, "/Admin/BlogCategory/GetAllCategoryReferences"))
-                        </div>
+                    @Html.LabelFor(model => model.CategoryReference, new { @class = "control-label col-sm-2 form-control-required" })
+                    <div class="col-sm-4">
+                        @Html.InlineEditableControl(Html.ReferenceLabelFor(model => model.CategoryReference, null, null, new { @class = "form-control-editable" }), Html.RemoteDropDownListFor(model => model.CategoryId, "/Admin/BlogCategory/GetAllCategoryReferences"))
                     </div>
                 </div>
                 <div class="form-group">

@@ -75,7 +75,7 @@ namespace Client.Core.HtmlHelpers
                 textToDisplay = ((DateTime)modelMetadataStart.Model).ToShortDateString() + " - " + ((DateTime)modelMetadataEnd.Model).ToShortDateString();
             }
 
-            return DivExtensions.CreateDiv(htmlHelper, textToDisplay, htmlAttributes);
+            return DivExtensions.CreateSpan(htmlHelper, textToDisplay, htmlAttributes);
             //return ExtensionsUtil.CreateLabel(modelMetadataStart.PropertyName, textToDisplay, htmlAttributes);
         }
 

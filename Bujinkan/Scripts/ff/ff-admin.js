@@ -3,10 +3,11 @@
     $(".notification").fadeOut(5000);
 
     $(".form-control-editable").inlineEditable();
-    $(".autocomplete").autocomplete();
-    $(".referencelist").referenceList();
+    $(".richtextbox").richTextBox();
+    //$(".autocomplete").autocomplete();
+    //$(".referencelist").referenceList();
+    //$(".remotecontent").remoteContent();
     $(".remotecontent").remoteContent();
-
     //$("body").on("click", ".show-dialog", function () {
     //    $.openDialog($(this));
     //});
@@ -19,5 +20,7 @@
 });
 
 function initPluginsOnRemoteContent() {
+    $(".autocomplete").autocomplete();
+    $(".referencelist").referenceList();
     
 }

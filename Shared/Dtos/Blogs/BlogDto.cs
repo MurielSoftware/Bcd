@@ -25,8 +25,10 @@ namespace Shared.Dtos.Blogs
         public virtual Guid CategoryId { get; set; }
 
         [Reference(DaoConstants.ATTRIBUTE_USER)]
+        [Display(Name = MessageKeyConstants.LABEL_TEACHER, ResourceType = typeof(Resource))]
         public virtual ReferenceString UserReference { get; set; }
 
+        [Display(Name = MessageKeyConstants.LABEL_CATEGORY, ResourceType = typeof(Resource))]
         [ListReference(DaoConstants.ATTRIBUTE_CATEGORY)]
         public virtual ReferenceString CategoryReference { get; set; }
     }

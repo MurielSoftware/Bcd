@@ -20,12 +20,15 @@ namespace Server.Model
         public virtual int Order { get; set; }
         public virtual MenuItemEntityType EntityType { get; set; }
         public virtual MenuItemAssociationType AssociationType { get; set; }
-        public virtual Guid? BlogCategoryId { get; set; }
         public virtual int Level { get; set; }
 
+        public virtual Guid? BlogCategoryId { get; set; }
         public virtual Guid? ParentMenuItemId { get; set; }
         public virtual Guid? UserDefinableId { get; set; }
-    
+
+        [ForeignKey("BlogCategoryId")]
+        public virtual BlogCategory BlogCategory { get; set; }
+
         [ForeignKey("ParentMenuItemId")]
         public virtual MenuItem ParentMenuItem { get; set; }
 

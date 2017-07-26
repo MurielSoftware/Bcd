@@ -69,11 +69,11 @@ namespace Client.Core.HtmlHelpers
             SelectListItem selectedValue = selectListItem.Where(f => f.Value.Equals(modelMetadata.Model.ToString())).FirstOrDefault();
             if (selectedValue == null)
             {
-                return EditableControlExtensions.CreateLabel(htmlHelper, modelMetadata.PropertyName, selectListItem.First().Text, htmlAttributes);
-                //return DivExtensions.CreateSpan<T>(htmlHelper, selectListItem.First().Text, htmlAttributes);
+                //return EditableControlExtensions.CreateLabel(htmlHelper, modelMetadata.PropertyName, selectListItem.First().Text, htmlAttributes);
+                return DivExtensions.CreateSpan<T>(htmlHelper, selectListItem.First().Text, htmlAttributes);
             }
-            return EditableControlExtensions.CreateLabel(htmlHelper, modelMetadata.PropertyName, selectedValue.Text, htmlAttributes);
-            //return DivExtensions.CreateSpan<T>(htmlHelper, selectedValue.Text, htmlAttributes);
+            //return EditableControlExtensions.CreateLabel(htmlHelper, modelMetadata.PropertyName, selectedValue.Text, htmlAttributes);
+            return DivExtensions.CreateSpan<T>(htmlHelper, selectedValue.Text, htmlAttributes);
         }
 
         /// <summary>

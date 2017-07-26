@@ -36,6 +36,18 @@ namespace Server.Services.Users
             return _userDao.FindPaged(userFilterDto);
         }
 
+        public void ChangeUserPositionUp(Guid id)
+        {
+            User sourceUser = _genericDao.FindTracking<User>(id);
+            _orderDao.ChangeOrder(sourceUser, _userDao.FindUserWithLowerOrder(id, sourceUser.Order));
+        }
+
+        public void ChangeUserPositionDown(Guid id)
+        {
+            User sourceUser = _genericDao.FindTracking<User>(id);
+            _orderDao.ChangeOrder(sourceUser, _userDao.FindUserWithGreaterOrder(id, sourceUser.Order));
+        }
+
         protected override User CreateEntity(UserDto userDto)
         {
             User user = base.CreateEntity(userDto);

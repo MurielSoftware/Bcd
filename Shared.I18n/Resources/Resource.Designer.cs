@@ -97,11 +97,29 @@ namespace Shared.I18n.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Přidat produkt.
+        /// </summary>
+        public static string label_add_product {
+            get {
+                return ResourceManager.GetString("label_add_product", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Přidat otázku.
         /// </summary>
         public static string label_add_question {
             get {
                 return ResourceManager.GetString("label_add_question", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Přidat roli.
+        /// </summary>
+        public static string label_add_role {
+            get {
+                return ResourceManager.GetString("label_add_role", resourceCulture);
             }
         }
         
@@ -547,6 +565,15 @@ namespace Shared.I18n.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kategorie.
+        /// </summary>
+        public static string label_link_category {
+            get {
+                return ResourceManager.GetString("label_link_category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Odkazy.
         /// </summary>
         public static string label_links {
@@ -678,6 +705,15 @@ namespace Shared.I18n.Resources {
         public static string label_prepayment_deadline {
             get {
                 return ResourceManager.GetString("label_prepayment_deadline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cena.
+        /// </summary>
+        public static string label_prize {
+            get {
+                return ResourceManager.GetString("label_prize", resourceCulture);
             }
         }
         

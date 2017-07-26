@@ -17,6 +17,8 @@
                 closeButton.click(_close);
                 removeFileButton.click(_removeFile);
                 submitButton.submit(_submit);
+
+                initPluginsOnRemoteContent();
             });
         });
 
@@ -38,7 +40,7 @@
             xhr.open("post", form.action, true);
             xhr.upload.addEventListener('progress', function (event) {
                 if (event.lengthComputable) {
-                    $("#modal-dialogs").find('.dialog-progress-bar').width((event.loaded / event.total) * 100 + "%");
+                    $("#modal-dialogs").find('.progress-bar').width((event.loaded / event.total) * 100 + "%");
                 }
             }, false);
             xhr.onreadystatechange = function () {
