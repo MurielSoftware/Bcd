@@ -96,6 +96,10 @@
       <Project>{4dbb29c3-9db3-4c2d-8dc6-b03787ba2af4}</Project>
       <Name>Shared.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Shared.I18n\Shared.I18n.csproj">
+      <Project>{e68def00-ca2f-4eca-bd76-c147018cc0d0}</Project>
+      <Name>Shared.I18n</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
+using Shared.I18n.Resources;
+using Shared.I18n.Utils;
 
 namespace Client.Core.HtmlHelpers
 {

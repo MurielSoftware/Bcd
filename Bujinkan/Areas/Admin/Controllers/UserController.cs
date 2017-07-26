@@ -4,12 +4,9 @@ using Shared.Core.Dtos;
 using Shared.Core.Messages;
 using Shared.Dtos.Dojos;
 using Shared.Dtos.Users;
+using Shared.I18n.Constants;
 using Shared.Services.Dojos;
 using Shared.Services.Users;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Bujinkan.Areas.Admin.Controllers

@@ -6,7 +6,7 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shared.Core.Utils
+namespace Shared.I18n.Utils
 {
     /// <summary>
     /// Gets the localized string value from the resources.
@@ -20,7 +20,7 @@ namespace Shared.Core.Utils
         /// <returns>The localized string value</returns>
         public static string GetString(string key, params object[] args)
         {
-            ResourceManager resourceManager = new ResourceManager("Shared.Core.Resources.Resource", Assembly.GetExecutingAssembly());
+            ResourceManager resourceManager = new ResourceManager("Shared.I18n.Resources.Resource", Assembly.GetExecutingAssembly());
             string internationalizedString = resourceManager.GetString(key);
             if (internationalizedString == null || string.Empty.Equals(internationalizedString))
             {

@@ -2,18 +2,9 @@
 using Shared.Core.Constants;
 using Shared.Core.Dtos;
 using Shared.Core.Messages;
-using Shared.Dtos.Blogs;
-using Shared.Dtos.Events;
 using Shared.Dtos.Products;
-using Shared.Dtos.Vocabularies;
-using Shared.Services.Blogs;
-using Shared.Services.Events;
+using Shared.I18n.Constants;
 using Shared.Services.Products;
-using Shared.Services.Vocabularies;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Bujinkan.Areas.Admin.Controllers

@@ -1,11 +1,6 @@
-﻿using Shared.Core.Constants;
-using Shared.Core.Resources;
-using System;
-using System.Collections.Generic;
+﻿using Shared.I18n.Constants;
+using Shared.I18n.Resources;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shared.Dtos.Dojos
 {

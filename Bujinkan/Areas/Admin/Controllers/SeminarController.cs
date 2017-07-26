@@ -3,11 +3,8 @@ using Shared.Core.Constants;
 using Shared.Core.Dtos;
 using Shared.Core.Messages;
 using Shared.Dtos.Events;
+using Shared.I18n.Constants;
 using Shared.Services.Events;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Bujinkan.Areas.Admin.Controllers

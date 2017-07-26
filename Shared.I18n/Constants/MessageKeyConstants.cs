@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shared.Core.Constants
+namespace Shared.I18n.Constants
 {
     public class MessageKeyConstants
     {

@@ -1,6 +1,5 @@
-﻿
-using Shared.Core.Constants;
-using Shared.Core.Resources;
+﻿using Shared.I18n.Constants;
+using Shared.I18n.Resources;
 using System.ComponentModel.DataAnnotations;
 
 namespace Shared.Core.Dtos.Roles
