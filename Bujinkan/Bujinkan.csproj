@@ -156,6 +156,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\BlogCategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CountryController.cs" />
     <Compile Include="Areas\Admin\Controllers\GalleryController.cs" />
     <Compile Include="Areas\Admin\Controllers\LinkCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\MenuItemController.cs" />
@@ -380,6 +381,7 @@
     <Content Include="Areas\Admin\Views\LinkCategory\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\Admin\Views\Country\" />
     <Folder Include="Areas\Admin\Views\MenuItem\" />
   </ItemGroup>
   <PropertyGroup>

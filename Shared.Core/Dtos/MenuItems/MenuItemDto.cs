@@ -1,6 +1,7 @@
 ﻿using Shared.Core.Attributes;
 using Shared.Core.Constants;
-using Shared.Core.Resources;
+using Shared.I18n.Constants;
+using Shared.I18n.Resources;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

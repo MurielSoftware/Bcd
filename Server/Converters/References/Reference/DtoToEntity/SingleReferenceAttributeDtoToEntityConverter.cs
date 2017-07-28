@@ -23,7 +23,8 @@ namespace Server.Converters.References.Reference.DtoToEntity
     {
         public void Convert(IUnitOfWork unitOfWork, BaseEntity sourceEntity, BaseDto dto, PropertyInfo sourcePropertyInfo, ReferenceAttribute referenceAttribute, ReferenceString referenceString)
         {
-            PropertyInfo targetProperty = sourceEntity.GetType().GetProperty(ReferenceConversionUtils.GetReferencedId(referenceAttribute));
+            //PropertyInfo targetProperty = sourceEntity.GetType().GetProperty(ReferenceConversionUtils.GetReferencedId(referenceAttribute));
+            PropertyInfo targetProperty = ReferenceConversionUtils.GetReferencedPropertyId(sourceEntity, referenceAttribute);
             if (referenceString == null || string.IsNullOrEmpty(referenceString.Value))
             {
                 targetProperty.SetValue(sourceEntity, null);

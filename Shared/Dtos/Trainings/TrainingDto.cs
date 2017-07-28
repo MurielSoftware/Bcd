@@ -51,11 +51,11 @@ namespace Shared.Dtos.Trainings
         public virtual Guid? CountryId { get; set; }
 
         [Display(Name = MessageKeyConstants.LABEL_COUNTRY, ResourceType = typeof(Resource))]
-        [Reference(DaoConstants.COUNTRY_ID)]
+        [Reference(DaoConstants.ATTRIBUTE_COUNTRY)]
         public virtual ReferenceString CountryReference { get; set; }
 
         [Display(Name = MessageKeyConstants.LABEL_TEACHER, ResourceType = typeof(Resource))]
-        [Reference(DaoConstants.USER_ID)]
+        [Reference(DaoConstants.ATTRIBUTE_USER)]
         public virtual ReferenceString UserReference { get; set; }
     }
 }

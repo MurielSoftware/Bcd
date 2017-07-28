@@ -24,7 +24,7 @@ namespace Server.Converters.References.Reference.EntityToDto
         public void Convert(IUnitOfWork unitOfWork, BaseEntity sourceEntity, BaseDto dto, PropertyInfo sourcePropertyInfo, ReferenceAttribute referenceAttribute, ReferenceString referenceString)
         {
             PropertyInfo referencedEntityPropertyInfo = sourceEntity.GetType().GetProperty(referenceAttribute.RefencedPropertyName);
-            PropertyInfo referencedEntityIdPropertyInfo = sourceEntity.GetType().GetProperty(ReferenceConversionUtils.GetReferencedId(referenceAttribute));
+            PropertyInfo referencedEntityIdPropertyInfo = ReferenceConversionUtils.GetReferencedPropertyId(sourceEntity, referenceAttribute); //sourceEntity.GetType().GetProperty(ReferenceConversionUtils.GetReferencedId(referenceAttribute));
             U referencedEntity = (U)referencedEntityPropertyInfo.GetValue(sourceEntity, null);
             if(referencedEntity != null)
             {

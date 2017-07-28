@@ -3,7 +3,7 @@
 	[Id] UNIQUEIDENTIFIER NOT NULL,
 	[CreatedDate] DATETIME NOT NULL,
 	[UpdatedDate] DATETIME NOT NULL,
-	[Name] NVARCHAR (128) NOT NULL,
+	[Name] NVARCHAR (MAX) NOT NULL,
 	[DojoCreation] BIT NOT NULL,
 	[UserCreation] BIT NOT NULL,
 	[RoleCreation] BIT NOT NULL,
