@@ -128,6 +128,7 @@
     <Compile Include="Services\Questions\QuestionCRUDService.cs" />
     <Compile Include="Services\Roles\RoleCRUDService.cs" />
     <Compile Include="Services\Trainings\TrainingCRUDService.cs" />
+    <Compile Include="Services\UploadFileService.cs" />
     <Compile Include="Services\UserDefinableCRUDService.cs" />
     <Compile Include="Services\Users\UserCRUDService.cs" />
     <Compile Include="Services\Vocabularies\VocabularyCRUDService.cs" />

@@ -19,7 +19,6 @@ namespace Server.Core
 {
     public class ServiceManager
     {
-        //private static Dictionary<Type, Type> SERVICES = CreateServiceMapping();
         private static System.Reflection.Assembly assembly = System.Reflection.Assembly.Load("Server");
 
         private IUnitOfWork _unitOfWork;
@@ -33,24 +32,11 @@ namespace Server.Core
         {
             Type type = assembly.GetTypes().Where(x => x.Name == GetInstanceName(typeof(T))).SingleOrDefault();
             return (T)Activator.CreateInstance(type, new object[] { _unitOfWork });
-            //return (T)assembly.CreateInstance(GetInstanceName(typeof(T)));
-            //return (T)Activator.CreateInstance(SERVICES[typeof(T)], new object[] { _unitOfWork });
         }
 
         private static string GetInstanceName(Type type)
         {
             return type.Name.Substring(1);
         }
-
-        //private static Dictionary<Type, Type> CreateServiceMapping()
-        //{
-        //    Dictionary<Type, Type> map = new Dictionary<Type, Type>();
-        //    map.Add(typeof(IUserCRUDService), typeof(UserCRUDService));
-        //    map.Add(typeof(ITrainingCRUDService), typeof(TrainingCRUDService));
-        //    map.Add(typeof(IDojoCRUDService), typeof(DojoCRUDService));
-        //    map.Add(typeof(IRoleCRUDService), typeof(RoleCRUDService));
-        //    map.Add(typeof(ISeminarCRUDService), typeof(SeminarCRUDService));
-        //    return map;
-        //}
     }
 }
