@@ -29,7 +29,8 @@ namespace Server.Converters.References.Utils
         public static bool IsCollectionPropertyType(Type type, ReferenceAttribute referenceAttribute)
         {
             PropertyInfo propertyInfo = type.GetProperty(referenceAttribute.RefencedPropertyName);
-            return propertyInfo.PropertyType is IEnumerable;
+            // return propertyInfo.PropertyType.IsAssignableFrom(typeof(IEnumerable));
+            return typeof(IEnumerable).IsAssignableFrom(propertyInfo.PropertyType);
         }
     }
 }

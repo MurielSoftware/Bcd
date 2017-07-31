@@ -10,6 +10,8 @@ using Shared.Core.Context;
 using Shared.Core.Dtos;
 using Server.Daos;
 using PagedList;
+using Shared.Core.Exceptions;
+using Shared.I18n.Constants;
 
 namespace Server.Services.Roles
 {
@@ -31,6 +33,15 @@ namespace Server.Services.Roles
         public IPagedList<RoleDto> ReadAdministrationPaged(BaseFilterDto baseFilterDto)
         {
             return _roleDao.FindPaged(baseFilterDto);
+        }
+
+        protected override void ValidationBeforeDelete(Role role)
+        {
+            base.ValidationBeforeDelete(role);
+            if(_genericDao.Exists<User>(x => x.RoleId == role.Id))
+            {
+                throw new ValidationException(MessageKeyConstants.VALIDATION_OBJECT_IS_USED_MESSAGE);
+            }
         }
     }
 }

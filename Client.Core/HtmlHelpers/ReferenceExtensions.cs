@@ -35,7 +35,7 @@ namespace Client.Core.HtmlHelpers
             //autocompleteHidden.MergeAttribute("Name", )
             //autocompleteHidden.AddCssClass("input-autocomplete-hidden");
             MvcHtmlString input = InputExtensions.TextBox(htmlHelper, name, null, new { @class = "input-autocomplete" });
-            MvcHtmlString hidden = InputExtensions.TextBoxFor(htmlHelper, expression, new { @class = "input-autocomplete-hidden" });
+            MvcHtmlString hidden = InputExtensions.HiddenFor(htmlHelper, expression, new { @class = "input-autocomplete-hidden" });
             TagBuilder autocompleteFrame = new TagBuilder("div");
             autocompleteFrame.AddCssClass("input-autocomplete-frame");
             TagBuilder divAutocomplete = new TagBuilder("div");

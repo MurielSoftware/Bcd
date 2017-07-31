@@ -180,6 +180,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-datepicker.min.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\ff\ff-tree.css" />
     <Content Include="Content\ff\ff-admin.css" />
@@ -199,6 +200,7 @@
     <Content Include="Areas\Admin\Views\User\Index.cshtml" />
     <Content Include="Areas\Admin\Views\User\PagedList.cshtml" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Scripts\bootstrap-datepicker.min.js" />
     <Content Include="Scripts\ff\ff-tree.js" />
     <Content Include="Scripts\ff\ff-admin.js" />
     <Content Include="Scripts\ff\ff-dialog.js" />

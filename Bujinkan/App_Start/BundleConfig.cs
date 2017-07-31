@@ -12,6 +12,7 @@ namespace Bujinkan
                         "~/Scripts/jquery-3.2.1.min.js",
                         "~/Scripts/jquery.mask.min.js",
                         "~/Scripts/bootstrap.min.js",
+                        "~/Scripts/bootstrap-datepicker.min.js",
                         "~/Scripts/ff/ff-inlineeditable.js",
                         "~/Scripts/ff/ff-remotecontent.js",
                         "~/Scripts/ff/ff-reference.js",

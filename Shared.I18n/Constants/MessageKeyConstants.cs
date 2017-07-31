@@ -139,6 +139,7 @@ namespace Shared.I18n.Constants
         public const string VALIDATION_RANGE_MESSAGE = "validation_range_message";
         public const string VALIDATION_REQUIRED_MESSAGE = "validation_required_message";
         public const string VALIDATION_URL_MESSAGE = "validation_url_message";
+        public const string VALIDATION_OBJECT_IS_USED_MESSAGE = "validation_object_is_used_message";
 
         public const string OBJECT_SAVE_SUCCESS_MESSAGE = "object_save_success_message";
         public const string OBJECT_INFORMATION_DELETE_MESSAGE = "object_information_delete_message";

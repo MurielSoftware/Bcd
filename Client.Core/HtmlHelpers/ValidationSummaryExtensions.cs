@@ -10,6 +10,7 @@ namespace Client.Core.HtmlHelpers
 {
     public static class ValidationSummaryExtensions
     {
+        private const string VALIDATION_SUMMARY_HEADER = "<span><i class='fa fa-warning'></i></span> <strong>Chyba</strong><br />Došlo k těmto chybám:";
         /// <summary>
         /// Gets the Validation summary for the current model.
         /// </summary>
@@ -23,7 +24,7 @@ namespace Client.Core.HtmlHelpers
             }
             TagBuilder tagBuilder = new TagBuilder("div");
             tagBuilder.MergeAttributes(HtmlHelper.AnonymousObjectToHtmlAttributes(new { @class = "alert alert-danger", role = "alert"}));
-            tagBuilder.InnerHtml = "<span><i class='fa fa-warning'></i></span> <strong>Chyba</strong><br />Došlo k těmto chybám:" + ValidationExtensions.ValidationSummary(htmlHelper).ToString();
+            tagBuilder.InnerHtml = VALIDATION_SUMMARY_HEADER + ValidationExtensions.ValidationSummary(htmlHelper).ToString();
             return MvcHtmlString.Create(tagBuilder.ToString());
         }
 
@@ -31,7 +32,7 @@ namespace Client.Core.HtmlHelpers
         {
             TagBuilder tagBuilder = new TagBuilder("div");
             tagBuilder.MergeAttributes(HtmlHelper.AnonymousObjectToHtmlAttributes(new { @class = "alert alert-danger", role = "alert" }));
-            tagBuilder.InnerHtml = "<span><i class='fa fa-warning'></i></span> <strong>Chyba</strong><br />Došlo k těmto chybám:" + validationResult;
+            tagBuilder.InnerHtml = VALIDATION_SUMMARY_HEADER + validationResult;
             return MvcHtmlString.Create(tagBuilder.ToString());
         }
 
@@ -39,14 +40,19 @@ namespace Client.Core.HtmlHelpers
         {
             TagBuilder tagBuilder = new TagBuilder("div");
             tagBuilder.MergeAttributes(HtmlHelper.AnonymousObjectToHtmlAttributes(new { @class = "alert alert-danger", role = "alert" }));
-            tagBuilder.InnerHtml = "<span><i class='fa fa-warning'></i></span> <strong>Chyba</strong><br />Došlo k těmto chybám:";
+            tagBuilder.InnerHtml = VALIDATION_SUMMARY_HEADER;
+
+            TagBuilder ulList = new TagBuilder("ul");
             foreach (var key in modelState.Keys)
             {
                 foreach (var err in modelState[key].Errors)
                 {
-                    tagBuilder.InnerHtml += err.ErrorMessage;
+                    TagBuilder liItem = new TagBuilder("li");
+                    liItem.InnerHtml = err.ErrorMessage;
+                    ulList.InnerHtml += liItem;
                 }
             }
+            tagBuilder.InnerHtml += ulList.ToString();
             return MvcHtmlString.Create(tagBuilder.ToString());
         }
     }

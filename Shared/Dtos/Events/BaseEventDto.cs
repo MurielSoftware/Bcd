@@ -84,7 +84,7 @@ namespace Shared.Dtos.Events
 
         public virtual Guid? CountryId { get; set; }
 
-        [Reference(DaoConstants.COUNTRY_ID)]
+        [Reference(DaoConstants.ATTRIBUTE_COUNTRY)]
         [Display(Name = MessageKeyConstants.LABEL_COUNTRY, ResourceType = typeof(Resource))]
         public virtual ReferenceString CountryReference { get; set; }
 
@@ -92,5 +92,11 @@ namespace Shared.Dtos.Events
         [Reference(DaoConstants.ATTRIBUTE_USERS)]
         //[ReferenceRequiredValidator(ErrorMessageResourceName = MessageKeys.REQUIRED, ErrorMessageResourceType = typeof(Resource))]
         public virtual ReferenceString UsersReference { get; set; }
+
+        public BaseEventDto()
+        {
+            Start = DateTime.Now;
+            End = DateTime.Now;
+        }
     }
 }
