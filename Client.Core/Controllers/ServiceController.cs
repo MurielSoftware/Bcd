@@ -39,5 +39,16 @@ namespace Client.Core.Controllers
         {
             return _serviceManager;
         }
+
+        protected string GetControllerName()
+        {
+            var routeValues = Request.RequestContext.RouteData.Values;
+
+            if (routeValues.ContainsKey("controller"))
+            {
+                return (string)routeValues["controller"];
+            }
+            return string.Empty;
+        }
     }
 }

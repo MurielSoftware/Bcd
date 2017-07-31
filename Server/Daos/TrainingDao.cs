@@ -7,6 +7,7 @@ using Shared.Core.Context;
 using Shared.Dtos.Trainings;
 using Server.Model;
 using PagedList;
+using Shared.Core.Dtos;
 
 namespace Server.Daos
 {
@@ -22,7 +23,7 @@ namespace Server.Daos
             return _modelContext.Set<Training>()
                 .Where(ExpressionQueryBuilder.BuildWhere<Training>(trainingFilterDto))
                 .OrderBy(x => x.Day)
-                .Select(x => new TrainingDto() { Id = x.Id, Day = x.Day, Start = x.Start, End = x.End, City = x.City })
+                .Select(x => new TrainingDto() { Id = x.Id, Day = x.Day, Start = x.Start, End = x.End, City = x.City, UserReference = new ReferenceString() { Value = x.UserId + ":" + x.User.FirstName + " " + x.User.Surname }, UserId = x.UserId })
                 .ToPagedList(trainingFilterDto.Page, trainingFilterDto.PageSize);
         }
     }

@@ -1,0 +1,20 @@
+﻿@model ICollection<Shared.Core.Dtos.MenuItems.MenuItemDto>
+
+@foreach (var menuSection in Model)
+{
+    int md = 12 / Model.Count;
+    <li class="col-md-@md col-sm-12">
+        <ul>
+            <li class="dropdown-header">@menuSection.Name</li>
+            @if (menuSection.SectionSubmenu != null)
+            {
+                foreach (var submenu in menuSection.SectionSubmenu)
+                {
+                    <li>
+                        <a href="@submenu.Url">@submenu.Name</a>
+                    </li>
+                }
+            }
+        </ul>
+    </li>
+}

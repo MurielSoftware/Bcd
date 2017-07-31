@@ -157,6 +157,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\BlogCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\CountryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FileReferenceController.cs" />
     <Compile Include="Areas\Admin\Controllers\GalleryController.cs" />
     <Compile Include="Areas\Admin\Controllers\LinkCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\MenuItemController.cs" />
@@ -180,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ff\ff-tree.css" />
     <Content Include="Content\ff\ff-admin.css" />
     <Content Include="Content\ff\ff-reference.css" />
     <Content Include="Content\ff\ff-ribbon.css" />
@@ -197,6 +199,7 @@
     <Content Include="Areas\Admin\Views\User\Index.cshtml" />
     <Content Include="Areas\Admin\Views\User\PagedList.cshtml" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Scripts\ff\ff-tree.js" />
     <Content Include="Scripts\ff\ff-admin.js" />
     <Content Include="Scripts\ff\ff-dialog.js" />
     <Content Include="Scripts\ff\ff-inlineeditable.js" />
@@ -205,6 +208,7 @@
     <Content Include="Scripts\ff\ff-remotecontent.js" />
     <Content Include="Scripts\ff\ff-richtextbox.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery.mask.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -381,9 +385,23 @@
     <Content Include="Areas\Admin\Views\LinkCategory\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\Admin\Views\Country\" />
-    <Folder Include="Areas\Admin\Views\MenuItem\" />
+    <Content Include="Views\MenuItem\CollapseMenu.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MenuItem\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MenuItem\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\MenuItem\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\MenuItem\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\MenuItem\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\FileReference\FileReferenceDialog.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

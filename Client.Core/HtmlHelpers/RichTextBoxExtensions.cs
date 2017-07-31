@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Shared.Core.Constants;
+using Shared.Core.Dtos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -117,6 +119,7 @@ namespace Client.Core.HtmlHelpers
             sb.Append(CreateButton("<i class='fa fa-unlink'></i>", "unlink"));
             if (imageSupport)
             {
+                sb.Append(LocalizedActionLinkExtensions.DialogActionLink(htmlHelper, "<i class='fa fa-image'></i>", HtmlConstants.DIALOG_FILE_REFERENCE, WebConstants.DIALOG_FILE_REFERENCE, controllerName, new { id = ((BaseDto)metadata.Container).Id }, new { @class = "btn btn-default" }));
                 //sb.Append(LocalizedActionLinkExtensions.DialogActionLink(htmlHelper, "<i class='fa fa-image'></i>", HtmlConstants.DIALOG_FILE_REFERENCE, SharedConstants.DIALOG_FILE_REFERENCE, controllerName, new { elementId = ((BaseDto)metadata.Container).Id }, new { @class = "btn btn-default" }));
             }
             sb.Append(CreateButton("<i class='fa fa-eraser'></i>", "clear"));

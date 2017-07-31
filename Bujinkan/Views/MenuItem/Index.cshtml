@@ -1,0 +1,36 @@
+﻿@using Client.Core.HtmlHelpers
+@using Shared.Core.Constants
+
+<div class="main-menu-container">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container languages">
+                <div class="pull-right" style="padding-top: 2px; margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Powered by Google">
+                    <div id="google_translate_element" style="display: none"></div>
+                    <a href="#" data-language="čeština" class="translate-button"><img src="~/Content/images/flags/czech.jpg" style="width:20px" /></a>
+                    <a href="#" data-language="angličtina" class="translate-button"><img src="~/Content/images/flags/gb.jpg" style="width:20px" /></a>
+                    <a href="#" data-language="španělština" class="translate-button"><img src="~/Content/images/flags/spain.jpg" style="width:20px" /></a>
+                    <a href="#" data-language="němčina" class="translate-button"><img src="~/Content/images/flags/germany.jpg" style="width:20px" /></a>
+                    <a href="#" data-language="japonština" class="translate-button"><img src="~/Content/images/flags/japan.jpg" style="width:20px" /></a>
+                    <a href="#" data-language="ruština" class="translate-button"><img src="~/Content/images/flags/russia.jpg" style="width:20px" /></a>
+                </div>
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/Home/">
+                    <img src="~/Content/images/presentation/logo.png" alt="logo" class="img-responsive" />
+                    <span>Bujinkan Czech Dojo</span>
+                    <small>1991</small>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="main-menu">
+                @Ajax.RemoteContent(WebConstants.VIEW_LIST, WebConstants.CONTROLLER_MENU_ITEM)
+            </div>
+        </nav>
+    </div>
+</div>

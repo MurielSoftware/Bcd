@@ -1,5 +1,6 @@
-﻿using Shared.Core.Dtos;
-using Shared.Core.Json.Shared.Core.Jsons;
+﻿using Shared.Core.Constants;
+using Shared.Core.Dtos;
+using Shared.Core.Json;
 using Shared.Core.Services;
 using System;
 using System.Collections.Generic;
@@ -33,10 +34,10 @@ namespace Client.Core.Controllers
             return RedirectToActionAfterSuccessDelete(id, actionName, controllerName, targetId, routeValues, JsonRefreshMode.FULL);
         }
 
-        //public ActionResult TreeNodeChangePosition(Guid sourceId, Guid targetId)
-        //{
-        //    GetService().TreeNodeChangePosition(sourceId, targetId);
-        //    return RedirectToActionAfterSuccessCreate(sourceId, HtmlConstants.TREE_MENU_ITEM, SharedConstants.VIEW_LIST, null, JsonRefreshMode.FULL);
-        //}
+        public ActionResult TreeNodeChangePosition(Guid sourceId, Guid targetId)
+        {
+            GetService().TreeNodeChangePosition(sourceId, targetId);
+            return RedirectToActionAfterSuccessCreate(sourceId, WebConstants.VIEW_LIST, null, null, HtmlConstants.TREE_MENU_ITEM, JsonRefreshMode.FULL);
+        }
     }
 }

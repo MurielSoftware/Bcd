@@ -1,0 +1,23 @@
+﻿@model ICollection<Shared.Core.Dtos.MenuItems.MenuItemDto>
+
+<ul class="nav navbar-nav pull-right">    
+    @foreach (var item in Model)
+    {
+        if (item.HasChildren)
+        {
+            <li class="dropdown mega-dropdown" data-id="@item.Id">
+                <a href="@item.Url" class="dropdown-toggle" data-toggle="dropdown">@item.Name <span class="caret"></span></a>
+                <ul class="dropdown-menu mega-dropdown-menu pull-right">
+
+                </ul>
+            </li>
+        }
+        else
+        {
+            <li>
+                <a href="@item.Url">@item.Name</a>
+            </li>
+        }
+    }
+</ul>
+

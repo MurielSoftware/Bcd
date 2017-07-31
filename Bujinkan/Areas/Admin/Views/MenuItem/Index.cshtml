@@ -1,0 +1,46 @@
+﻿@using Client.Core.HtmlHelpers
+@using Shared.Core.Constants
+@using Shared.I18n.Constants
+@using Shared.I18n.Utils
+
+@{
+    ViewBag.Title = Html.LocalizedDisplay(MessageKeyConstants.LABEL_MENU);
+}
+
+@section header{
+    <div class="header-section">
+        <h1>
+            <i class="fa fa-map-signs"></i> @Html.LocalizedDisplay(MessageKeyConstants.LABEL_MENU)
+            <br />
+            <small>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_MENU)</small>
+        </h1>
+    </div>
+}
+
+@section breadcrumb {
+    <ul class="breadcrumb">
+        <li>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_HOME)</li>
+        <li>@Html.LocalizedActionLink(MessageKeyConstants.LABEL_MENU, WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_MENU_ITEM)</li>
+    </ul>
+}
+
+<div class="panel">
+    <div class="panel-heading">
+        <ul class="nav nav-tabs remoteTabs">
+            <li class="active"><a href="#form" data-toggle="tab"><i class='fa fa-list'></i> @Html.LocalizedDisplay(MessageKeyConstants.LABEL_MENU)</a></li>
+        </ul>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-12">
+                @Html.DialogActionLink("<i class='fa fa-plus-circle'></i> " + ResourceUtils.GetString(MessageKeyConstants.LABEL_ADD), WebConstants.DIALOG_MENU_ITEM, WebConstants.VIEW_CREATE_PREDEFINED, WebConstants.CONTROLLER_MENU_ITEM, null, new { @class = "btn btn-success" })
+            </div>
+        </div>
+        <div id="loading" style="display:none"><i class="fa fa-circle-o-notch fa-spin"></i></div>
+        <div class="tree">
+            <div id="@HtmlConstants.TREE_MENU_ITEM">
+                @Ajax.RemoteContent(WebConstants.VIEW_LIST, WebConstants.CONTROLLER_MENU_ITEM, WebConstants.AREA_ADMIN)
+            </div>
+        </div>
+    </div>
+</div>

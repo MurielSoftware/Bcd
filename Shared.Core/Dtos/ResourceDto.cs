@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared.Core.Utils;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,5 +17,20 @@ namespace Shared.Core.Dtos
 
         public virtual string Extension { get; set; }
         public virtual Stream Stream { get; set; }
+
+        public string GetAbsolutePath()
+        {
+            return IOUtils.GetUploadRoot() + Path;
+        }
+
+        public string GetAbsoluteFilePath()
+        {
+            return IOUtils.GetUploadRoot() + GetRelativeFilePath();
+        }
+
+        public string GetRelativeFilePath()
+        {
+            return Path + Name;
+        }
     }
 }

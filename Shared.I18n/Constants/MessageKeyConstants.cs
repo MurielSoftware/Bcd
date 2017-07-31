@@ -101,6 +101,7 @@ namespace Shared.I18n.Constants
         public const string LABEL_SATURDAY = "label_saturday";
         public const string LABEL_SAVE = "label_save";
         public const string LABEL_SECTION_MENU = "label_section_menu";
+        public const string LABEL_SELECT_FILE = "label_select_file";
         public const string LABEL_SEMINAR = "label_seminar";
         public const string LABEL_SEMINARS = "label_seminars";
         public const string LABEL_SETTINGS = "label_settings";
@@ -149,6 +150,7 @@ namespace Shared.I18n.Constants
         public const string TRAINING_INFORMATION_DELETE_MESSAGE = "training_information_delete_message";
         public const string USER_INFORMATION_DELETE_MESSAGE = "user_information_delete_message";
         public const string GALLERY_INFORMATION_DELETE_MESSAGE = "gallery_information_delete_message";
+        public const string MENU_ITEM_DELETE_MESSAGE = "menu_item_delete_message";
         //public const string PRODUCT_INFORMATION_DELETE_MESSAGE = "product_information_delete_message";
     }
 }

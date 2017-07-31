@@ -1,5 +1,7 @@
-﻿using Shared.Core.Context;
+﻿using Shared.Core.Attributes;
+using Shared.Core.Context;
 using Shared.Dtos.Users;
+using Shared.I18n.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -49,5 +51,11 @@ namespace Server.Model
 
         public virtual ICollection<BaseEvent> Events { get; set; }
         public virtual ICollection<Training> Trainings { get; set; }
+
+        public override string ToString()
+        {
+            string resourceKey = ((EnumAttribute)BujinkanTitle.GetType().GetField(BujinkanTitle.ToString()).GetCustomAttributes(typeof(EnumAttribute), false).First()).ResourceKey;
+            return string.Format(@"{0} {1} {2}", ResourceUtils.GetString(resourceKey), FirstName, Surname);
+        }
     }
 }

@@ -187,6 +187,15 @@ namespace Shared.I18n.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vazba.
+        /// </summary>
+        public static string label_association_type {
+            get {
+                return ResourceManager.GetString("label_association_type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Blog.
         /// </summary>
         public static string label_blog {

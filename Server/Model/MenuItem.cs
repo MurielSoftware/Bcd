@@ -1,4 +1,5 @@
-﻿using Shared.Core.Dtos.MenuItems;
+﻿using Shared.Core.Context;
+using Shared.Core.Dtos.MenuItems;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 namespace Server.Model
 {
     [Table("MENU_ITEM")]
-    public class MenuItem : BaseEntity//, IOrderableEntity
+    public class MenuItem : BaseEntity, IOrderableEntity
     {
         [Required]
         public virtual string Name { get; set; }
@@ -22,12 +23,12 @@ namespace Server.Model
         public virtual MenuItemAssociationType AssociationType { get; set; }
         public virtual int Level { get; set; }
 
-        public virtual Guid? BlogCategoryId { get; set; }
+        public virtual Guid? CategoryId { get; set; }
         public virtual Guid? ParentMenuItemId { get; set; }
         public virtual Guid? UserDefinableId { get; set; }
 
-        [ForeignKey("BlogCategoryId")]
-        public virtual BlogCategory BlogCategory { get; set; }
+        [ForeignKey("CategoryId")]
+        public virtual Category Category { get; set; }
 
         [ForeignKey("ParentMenuItemId")]
         public virtual MenuItem ParentMenuItem { get; set; }

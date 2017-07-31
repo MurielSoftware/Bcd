@@ -4,7 +4,6 @@ using Shared.Core.Constants;
 using Shared.Core.Dtos;
 using Shared.Core.Exceptions;
 using Shared.Core.Json;
-using Shared.Core.Json.Shared.Core.Jsons;
 using Shared.Core.Messages;
 using Shared.Core.Services;
 using System;
@@ -52,7 +51,7 @@ namespace Client.Core.Controllers
         public virtual ActionResult CreatePredefined(T precreatedDto)
         {
             TempData[TempDataConstants.PRECREATED_DTO] = precreatedDto;
-            return RedirectToAction(WebConstants.VIEW_CREATE);
+            return RedirectToAction(WebConstants.VIEW_CREATE, GetControllerName());
         }
 
         /// <summary>

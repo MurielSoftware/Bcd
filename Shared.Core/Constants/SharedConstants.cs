@@ -10,5 +10,6 @@ namespace Shared.Core.Constants
     {
         public const int PAGE_SIZE = 15;
         public const string EMPTY_STRING = "";
+        public const string SLASH = "/";
     }
 }

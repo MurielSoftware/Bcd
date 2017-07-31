@@ -10,6 +10,7 @@ namespace Bujinkan
         {
             bundles.Add(new ScriptBundle("~/bundles/script-admin").Include(
                         "~/Scripts/jquery-3.2.1.min.js",
+                        "~/Scripts/jquery.mask.min.js",
                         "~/Scripts/bootstrap.min.js",
                         "~/Scripts/ff/ff-inlineeditable.js",
                         "~/Scripts/ff/ff-remotecontent.js",
@@ -17,6 +18,7 @@ namespace Bujinkan
                         "~/Scripts/ff/ff-referencelist.js",
                         "~/Scripts/ff/ff-richtextbox.js",
                         "~/Scripts/ff/ff-dialog.js",
+                        "~/Scripts/ff/ff-tree.js",
                         "~/Scripts/ff/ff-admin.js"));
 
             bundles.Add(new StyleBundle("~/Content/css-admin").Include(
@@ -26,6 +28,7 @@ namespace Bujinkan
                         "~/Content/ff/ff-richtextbox.css",
                         "~/Content/ff/ff-ribbon.css",
                         "~/Content/ff/ff-reference.css",
+                        "~/Content/ff/ff-tree.css",
                         "~/Content/ff/ff-admin.css"));
         }
     }

@@ -29,6 +29,7 @@ namespace Shared.Core.Constants
         public const string DIALOG_CREATE_PREDEFINED = "DialogCreatePredefined";
         public const string DIALOG_FILE_REFERENCE = "DialogFileReference";
         public const string DIALOG_UPDATE = "DialogUpdate";
+        public const string DIALOG_MENU_ITEM = "DialogMenuItem";
 
         public const string CONTROLLER_ADMINISTRATION_TOOLS = "AdministrationTools";
         public const string CONTROLLER_ACTUALITY = "Actuality";

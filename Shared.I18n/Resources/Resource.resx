@@ -483,4 +483,7 @@
   <data name="label_add_role" xml:space="preserve">
     <value>Přidat roli</value>
   </data>
+  <data name="label_association_type" xml:space="preserve">
+    <value>Vazba</value>
+  </data>
 </root>
