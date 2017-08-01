@@ -9,20 +9,19 @@ using System.Threading.Tasks;
 using Shared.Core.Context;
 using PagedList;
 using Server.Daos;
-using Shared.Core.Utils;
 
 namespace Server.Services.Events
 {
-    public class SeminarCRUDService : BaseEventCRUDService<SeminarDto, Seminar>, ISeminarCRUDService
+    public class EventCRUDService : BaseEventCRUDService<EventDto, Event>, IEventCRUDService
     {
-        public SeminarCRUDService(IUnitOfWork unitOfWork) 
+        public EventCRUDService(IUnitOfWork unitOfWork) 
             : base(unitOfWork)
         {
         }
 
-        public IPagedList<SeminarDto> ReadAdministrationPaged(EventFilterDto eventFilterDto)
+        public IPagedList<EventDto> ReadAdministrationPaged(EventFilterDto eventFilterDto)
         {
-            return _baseEventDao.FindPaged<SeminarDto, Seminar>(eventFilterDto);
+            return _baseEventDao.FindPaged<EventDto, Event>(eventFilterDto);
         }
     }
 }

@@ -3,5 +3,5 @@
 	[Id] UNIQUEIDENTIFIER NOT NULL,
 	[Name] NVARCHAR(MAX) NOT NULL,
 	[BuiltIn] BIT NOT NULL,
-	[Discriminator] NVARCHAR(MAX) NOT NULL
+	[Discriminator] NVARCHAR(128) NOT NULL
 )

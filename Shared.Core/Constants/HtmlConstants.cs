@@ -22,6 +22,8 @@ namespace Shared.Core.Constants
         public const string PAGED_LIST_PRODUCT_CATEGORY = "paged-list-product-category";
         public const string PAGED_LIST_LINK_CATEGORY = "paged-list-link-category";
         public const string PAGED_LIST_DOJO = "paged-list-dojo";
+        public const string PAGED_LIST_EVENT = "paged-list-event";
+        public const string PAGED_LIST_VIDEO = "paged-list-video";
 
         public const string DIALOG_CONFIRMATION = "dialog-confirmation";
         public const string DIALOG_ROLE = "dialog-role";
@@ -33,6 +35,7 @@ namespace Shared.Core.Constants
         public const string DIALOG_PRODUCT_CATEGORY = "dialog-product-category";
         public const string DIALOG_LINK_CATEGORY = "dialog-link-category";
         public const string DIALOG_FILE_REFERENCE = "dialog-file-reference";
+        public const string DIALOG_VIDEO = "dialog-video";
 
         public const string FA_IMAGE_USER = "fa fa-user";
         public const string FA_IMAGE_TRAINING = "fa fa-graduation-cap";

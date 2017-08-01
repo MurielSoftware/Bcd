@@ -21,7 +21,7 @@
 	[Prepayment] SMALLINT NULL,
 	[PrepaymentDeadline] DATETIME NULL,
 	[AccountNumber] NVARCHAR(MAX) NULL,
-	[Discriminator] NVARCHAR(MAX) NOT NULL,
+	[Discriminator] NVARCHAR(128) NOT NULL,
 
 	[CountryId] UNIQUEIDENTIFIER NULL,
 )

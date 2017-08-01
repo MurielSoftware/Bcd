@@ -7,24 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Server.Model
-{
-    [Table("LINK")]
-    public class Link : BaseEntity
+{    
+    public class Link : BaseLink
     {
-        [Required]
-        public virtual string Name { get; set; }
-
-        public virtual string Url { get; set; }
-        public virtual string Description { get; set; }
-
-        public virtual Guid CategoryId { get; set; }
-
-        [ForeignKey("CategoryId")]
-        public virtual LinkCategory Category { get; set; }
-
-        public override string ToString()
-        {
-            return Name;
-        }
+        public static string DISC = "LINK";
     }
 }

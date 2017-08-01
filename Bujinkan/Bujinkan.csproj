@@ -160,6 +160,7 @@
     <Compile Include="Areas\Admin\Controllers\FileReferenceController.cs" />
     <Compile Include="Areas\Admin\Controllers\GalleryController.cs" />
     <Compile Include="Areas\Admin\Controllers\LinkCategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\VideoController.cs" />
     <Compile Include="Areas\Admin\Controllers\MenuItemController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
@@ -169,6 +170,7 @@
     <Compile Include="Areas\Admin\Controllers\QuestionController.cs" />
     <Compile Include="Areas\Admin\Controllers\LinkController.cs" />
     <Compile Include="Areas\Admin\Controllers\BlogController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EventController.cs" />
     <Compile Include="Areas\Admin\Controllers\VocabularyController.cs" />
     <Compile Include="Areas\Admin\Controllers\SeminarController.cs" />
     <Compile Include="Areas\Admin\Controllers\TrainingController.cs" />
@@ -403,7 +405,24 @@
   <ItemGroup>
     <Content Include="Areas\Admin\Views\FileReference\FileReferenceDialog.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Event\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Event\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Event\PagedList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Video\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Video\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Video\PagedList.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

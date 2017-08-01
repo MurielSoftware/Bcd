@@ -10,9 +10,9 @@ using PagedList;
 
 namespace Server.Daos
 {
-    public class LinkDao : BaseDao
+    public class BaseLinkDao : BaseDao
     {
-        public LinkDao(IUnitOfWork unitOfWork) 
+        public BaseLinkDao(IUnitOfWork unitOfWork) 
             : base(unitOfWork)
         {
         }
@@ -22,11 +22,11 @@ namespace Server.Daos
         /// </summary>
         /// <param name="LinkFilterDto">The filtering DTO</param>
         /// <returns>The Link DTO page</returns>
-        internal IPagedList<LinkDto> FindPaged(LinkFilterDto linkFilterDto)
+        internal IPagedList<T> FindPaged<T, U>(LinkFilterDto linkFilterDto) where T : BaseLinkDto, new() where U : BaseLink
         {
-            return _modelContext.Set<Link>()
+            return _modelContext.Set<U>()
                 .OrderBy(x => x.Name)
-                .Select(x => new LinkDto() { Id = x.Id, Name = x.Name, Url = x.Url })
+                .Select(x => new T() { Id = x.Id, Name = x.Name, Url = x.Url })
                 .ToPagedList(linkFilterDto.Page, linkFilterDto.PageSize);
         }
     }

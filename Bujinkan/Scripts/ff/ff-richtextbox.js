@@ -59,7 +59,6 @@
                 }
             });
 
-
             $.richTextBoxSetImage = function (thumbnailSource, source) {
                 textArea.append(_createHrefTag(thumbnailSource, source));
                 _update();

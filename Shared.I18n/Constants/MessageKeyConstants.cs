@@ -152,6 +152,7 @@ namespace Shared.I18n.Constants
         public const string USER_INFORMATION_DELETE_MESSAGE = "user_information_delete_message";
         public const string GALLERY_INFORMATION_DELETE_MESSAGE = "gallery_information_delete_message";
         public const string MENU_ITEM_DELETE_MESSAGE = "menu_item_delete_message";
+        public const string EVENT_INFORMATION_DELETE_MESSAGE = "event_information_delete_message";
         //public const string PRODUCT_INFORMATION_DELETE_MESSAGE = "product_information_delete_message";
     }
 }

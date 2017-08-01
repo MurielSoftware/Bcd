@@ -26,9 +26,11 @@ namespace Server.Context
         public DbSet<Product> Products { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<Seminar> Seminars { get; set; }
         public DbSet<Training> Trainings { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserDefinable> UserDefinables { get; set; }
+        public DbSet<Video> Videos { get; set; }
         public DbSet<Vocabulary> Vocabularies { get; set; }
 
         public BujinkanContext()
@@ -52,6 +54,10 @@ namespace Server.Context
             modelBuilder.Entity<BaseEvent>()
                 .Map<Event>(m => m.Requires("Discriminator").HasValue(Event.DISC))
                 .Map<Seminar>(m => m.Requires("Discriminator").HasValue(Seminar.DISC));
+
+            modelBuilder.Entity<BaseLink>()
+                .Map<Link>(m => m.Requires("Discriminator").HasValue(Link.DISC))
+                .Map<Video>(m => m.Requires("Discriminator").HasValue(Video.DISC));
 
             modelBuilder.Entity<BaseEvent>()
                 .HasMany(x => x.Users)

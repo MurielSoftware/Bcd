@@ -1,18 +1,18 @@
-﻿@model Shared.Dtos.Links.LinkDto
+﻿@model Shared.Dtos.Links.VideoDto
 
 @using Client.Core.HtmlHelpers
 @using Shared.Core.Constants
 @using Shared.I18n.Constants
 
 <div class="modal-backdrop fade in"></div>
-<div class="modal fade in" style="display:block" id="@HtmlConstants.DIALOG_LINK" role="dialog">
+<div class="modal fade in" style="display:block" id="@HtmlConstants.DIALOG_VIDEO" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close btn-dialog-close">&times;</button>
-                <h4 class="modal-title">@Html.LocalizedDisplay(MessageKeyConstants.LABEL_LINK)</h4>
+                <h4 class="modal-title">@Html.LocalizedDisplay(MessageKeyConstants.LABEL_VIDEO)</h4>
             </div>
-            @using (Html.BeginForm(WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_LINK, FormMethod.Post, new { @class = "asynchronous-form" }))
+            @using (Html.BeginForm(WebConstants.VIEW_CREATE, WebConstants.CONTROLLER_VIDEO, FormMethod.Post, new { @class = "asynchronous-form" }))
             {
                 <div class="modal-body">
                     @Html.HiddenFor(model => model.Id)

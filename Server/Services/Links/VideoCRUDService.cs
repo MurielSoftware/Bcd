@@ -8,20 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using Shared.Core.Context;
 using PagedList;
-using Server.Daos;
 
 namespace Server.Services.Links
 {
-    public class LinkCRUDService : BaseLinkCRUDService<LinkDto, Link>, ILinkCRUDService
+    public class VideoCRUDService : BaseLinkCRUDService<VideoDto, Video>, IVideoCRUDService
     {
-        public LinkCRUDService(IUnitOfWork unitOfWork) 
+        public VideoCRUDService(IUnitOfWork unitOfWork) 
             : base(unitOfWork)
         {
         }
 
-        public IPagedList<LinkDto> ReadAdministrationPaged(LinkFilterDto linkFilterDto)
+        public IPagedList<VideoDto> ReadAdministrationPaged(LinkFilterDto linkFilterDto)
         {
-            return _baseLinkDao.FindPaged<LinkDto, Link>(linkFilterDto);
+            return _baseLinkDao.FindPaged<VideoDto, Video>(linkFilterDto);
         }
     }
 }

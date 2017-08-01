@@ -1,0 +1,37 @@
+﻿@using Client.Core.HtmlHelpers
+@using Shared.Core.Constants
+@using Shared.I18n.Constants
+
+@{
+    ViewBag.Title = Html.LocalizedDisplay(MessageKeyConstants.LABEL_EVENTS);
+}
+
+@section header{
+    <div class="header-section-title">
+        <h1><i class="@HtmlConstants.FA_IMAGE_EVENT"></i> @Html.LocalizedDisplay(MessageKeyConstants.LABEL_EVENTS)</h1>
+        <small>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_EVENTS)</small>
+    </div>
+    <img src="/Content/images/admin/admin-cover.jpg" />
+}
+
+@section breadcrumb {
+    <ul class="breadcrumb">
+        <li>@Html.LocalizedDisplay(MessageKeyConstants.LABEL_HOME)</li>
+        <li>@Html.LocalizedActionLink(MessageKeyConstants.LABEL_EVENTS, WebConstants.VIEW_INDEX, WebConstants.CONTROLLER_EVENT)</li>
+    </ul>
+}
+
+<div class="panel">
+    <div class="panel-heading">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#form" data-toggle="tab">
+                    <i class="fa fa-list"></i> @Html.LocalizedDisplay(MessageKeyConstants.LABEL_EVENTS)
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="panel-body">
+        @Ajax.RemoteContent(WebConstants.VIEW_PAGED_LIST, WebConstants.CONTROLLER_EVENT, WebConstants.AREA_ADMIN)
+    </div>
+</div>
