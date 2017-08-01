@@ -24,6 +24,7 @@ namespace Shared.Core.Constants
         public const string ATTRIBUTE_DOJO = "Dojo";
         public const string ATTRIBUTE_USER = "User";
         public const string ATTRIBUTE_USERS = "Users";
+        public const string ATTRIBUTE_THEME = "Theme";
 
         public const string COUNTRY_ID = "CountryId";
         public const string DOJO_ID = "DojoId";

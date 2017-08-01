@@ -153,6 +153,9 @@ namespace Shared.I18n.Constants
         public const string GALLERY_INFORMATION_DELETE_MESSAGE = "gallery_information_delete_message";
         public const string MENU_ITEM_DELETE_MESSAGE = "menu_item_delete_message";
         public const string EVENT_INFORMATION_DELETE_MESSAGE = "event_information_delete_message";
+        public const string VALIDATION_SECTION_CAN_BE_PLACED_ONLY_UNDER_THE_MAIN_MENU_MESSAGE = "validation_section_can_be_placed_only_under_the_main_menu_message";
+        public const string VALIDATION_UNDER_THE_MAIN_MENU_THE_SECTION_MUST_BE_PLACED_MESSAGE = "validation_under_the_main_menu_the_section_must_be_placed_message";
+        public const string VALIDATION_ONLY_FOUR_SECTIONS_CAN_BE_UNDER_MAIN_MENU_MESSAGE = "validation_only_four_sections_can_be_under_main_menu_message";
         //public const string PRODUCT_INFORMATION_DELETE_MESSAGE = "product_information_delete_message";
     }
 }

@@ -16,6 +16,7 @@ namespace Shared.Core.Constants
         public const string VIEW_DELETE = "Delete";
         public const string VIEW_DELETE_CONFIRMED = "DeleteConfirmed";
         public const string VIEW_EDIT = "Edit";
+        public const string VIEW_DETAILS = "Details";
         public const string VIEW_INDEX = "";
         public const string VIEW_LIST = "List";
         public const string VIEW_PROFILE = "Profil";

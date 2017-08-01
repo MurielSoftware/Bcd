@@ -1,4 +1,6 @@
-﻿using Shared.Core.Dtos;
+﻿using Shared.Core.Attributes;
+using Shared.Core.Constants;
+using Shared.Core.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +11,7 @@ namespace Shared.Dtos.Events
 {
     public class EventFilterDto : BaseFilterDto
     {
+        [Filter(DaoConstants.ATTRIBUTE_THEME, CompareOperator.CONTAINS)]
+        public virtual string Theme { get; set; }
     }
 }
